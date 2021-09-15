@@ -3,13 +3,13 @@ This project is to answer questions related to keywords using google with extrac
 
 # Functional Design
 ## Funtion 1 inputQuestionTemplate
-<br>***Functionality***: Implement the question template
-<br>***Input***:
+<br>* ***Functionality***: Implement the question template
+<br>* ***Input***:
 * templateId: the id of the template
 * template: template represented by a list
 <br>e.g. "What is xxx" is represented by ["What is ", 0]
 <br>"xxx's history" is represented by [0, "'s history"]
-<br>***Output***: 0 for success and -1 for failed
+<br>* ***Output***: 0 for success and -1 for failed
 ```python
 def inputQuestionTemplate( templateId, template):
     xxxxx
