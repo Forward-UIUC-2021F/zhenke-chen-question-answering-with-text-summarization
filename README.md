@@ -31,48 +31,7 @@ def getGoogleResults( question, resNum, conditionId ):
    return originalText
 ```
 
-## Function 3 getAnswer
-* ***Functionality***: Overall text summarization function, for convenience of implementation
-* ***Input***:
-   * templateId: the id of the template
-   * conditionId: potential condition for Google Search result filter
-   * searchResNum: the number of google search results as original text for summarization
-   * keyword: keyword of the question
-   * sentenceNum: the sentence number of summarized text
-* ***Output***: summarized text
-```python
-def getAnswer( templateId, conditionId, searchResNum, keyword, sentenceNum ):
-   xxxxxx
-   return summarizedText
-```
-
-## Function 4 evaluateWithRouge
-* ***Functionality***: Evaluate the text summarization result with Rouge
-* ***Input***:
-   * rougeMethodId: since there are many different Rouge evaluation methods, such Rouge-1, Rouge-2 and Rouge-L, this is for selection of Rouge method
-   * referenceText: for some Rouge methods, the evaluation needs the standard reference text
-   * summarizedText: summarized text to be evaluated
-* ***Output***: evaluation result represented by a dictionary with form {Precision: xxx, Recall: xxx, Fmeasure: xxx}
-```python
-def evaluateWithRouge( rougeMethodId, referenceText, summarizedText ):
-   xxxxxx
-   return evaluationResult
-```
-
-## Function 5 embedSentences
-* ***Functionality***: Embed the sentences with word2vec
-* ***Input***:
-   * data: data with sentences and their corresponding saliency scores
-   * word2vecWordNum: number of words used in word embedding with word2vec
-   * wordNum: maximum number of words to keep (with relatively large frequency)
-* ***Output***: embedded data with saliency scores
-```python
-def embedSentences( data, word2vecWordNum, wordNum ):
-   xxxxxx
-   return embeddedData
-```
-
-## Function 6 preprocess
+## Function 3 preprocess
 * ***Functionality***: Preprocess the sentences from original text by Rouge method compared with reference data to get each sentence's saliency scores
 * ***Input***:
    * rougeMethodId: id selection of Rouge method
@@ -85,7 +44,20 @@ def preprocess( rougeMethodId, referenceText, data ):
    return dataWithScores
 ```
 
-## Function 7 trainModel
+## Function 4 embedSentences
+* ***Functionality***: Embed the sentences with word2vec
+* ***Input***:
+   * data: data with sentences and their corresponding saliency scores
+   * word2vecWordNum: number of words used in word embedding with word2vec
+   * wordNum: maximum number of words to keep (with relatively large frequency)
+* ***Output***: embedded data with saliency scores
+```python
+def embedSentences( data, word2vecWordNum, wordNum ):
+   xxxxxx
+   return embeddedData
+```
+
+## Function 5 trainModel
 * ***Functionality***: Train the CNN model based on embedded data from standard reference text
 * ***Input***:
    * embeddedData: embedded data with saliency scores
@@ -97,7 +69,7 @@ def trainModel( embeddedData, dataWithScores ):
    return trainedModel
 ```
 
-## Function 8 selectSentences
+## Function 6 selectSentences
 * ***Functionalitu***: Select sentence from sentences with highest saliency scores calculated by the trained model
 * ***Input***:
    * data: data from the output of trained model, with saliency scores
@@ -106,6 +78,34 @@ def trainModel( embeddedData, dataWithScores ):
 * ***Output***: summarized text
 ```python
 def selectSentences ( data, sentenceNum, threshold ):
+   xxxxxx
+   return summarizedText
+```
+
+## Function 7 evaluateWithRouge
+* ***Functionality***: Evaluate the text summarization result with Rouge
+* ***Input***:
+   * rougeMethodId: since there are many different Rouge evaluation methods, such Rouge-1, Rouge-2 and Rouge-L, this is for selection of Rouge method
+   * referenceText: for some Rouge methods, the evaluation needs the standard reference text
+   * summarizedText: summarized text to be evaluated
+* ***Output***: evaluation result represented by a dictionary with form {Precision: xxx, Recall: xxx, Fmeasure: xxx}
+```python
+def evaluateWithRouge( rougeMethodId, referenceText, summarizedText ):
+   xxxxxx
+   return evaluationResult
+```
+
+## Function 8 getAnswer
+* ***Functionality***: Overall text summarization function, for convenience of implementation
+* ***Input***:
+   * templateId: the id of the template
+   * conditionId: potential condition for Google Search result filter
+   * searchResNum: the number of google search results as original text for summarization
+   * keyword: keyword of the question
+   * sentenceNum: the sentence number of summarized text
+* ***Output***: summarized text
+```python
+def getAnswer( templateId, conditionId, searchResNum, keyword, sentenceNum ):
    xxxxxx
    return summarizedText
 ```
