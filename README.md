@@ -1,11 +1,11 @@
 # Question-answering-with-extracted-text-summarization
 This project is to answer questions related to keywords using google with extracted text summarization.
 
-## Functional Design
+# Functional Design
 
-### Funtion 1
-*Functionality*: Implement the question template  
-*Input*:
+## Funtion 1
+***Functionality***: Implement the question template  
+***Input***:
 * templateId: the id of the template
 * template: template represented by a list  
   for example: "What is xxx" is represented by ["What is ", 0]  
