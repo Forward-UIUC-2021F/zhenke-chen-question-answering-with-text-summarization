@@ -69,12 +69,43 @@ def evaluateWithRouge( rougeMethodId, referenceText, summarizedText ):
 ```python
 def embedSentences( data, word2vecWordNum, wordNum ):
    xxxxxx
-   return embedded data
+   return embeddedData
 ```
 
 ## Function 6 preprocess
 * ***Functionality***: Preprocess the sentences from original text by Rouge method compared with reference data to get each sentence's saliency scores
 * ***Input***:
    * rougeMethodId: id selection of Rouge method
-   * 
-   * 
+   * referenceText: standard reference text is needed for calculation of saliency scores
+   * data: data with sentences from original text
+* ***Output***: data with sentences and saliency scores for each sentence
+```python
+def preprocess( rougeMethodId, referenceText, data ):
+   xxxxxx
+   return dataWithScores
+```
+
+## Function 7 trainModel
+* ***Functionality***: Train the CNN model based on embedded data from standard reference text
+* ***Input***:
+   * embeddedData: embedded data with saliency scores
+   * dataWithScores: data with sentences and saliency scores for each sentence
+* ***Output***: trained model
+```python
+def trainModel( embeddedData, dataWithScores ):
+   xxxxxx
+   return trainedModel
+```
+
+## Function 8 selectSentences
+* ***Functionalitu***: Select sentence from sentences with highest saliency scores calculated by the trained model
+* ***Input***:
+   * data: data from the output of trained model, with saliency scores
+   * sentenceNum: number of sentences from the summarization
+   * threshold: limit the similarity if the sentences with all the sentences already in the summary
+* ***Output***: summarized text
+```python
+def selectSentences:
+   xxxxxx
+   return summarizedText
+```
