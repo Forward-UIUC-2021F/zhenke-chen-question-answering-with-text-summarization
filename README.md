@@ -105,7 +105,7 @@ def trainModel( embeddedData, dataWithScores ):
    * threshold: limit the similarity if the sentences with all the sentences already in the summary
 * ***Output***: summarized text
 ```python
-def selectSentences:
+def selectSentences ( data, sentenceNum, threshold ):
    xxxxxx
    return summarizedText
 ```
