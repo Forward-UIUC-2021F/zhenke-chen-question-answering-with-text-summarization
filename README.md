@@ -58,3 +58,16 @@ def evaluateWithRouge( rougeMethodId, referenceText, summarizedText ):
    xxxxxx
    return evaluationResult
 ```
+
+## Function 5 embedSentences
+* ***Functionality***: Embed the sentences with word2vec
+* ***Input***:
+   * data: data with sentences and their corresponding saliency scores
+   * word2vecWordNum: number of words used in word embedding with word2vec
+   * wordNum: maximum number of words to keep (with relatively large frequency)
+* ***Output***: embedded data with saliency scores
+```python
+def embedSentences( data, word2vecWordNum, wordNum):
+   xxxxxx
+   return embedded data
+```
