@@ -2,7 +2,6 @@
 This project is to answer questions related to keywords using google with extracted text summarization.
 
 # Functional Design
-
 ## Funtion 1
 ***Functionality***: Implement the question template  
 ***Input***:
