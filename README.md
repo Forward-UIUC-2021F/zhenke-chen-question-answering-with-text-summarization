@@ -30,3 +30,18 @@ def getGoogleResults( question, resNum, conditionId ):
    xxxxxx
    return originalText
 ```
+
+## Function 3 getAnswer
+* ***Functionality***: Overall text summarization function, for convenience of implementation
+* ***Input***:
+   * templateId: the id of the template
+   * conditionId: potential condition for Google Search result filter
+   * searchResNum: the number of google search results as original text for summarization
+   * keyword: keyword of the question
+   * sentenceNum: the sentence number of summarized text
+* ***Output***: summarized text
+```python
+def getAnswer( templateId, conditionId, searchResNum, keyword, sentenceNum ):
+   xxxxxx
+   return summarized text
+```
