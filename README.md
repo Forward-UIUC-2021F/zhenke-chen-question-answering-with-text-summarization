@@ -7,7 +7,7 @@ This project is to answer questions related to keywords using google with extrac
 <br>***Input***:
 * templateId: the id of the template
 * template: template represented by a list
-<br>for example: "What is xxx" is represented by ["What is ", 0]
+<br>e.g. "What is xxx" is represented by ["What is ", 0]
 <br>"xxx's history" is represented by [0, "'s history"]
 <br>***Output***: 0 for success and -1 for failed
 ```python
