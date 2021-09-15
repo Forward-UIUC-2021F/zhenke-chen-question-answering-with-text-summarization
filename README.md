@@ -8,7 +8,7 @@ This project is to answer questions related to keywords using google with extrac
 * templateId: the id of the template
 * template: template represented by a list  
   for example: "What is xxx" is represented by ["What is ", 0]  
-  "xxx's history" is represented by [0, "'s history"]  
+  "xxx's history" is represented by [0, "'s history"]
 ***Output***: 0 for success and -1 for failed
 ```python
 def inputQuestionTemplate( templateId, template):
