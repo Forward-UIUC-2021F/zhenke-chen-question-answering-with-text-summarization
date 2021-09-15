@@ -43,5 +43,18 @@ def getGoogleResults( question, resNum, conditionId ):
 ```python
 def getAnswer( templateId, conditionId, searchResNum, keyword, sentenceNum ):
    xxxxxx
-   return summarized text
+   return summarizedText
+```
+
+## Function 4 evaluateWithRouge
+* ***Functionality***: Evaluate the text summarization result with Rouge
+* ***Input***:
+   * rougeMethodId: since there are many different Rouge evaluation methods, such Rouge-1, Rouge-2 and Rouge-L, this is for selection of Rouge method
+   * referenceText: for some Rouge methods, the evaluation needs the standard reference text
+   * summarizedText: summarized text to be evaluated
+* ***Output***: evaluation result represented by a dictionary with form {Precision: xxx, Recall: xxx, Fmeasure: xxx}
+```python
+def evaluateWithRouge( rougeMethodId, referenceText, summarizedText ):
+   xxxxxx
+   return evaluationResult
 ```
