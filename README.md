@@ -67,7 +67,14 @@ def evaluateWithRouge( rougeMethodId, referenceText, summarizedText ):
    * wordNum: maximum number of words to keep (with relatively large frequency)
 * ***Output***: embedded data with saliency scores
 ```python
-def embedSentences( data, word2vecWordNum, wordNum):
+def embedSentences( data, word2vecWordNum, wordNum ):
    xxxxxx
    return embedded data
 ```
+
+## Function 6 preprocess
+* ***Functionality***: Preprocess the sentences from original text by Rouge method compared with reference data to get each sentence's saliency scores
+* ***Input***:
+   * rougeMethodId: id selection of Rouge method
+   * 
+   * 
