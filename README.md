@@ -70,7 +70,7 @@ def trainModel( embeddedData, dataWithScores ):
 ```
 
 ## Function 6 selectSentences
-* ***Functionalitu***: Select sentence from sentences with highest saliency scores calculated by the trained model
+* ***Functionality***: Select sentence from sentences with highest saliency scores calculated by the trained model
 * ***Input***:
    * data: data from the output of trained model, with saliency scores
    * sentenceNum: number of sentences from the summarization
