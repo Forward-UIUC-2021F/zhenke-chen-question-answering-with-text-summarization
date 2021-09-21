@@ -109,3 +109,9 @@ def getAnswer( templateId, conditionId, searchResNum, keyword, sentenceNum ):
    xxxxxx
    return summarizedText
 ```
+
+# Algorithmic Design
+
+
+# References
+Dataset: 
