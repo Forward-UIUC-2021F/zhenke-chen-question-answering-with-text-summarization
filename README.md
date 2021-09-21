@@ -3,7 +3,7 @@ This project is to answer questions related to keywords using google with extrac
 
 # Functional Design
 
-## Funtion 1 inputQuestionTemplate
+<!-- ## Funtion 1 inputQuestionTemplate
 * ***Functionality***: Implement the question template
 * ***Input***:
     * templateId: the id of the template
@@ -15,7 +15,7 @@ This project is to answer questions related to keywords using google with extrac
 def inputQuestionTemplate( templateId, template ):
    xxxxxx
    return 0
-```
+``` -->
 
 ## Function 2 getGoogleResults
 * ***Functionality***: Get searching results from Google Search with question
