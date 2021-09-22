@@ -31,8 +31,8 @@ def getGoogleResults( question, resNum, conditionId ):
    return originalText
 ``` -->
 
-# Module: Data Collection
-## Function 1 getGoogleResults
+## Module: Data Collection
+### Function 1 getGoogleResults
 * ***Functionality***: Get searching results from Google Search with question
 * ***Input***:
    * keywords: the keywords for the question
@@ -45,7 +45,7 @@ def getGoogleResults( keywords, resNum ):
    return originalText
 ```
 
-## Function 2 optimizeResultsWithConcept
+### Function 2 optimizeResultsWithConcept
 * ***Functionality***: Select the best results from Google based on the key concept
 * * ***Input***:
    * keywords: the keywords for key concepts for the question
@@ -58,8 +58,8 @@ def optimizeResultsWithConcept( keywords, resNum, originalText ):
    return optimizedText
 ```
 
-# Module: Model Training (if necessary for the user)
-## Function 3 preprocess
+## Module: Model Training (if necessary for the user)
+### Function 3 preprocess
 * ***Functionality***: Preprocess the sentences from original text by Rouge method compared with reference data to get each sentence's saliency scores
 * ***Input***:
    * rougeMethodId: id selection of Rouge method
@@ -72,7 +72,7 @@ def preprocess( rougeMethodId, referenceText, data ):
    return dataWithScores
 ```
 
-## Function 4 embedSentences
+### Function 4 embedSentences
 * ***Functionality***: Embed the sentences with word2vec
 * ***Input***:
    * data: data with sentences and their corresponding saliency scores
@@ -96,9 +96,9 @@ def trainModel( embeddedData, dataWithScores ):
    return trainedModel
 ```
 
-# Module: Result Selection and Evaluation
+## Module: Result Selection and Evaluation
 
-## Function 6 getModelOutput
+### Function 6 getModelOutput
 * ***Functionality***: Get the saliency scores output by the trained model
 * ***Input***:
    * data: raw data to summarize
@@ -110,7 +110,7 @@ def getModelOutput ( data, model ):
    return rawResults
 ```
 
-## Function 7 selectSentences
+### Function 7 selectSentences
 * ***Functionality***: Select sentence from sentences with highest saliency scores calculated by the trained model
 * ***Input***:
    * data: data from the output of trained model, with saliency scores
@@ -136,7 +136,7 @@ def evaluateWithRouge( rougeMethodId, referenceText, summarizedText ):
    return evaluationResult
 ``` -->
 
-## Function 8 evaluateWithRouge
+### Function 8 evaluateWithRouge
 * ***Functionality***: Evaluate the text summarization result with Rouge
 * ***Input***:
    * referenceText: for some Rouge methods, the evaluation needs the standard reference text
