@@ -31,6 +31,7 @@ def getGoogleResults( question, resNum, conditionId ):
    return originalText
 ``` -->
 
+## Module: Data Collection
 ## Function 1 getOptimizedGoogleResults
 * ***Functionality***: Get searching results from Google Search with question
 * ***Input***:
@@ -44,7 +45,7 @@ def getGoogleResults( keywords, resNum ):
    return originalText
 ```
 
-## Function 3 preprocess
+## Function 2 preprocess
 * ***Functionality***: Preprocess the sentences from original text by Rouge method compared with reference data to get each sentence's saliency scores
 * ***Input***:
    * rougeMethodId: id selection of Rouge method
@@ -57,7 +58,7 @@ def preprocess( rougeMethodId, referenceText, data ):
    return dataWithScores
 ```
 
-## Function 4 embedSentences
+## Function 3 embedSentences
 * ***Functionality***: Embed the sentences with word2vec
 * ***Input***:
    * data: data with sentences and their corresponding saliency scores
@@ -70,7 +71,8 @@ def embedSentences( data, word2vecWordNum, wordNum ):
    return embeddedData
 ```
 
-## Function 5 trainModel
+## Module: Model Training (if necessary for the user)
+## Function 4 trainModel
 * ***Functionality***: Train the CNN model based on embedded data from standard reference text
 * ***Input***:
    * embeddedData: embedded data with saliency scores
@@ -82,7 +84,8 @@ def trainModel( embeddedData, dataWithScores ):
    return trainedModel
 ```
 
-## Function 6 selectSentences
+## Module: Result Selection and Evaluation
+## Function 5 selectSentences
 * ***Functionality***: Select sentence from sentences with highest saliency scores calculated by the trained model
 * ***Input***:
    * data: data from the output of trained model, with saliency scores
@@ -108,7 +111,7 @@ def evaluateWithRouge( rougeMethodId, referenceText, summarizedText ):
    return evaluationResult
 ``` -->
 
-## Function 7 evaluateWithRouge
+## Function 6 evaluateWithRouge
 * ***Functionality***: Evaluate the text summarization result with Rouge
 * ***Input***:
    * referenceText: for some Rouge methods, the evaluation needs the standard reference text
@@ -135,7 +138,7 @@ def getAnswer( templateId, conditionId, searchResNum, keyword, sentenceNum ):
    return summarizedText
 ``` -->
 
-## Function 8 getAnswer
+<!-- ## Function 7 getAnswer
 * ***Functionality***: Overall text summarization function, for convenience of implementation
 * ***Input***:
    * searchResNum: the number of google search results as original text for summarization
@@ -146,9 +149,10 @@ def getAnswer( templateId, conditionId, searchResNum, keyword, sentenceNum ):
 def getAnswer( searchResNum, keywords, sentenceNum ):
    xxxxxx
    return summarizedText
-```
+``` -->
 
 # Algorithmic Design
+
 
 
 # References
