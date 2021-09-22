@@ -84,7 +84,7 @@ def embedSentences( data, word2vecWordNum, wordNum ):
    xxxxxx
    return embeddedData
 ```
-## Function 5 trainModel
+### Function 5 trainModel
 * ***Functionality***: Train the CNN model based on embedded data from standard reference text
 * ***Input***:
    * embeddedData: embedded data with saliency scores
