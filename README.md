@@ -96,7 +96,7 @@ def trainModel( embeddedData, dataWithScores ):
    return trainedModel
 ```
 
-## Module: Result Selection and Evaluation
+## Module: Results Selection and Evaluation
 
 ### Function 6 getModelOutput
 * ***Functionality***: Get the saliency scores output by the trained model
@@ -178,6 +178,7 @@ def getAnswer( searchResNum, keywords, sentenceNum ):
 
 # Algorithmic Design
 
+There are three parts of algorithmic designs for this project, which are corresponding the three parts from the functional design, which are **Data Collection**, **Model Training** as well as **Results Selection and Evaluation**.
 
 
 # References
