@@ -190,7 +190,12 @@ There are three parts of algorithmic designs for this project, which are corresp
 ## Module: Model Training
 * For data training, in order to provide comparison for supervised learning, the train data will be preprocessed. The widely-accepted automatic summarization evaluation metric, ROUGE, is applied to get the salience score for each sentence. Those scores will be used in a further training process.
 * To promote the performance of training, the raw training data, also known as sentences, are not used as inputs directly. Instead, the word embedding technique, word2vec will be applied to make better use of the semantic and grammatical association of words. So, the human feature enginnering is not needed.
-* For the training, the Convolutional Neural Networds (CNN) is applied with Convolution (Sigmoid as Activation Function), Max-pooling and Regularization. And the goal is to minimized the cross-entropy (CE) compared with the salience scores from train data.
+* For the training, the Convolutional Neural Networds (CNN) is applied with Convolution (Sigmoid as Activation Function), Max-pooling and Regularization. And the goal is to minimized the cross-entropy (CE) compared with the salience scores from train data.<br>
+
+   ![CNN Training Model](https://github.com/Forward-UIUC-2021F/Question-answering-with-extracted-text-summarization/blob/main/Images%20for%20md/Module_2.png)
+
+## Module: Results Selection and Evaluation
+* aa
 
 # References
 Dataset:
