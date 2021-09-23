@@ -195,7 +195,10 @@ There are three parts of algorithmic designs for this project, which are corresp
    ![CNN Training Model](https://github.com/Forward-UIUC-2021F/Question-answering-with-extracted-text-summarization/blob/main/Images%20for%20md/Module_2.png)
 
 ## Module: Results Selection and Evaluation
-* aa
+* To get all the salience scores for the input test results, also known as the text from Google Search, the text needs to be input into the trained model, and the results are salience scores for each sentence.
+* In order to select the most appropriate sentences to form a summary, the salience socres of sentences are compared, and the highest ones will be chosen. In order not collect too many sentences with similar meanings, there is a threahold measuring the similarity of the collected sentences, and if the similarity reaches the threshold, no more similar sentences will be chosen. The routine will start from the beginning until required number of sentences are collected.
+* For performance evaluation after the sentence selection, the ROUGE-L method with measurement of fmeasure value will be applied. This evaluation perspective considers both the precision and recall value. With larger the value, the performance is better.
+* 
 
 # References
 Dataset:
