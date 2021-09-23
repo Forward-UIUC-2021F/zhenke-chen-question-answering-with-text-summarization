@@ -200,4 +200,8 @@ There are three parts of algorithmic designs for this project, which are corresp
 * For performance evaluation after the sentence selection, the **ROUGE-L** method with measurement of **F-Measure** value will be applied. This evaluation perspective considers both the Precision and Recall values. With larger the value, the performance is better.
 
 # References
-Dataset:
+## Datasets:
+* Google's Word2vec. Link: https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz.
+* DUC Dataset. Link: https://duc.nist.gov/data.html.
+## Papers:
+* Extractive Document Summarization Based on Convolutional Neural Networks. Link: https://ieeexplore.ieee.org/document/7793761.
