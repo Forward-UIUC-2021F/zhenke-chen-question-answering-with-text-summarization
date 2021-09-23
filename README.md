@@ -205,3 +205,4 @@ There are three parts of algorithmic designs for this project, which are corresp
 * DUC Dataset. Link: https://duc.nist.gov/data.html.
 ## Papers:
 * Extractive Document Summarization Based on Convolutional Neural Networks. Link: https://ieeexplore.ieee.org/document/7793761.
+* Extractive Document Summarization Using Convolutional Neural Networks - Reimplementation. Link: https://leolaugier.github.io/doc/summarization.pdf.
