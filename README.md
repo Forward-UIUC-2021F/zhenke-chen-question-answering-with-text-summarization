@@ -45,7 +45,7 @@ def getGoogleResults( keywords, resNum ):
    return originalText
 ```
 
-### Function 2 optimizeResultsWithConcept
+<!-- ### Function 2 optimizeResultsWithConcept
 * ***Functionality***: Select the best results from Google based on the key concept
 * * ***Input***:
    * keywords: the keywords for key concepts for the question
@@ -56,10 +56,24 @@ def getGoogleResults( keywords, resNum ):
 def optimizeResultsWithConcept( keywords, resNum, originalText ):
    xxxxxx
    return optimizedText
-```
+``` -->
 
 ## Module 2: Model Training (if necessary for the user)
-### Function 3 preprocess
+### Function 2 trainModel
+* ***Functionality***: Train the model if it is necessary for the user
+* ***Input***:
+   * referenceText: standard reference text is needed for calculation of saliency scores
+   * data: data with sentences from original text
+   * word2vecWordNum: number of words used in word embedding with word2vec
+   * wordNum: maximum number of words to keep (with relatively large frequency)
+* ***Output***: trained model
+```python
+def trainModel( referenceText, data, word2vecWordNum, wordNum ):
+   xxxxxx
+   return trainedModel
+```
+
+<!-- ### Function 3 preprocess
 * ***Functionality***: Preprocess the sentences from original text by Rouge method compared with reference data to get each sentence's saliency scores
 * ***Input***:
    * rougeMethodId: id selection of Rouge method
@@ -94,11 +108,23 @@ def embedSentences( data, word2vecWordNum, wordNum ):
 def trainModel( embeddedData, dataWithScores ):
    xxxxxx
    return trainedModel
-```
+``` -->
 
 ## Module 3: Results Selection and Evaluation
+### Function 3 getResult
+* ***Functionality***: Get the saliency scores from the trained model and select the sentences with highest scores
+   * data: raw data to summarize
+   * model: trained model
+   * sentenceNum: number of sentences from the summarization
+   * threshold: limit the similarity if the sentences with all the sentences already in the summary
+* ***Output***: summarized text
+```python
+def getResult ( data, model, sentenceNum, threshold ):
+   xxxxxx
+   return summarizedText
+```
 
-### Function 6 getModelOutput
+<!-- ### Function 6 getModelOutput
 * ***Functionality***: Get the saliency scores output by the trained model
 * ***Input***:
    * data: raw data to summarize
@@ -121,7 +147,7 @@ def getModelOutput ( data, model ):
 def selectSentences ( data, sentenceNum, threshold ):
    xxxxxx
    return summarizedText
-```
+``` -->
 
 <!-- ## Function 7 evaluateWithRouge
 * ***Functionality***: Evaluate the text summarization result with Rouge
@@ -136,7 +162,7 @@ def evaluateWithRouge( rougeMethodId, referenceText, summarizedText ):
    return evaluationResult
 ``` -->
 
-### Function 8 evaluateWithRouge
+<!-- ### Function 8 evaluateWithRouge
 * ***Functionality***: Evaluate the text summarization result with Rouge
 * ***Input***:
    * referenceText: for some Rouge methods, the evaluation needs the standard reference text
@@ -146,7 +172,7 @@ def evaluateWithRouge( rougeMethodId, referenceText, summarizedText ):
 def evaluateWithRouge( referenceText, summarizedText ):
    xxxxxx
    return evaluationResult
-```
+``` -->
 
 <!-- ## Function 8 getAnswer
 * ***Functionality***: Overall text summarization function, for convenience of implementation
