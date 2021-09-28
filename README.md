@@ -31,7 +31,7 @@ def getGoogleResults( question, resNum, conditionId ):
    return originalText
 ``` -->
 
-## Module: Data Collection
+## Module 1: Data Collection
 ### Function 1 getGoogleResults
 * ***Functionality***: Get searching results from Google Search with question
 * ***Input***:
@@ -58,7 +58,7 @@ def optimizeResultsWithConcept( keywords, resNum, originalText ):
    return optimizedText
 ```
 
-## Module: Model Training (if necessary for the user)
+## Module 2: Model Training (if necessary for the user)
 ### Function 3 preprocess
 * ***Functionality***: Preprocess the sentences from original text by Rouge method compared with reference data to get each sentence's saliency scores
 * ***Input***:
@@ -96,7 +96,7 @@ def trainModel( embeddedData, dataWithScores ):
    return trainedModel
 ```
 
-## Module: Results Selection and Evaluation
+## Module 3: Results Selection and Evaluation
 
 ### Function 6 getModelOutput
 * ***Functionality***: Get the saliency scores output by the trained model
@@ -180,21 +180,21 @@ def getAnswer( searchResNum, keywords, sentenceNum ):
 
 There are three parts of algorithmic designs for this project, which are corresponding the three parts from the functional design, which are **Data Collection**, **Model Training** as well as **Results Selection and Evaluation**.
 
-## Module: Data Collection
+## Module 1: Data Collection
 * For data collection, since the data are collected from the Google Search, the raw text result corresponding to the questions will be collected by the **APIs** offered by Google.
 * Then, since some of the searching results may not be relevant enough with the keywords presented by the user, there will be a filter algorithm to opimize the searching results. In details, the ones most related to the concept will be chosed to form the text to be summarized. For this part, I will temporarily apply the algorithms from Zicheng to pursue the best performance.<br>
 
 
   ![Routine for Module 1](https://github.com/Forward-UIUC-2021F/Question-answering-with-extracted-text-summarization/blob/main/Images%20for%20md/Module_1.png)
 
-## Module: Model Training
+## Module 2: Model Training
 * For data training, in order to provide comparison for supervised learning, the train data will be preprocessed. The widely-accepted automatic summarization evaluation metric, ROUGE, is applied to get the salience score for each sentence. Those scores will be used in a further training process.
 * To promote the performance of training, the raw training data, also known as sentences, are not used as inputs directly. Instead, the word embedding technique, **word2vec** will be applied to make better use of the semantic and grammatical association of words. So, the human feature enginnering is not needed.
 * For the training, the Convolutional Neural Networds (**CNN**) is applied with Convolution (Sigmoid as Activation Function), Max-pooling and Regularization. And the goal is to minimized the cross-entropy (CE) compared with the salience scores from train data.<br>
 
    ![CNN Training Model](https://github.com/Forward-UIUC-2021F/Question-answering-with-extracted-text-summarization/blob/main/Images%20for%20md/Module_2.png)
 
-## Module: Results Selection and Evaluation
+## Module 3: Results Selection and Evaluation
 * To get all the salience scores for the input test results, also known as the text from Google Search, the text needs to be input into the trained model, and the results are salience scores for each sentence.
 * In order to select the most appropriate sentences to form a summary, the salience socres of sentences are compared, and the highest ones will be chosen. In order not collect too many sentences with similar meanings, there is a threahold measuring the similarity of the collected sentences, and if the similarity reaches the threshold, no more similar sentences will be chosen. The routine will start from the beginning until required number of sentences are collected.
 * For performance evaluation after the sentence selection, the **ROUGE-L** method with measurement of **F-Measure** value will be applied. This evaluation perspective considers both the Precision and Recall values. With larger the value, the performance is better.
