@@ -90,9 +90,9 @@ def web_clawer( websites, result_num = 2 ):
         # fetch the appropriate text from the website
         soup = BeautifulSoup(open(DOC), features = "lxml")
         # for p_idx in soup.select("p"):
-        #     if len(p_idx.get_text()) > STRING_LENGTH:
+        #     if len(p_idx.get_text().split()) > STRING_LENGTH:
         #         original_text.append(p_idx.get_text())
-        original_text = [p_idx.get_text() for p_idx in soup.select("p") if len(p_idx.get_text()) > STRING_LENGTH]
+        original_text = [p_idx.get_text() for p_idx in soup.select("p") if len(p_idx.get_text().split()) > STRING_LENGTH]
 
     return original_text
 
