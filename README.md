@@ -32,17 +32,17 @@ def getGoogleResults( question, resNum, conditionId ):
 ``` -->
 
 ## Module 1: Data Collection
-### Function 1 getGoogleResults
+### Function 1 get_google_results
 * ***Functionality***: Get searching results from Google Search with question
 * ***Input***:
    * keywords: the keywords for the question
-   * resNum: the number of results as original text for summarization
+   * res_num: the number of results as original text for summarization
    <br>e.g. if the conditions are pre-defined with specific id for each one, such as only with “.edu“ websites, then the source of original text will only be ".edu" websites
-* ***Output***: Original text stored in a list of length resNum, with each element from one piece of Google Search result
+* ***Output***: Original text stored in a list of length res_num, with each element from one piece of Google Search result
 ```python
-def getGoogleResults( keywords, resNum ):
+def get_google_results( keywords, res_num ):
    xxxxxx
-   return originalText
+   return original_text
 ```
 
 <!-- ### Function 2 optimizeResultsWithConcept
@@ -59,18 +59,18 @@ def optimizeResultsWithConcept( keywords, resNum, originalText ):
 ``` -->
 
 ## Module 2: Model Training (if necessary for the user)
-### Function 2 trainModel
+### Function 2 train_model
 * ***Functionality***: Train the model if it is necessary for the user
 * ***Input***:
-   * referenceText: standard reference text is needed for calculation of saliency scores
+   * reference_text: standard reference text is needed for calculation of saliency scores
    * data: data with sentences from original text
-   * word2vecWordNum: number of words used in word embedding with word2vec
-   * wordNum: maximum number of words to keep (with relatively large frequency)
+   * word2vec_word_num: number of words used in word embedding with word2vec
+   * word_num: maximum number of words to keep (with relatively large frequency)
 * ***Output***: trained model
 ```python
-def trainModel( referenceText, data, word2vecWordNum, wordNum ):
+def train_model( reference_text, data, word2vec_word_num, word_num ):
    xxxxxx
-   return trainedModel
+   return trained_model
 ```
 
 <!-- ### Function 3 preprocess
@@ -111,17 +111,17 @@ def trainModel( embeddedData, dataWithScores ):
 ``` -->
 
 ## Module 3: Results Selection and Evaluation
-### Function 3 getResult
+### Function 3 get_result
 * ***Functionality***: Get the saliency scores from the trained model and select the sentences with highest scores
    * data: raw data to summarize
    * model: trained model
-   * sentenceNum: number of sentences from the summarization
+   * sentence_num: number of sentences from the summarization
    * threshold: limit the similarity if the sentences with all the sentences already in the summary
 * ***Output***: summarized text
 ```python
-def getResult ( data, model, sentenceNum, threshold ):
+def get_result ( data, model, sentence_num, threshold ):
    xxxxxx
-   return summarizedText
+   return summarized_text
 ```
 
 <!-- ### Function 6 getModelOutput
