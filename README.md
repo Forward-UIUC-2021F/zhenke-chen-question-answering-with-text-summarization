@@ -63,12 +63,12 @@ def optimizeResultsWithConcept( keywords, resNum, originalText ):
 * ***Functionality***: Train the model if it is necessary for the user
 * ***Input***:
    * reference_text: standard reference text is needed for calculation of saliency scores
-   * data: data with sentences from original text
+   * training_data: training data with sentences from original text
    * word2vec_word_num: number of words used in word embedding with word2vec
    * word_num: maximum number of words to keep (with relatively large frequency)
 * ***Output***: trained model
 ```python
-def train_model( reference_text, data, word2vec_word_num, word_num ):
+def train_model( reference_text, training_data, word2vec_word_num, word_num ):
    xxxxxx
    return trained_model
 ```
