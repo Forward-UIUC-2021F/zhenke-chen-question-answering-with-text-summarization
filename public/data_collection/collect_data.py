@@ -34,7 +34,7 @@ USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
 
 class CollectData:
 
-    def __self__( self ):
+    def __init__( self ):
         pass
 
     # This Google API is not used now 
