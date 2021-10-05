@@ -8,7 +8,7 @@
 from typing_extensions import ParamSpecKwargs
 
 
-class AccessTrainingData:
+class AccessTrainingData():
 
     def __init__( self ):
         ParamSpecKwargs

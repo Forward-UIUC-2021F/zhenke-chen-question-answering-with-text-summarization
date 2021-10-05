@@ -32,7 +32,7 @@ USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
 # SEARCH_ENGINE_CX = "64828619eec714ab8"
 
 
-class CollectData:
+class CollectData():
 
     def __init__( self ):
         pass

@@ -40,7 +40,7 @@ EPOCHS = 100
 BATCH_SIZE = 128
 
 
-class TrainModel:
+class TrainModel():
 
     def __init__( self ):
         pass
