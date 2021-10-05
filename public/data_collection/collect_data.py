@@ -26,12 +26,16 @@ TIME_OUT = 60
 # parameters setting for the Google Programmable Search Engine, which can be modified based on different users
 USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36"
 
+
 # These parameters for Google API are not used now
 # GOOGLE_CLOUD_KEY = "AIzaSyA-Wb9q_61coW7iPJtGlJJOrB9oTRAdcVg"
 # SEARCH_ENGINE_CX = "64828619eec714ab8"
 
 
-class CollectData():
+class CollectData:
+
+    def __self__( self ):
+        pass
 
     # This Google API is not used now 
 
@@ -105,3 +109,6 @@ class CollectData():
         return original_text
 
         
+def main():
+
+    return 0
