@@ -6,7 +6,6 @@
 '''
 
 # import the necessary fucntions from other files
-from keras.layers.core import Dropout
 from access_training_data import AccessTrainingData
 
 # import the required packages
@@ -219,7 +218,7 @@ def main():
     plt.savefig("./figures/model_mae", dpi = 300)
     plt.show()
 
-    return 0
+    return
 
 if __name__ == "__main__":
     main()
