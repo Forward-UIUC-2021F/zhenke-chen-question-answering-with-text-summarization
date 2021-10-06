@@ -14,7 +14,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
 
-
 # import the keras package for CNN model construction
 from tensorflow import keras
 from keras.models import Sequential
@@ -24,6 +23,7 @@ from keras import metrics
 from keras.layers import Conv2D, MaxPooling2D
 from keras.layers import Dense, Flatten, Dropout
 from keras import regularizers, losses
+from keras.utils import plot_model
 
 
 # define the CNN model hyperparameters
@@ -118,7 +118,7 @@ class TrainModel():
         return model
 
 
-    def train_model( model, training_data, target_data):
+    def train_model( model, training_data, target_data ):
 
         '''
             Train the CNN model based on the given training hyperparameters with the keras package
@@ -147,4 +147,79 @@ class TrainModel():
 
 def main():
 
+    '''
+        There are three steps for the model training process:
+        1. Construct the CNN model with pre-set hyperparameters
+        2. Train the model with pre-set training hyperparameters
+        3. Visualize the training process and result
+
+        Keyword arguments:
+        None
+
+        P.S. The hyperparameters for CNN model training are set above. And the training data is from the file access_training_data
+    '''
+
+    # access the training data and target data from access_training_data
+    access_data = AccessTrainingData()
+    x_data, y_data = access_data.load_data()
+    data_size = (
+        1,
+        x_data.shape[2],
+        x_data.shape[3]
+    )
+
+    model_training = TrainModel()
+
+    # construct the CNN model with pre-set hyperparameters
+    CNN_model = model_training.construct_model( data_size )
+
+    # train the CNN model with pre-set training hyperparameters
+    training_status = model_training.train_model( CNN_model, x_data, y_data )
+
+    # save the model
+    CNN_model.model.save('CNN_model.h5')
+
+    # show the figure of the model
+    plot_model(
+        model = CNN_model,
+        show_shapes = True,
+        show_layer_names = True,
+        expand_dim = False,
+        dpi = 300,
+        to_file = "model.png"
+    )
+
+    # plot the model accuracy
+    plt.plot(training_status.history['acc'])
+    plt.plot(training_status.history['val_acc'])
+    plt.title('Model accuracy')
+    plt.ylabel('Accuracy')
+    plt.xlabel('Epoch')
+    plt.legend(['Train', 'Test'], loc='upper left')
+    plt.savefig("model_accuracy.png", dpi = 300)
+    plt.show()
+
+    # plot the model loss
+    plt.plot(training_status.history['loss'])
+    plt.plot(training_status.history['val_loss'])
+    plt.title('Model loss')
+    plt.ylabel('Loss')
+    plt.xlabel('Epoch')
+    plt.legend(['Train', 'Test'], loc='upper left')
+    plt.savefig("model_loss.png", dpi = 300)
+    plt.show()
+
+    # plot the model mean absolute error
+    plt.plot(training_status.history['mean_absolute_error'])
+    plt.plot(training_status.history['val_mean_absolute_error'])
+    plt.title('Model mean absolute error')
+    plt.ylabel('MAE')
+    plt.xlabel('Epoch')
+    plt.legend(['Train', 'Test'], loc='upper left')
+    plt.savefig("model_mae", dpi = 300)
+    plt.show()
+
     return 0
+
+if __name__ == "__main__":
+    main()
