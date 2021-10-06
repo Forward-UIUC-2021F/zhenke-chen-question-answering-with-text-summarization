@@ -177,7 +177,7 @@ def main():
     training_status = model_training.train_model( CNN_model, x_data, y_data )
 
     # save the model
-    CNN_model.model.save('CNN_model.h5')
+    CNN_model.model.save('./models/CNN_model.h5')
 
     # show the figure of the model
     plot_model(
@@ -186,7 +186,7 @@ def main():
         show_layer_names = True,
         expand_dim = False,
         dpi = 300,
-        to_file = "model.png"
+        to_file = "./figures/model.png"
     )
 
     # plot the model accuracy
@@ -196,7 +196,7 @@ def main():
     plt.ylabel('Accuracy')
     plt.xlabel('Epoch')
     plt.legend(['Train', 'Test'], loc='upper left')
-    plt.savefig("model_accuracy.png", dpi = 300)
+    plt.savefig("./figures/model_accuracy.png", dpi = 300)
     plt.show()
 
     # plot the model loss
@@ -206,7 +206,7 @@ def main():
     plt.ylabel('Loss')
     plt.xlabel('Epoch')
     plt.legend(['Train', 'Test'], loc='upper left')
-    plt.savefig("model_loss.png", dpi = 300)
+    plt.savefig("./figures/model_loss.png", dpi = 300)
     plt.show()
 
     # plot the model mean absolute error
@@ -216,7 +216,7 @@ def main():
     plt.ylabel('MAE')
     plt.xlabel('Epoch')
     plt.legend(['Train', 'Test'], loc='upper left')
-    plt.savefig("model_mae", dpi = 300)
+    plt.savefig("./figures/model_mae", dpi = 300)
     plt.show()
 
     return 0
