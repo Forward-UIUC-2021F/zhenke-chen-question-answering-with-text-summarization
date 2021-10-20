@@ -199,7 +199,7 @@ def main( question, res_num ):
         file.write(text_list[text_id])
         # to make the demonstration more clear, split each result with three blank lines
         if text_id != len(text_list) - 1:
-            file.write("\n\n\n")
+            file.write("######\n")
     file.close()
 
     return text_list
