@@ -13,20 +13,28 @@ import openai
 
 
 # OpenAI API parameters setting
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 # define the file path which stores the original file
-FILE_PATH = "xxx"
+FILE_PATH = "./public/data_collection/original_text.txt"
+
+
+# define the mark for the OpenAI API to recognize
+MARK = "tl;dr:"
 
 
 # define the parameters for OpenAI API
 ENGINE = "davinci"
 TEMPERATURE = 0.3
-MAX_TOKENS = 100
+MAX_TOKENS = 300
 TOP_P = 1.0
 FREQ_P = 0.0
 PRE_P = 0.0
+
+
+# define the mark to separate text from different sources while storing in the file
+DELIMETER = "######"
 
 
 class TextSummarizer():
@@ -44,6 +52,40 @@ class TextSummarizer():
             file_path -- the file path for the original text file
         '''
 
+        original_text = []
+        tmp_text = ""
+        space_mark = 0
+
+        # read the original text file and fetch the text
+        with open(file_path, "r") as f:
+            data = f.readlines()
+            for i in range(len(data)):
+                line = data[i].strip("\n")
+                if line == DELIMETER:
+                    original_text.append(tmp_text)
+                    tmp_text = ""
+                    space_mark = 0
+                elif line != DELIMETER:
+                    if i != len(data) - 1 and space_mark == 1:
+                        tmp_text += " " + line
+                    elif i != len(data) - 1 and space_mark == 0:
+                        tmp_text += line
+                        space_mark = 1
+                    else:
+                        original_text.append(tmp_text)
+        f.close()
+
+        # print(len(original_text))
+        # print(original_text)
+
+        # add the "tl;dr" to the end of text from every source
+        for i in range(len(original_text)):
+            original_text[i] += "\n" + MARK
+
+        # print(original_text)
+
+        return original_text
+                    
 
     def text_summarization( self, original_text ):
 
@@ -54,39 +96,59 @@ class TextSummarizer():
             original_text -- the original text to be summarized
         '''
 
-        response = openai.Completion.create(
+        get_result = 0
+        cut = 1
+        length = len(original_text)
+        # print(length)
+        tmp_text = original_text
 
-            # define the NLP engine
-            # davinci proper for Text Summarization
-            engine = ENGINE,
+        while(get_result == 0):
+            try:
+                response = openai.Completion.create(
 
-            # define the text to be summarize
-            prompt = original_text,
+                    # define the NLP engine
+                    # davinci proper for Text Summarization
+                    engine = ENGINE,
 
-            # define the randomness for completion
-            # lower for less random
-            temperature = TEMPERATURE,
+                    # define the text to be summarize
+                    prompt = tmp_text,
 
-            # define the maximum output tokens
-            # approximately four characters for one token
-            max_tokens = MAX_TOKENS,
+                    # define the randomness for completion
+                    # lower for less random
+                    temperature = TEMPERATURE,
 
-            # define diversity via nucleus sampling
-            top_p = TOP_P,
+                    # define the maximum output tokens
+                    # approximately four characters for one token
+                    max_tokens = MAX_TOKENS,
 
-            # define how much to penalize the new tokens based on their existing frequency
-            # increase the value will decrease the likelihood to repeat the same line verbatim
-            frequency_penalty = FREQ_P,
+                    # define diversity via nucleus sampling
+                    top_p = TOP_P,
 
-            # define how much to penalize the new tokens based on whether they appear in the text so far
-            # increase the value will increase the likelihood to discuss about new topics
-            presence_penalty = PRE_P
-        )
+                    # define how much to penalize the new tokens based on their existing frequency
+                    # increase the value will decrease the likelihood to repeat the same line verbatim
+                    frequency_penalty = FREQ_P,
+
+                    # define how much to penalize the new tokens based on whether they appear in the text so far
+                    # increase the value will increase the likelihood to discuss about new topics
+                    presence_penalty = PRE_P
+                )
+            
+            # deal with the case when the original text is too long
+            except openai.error.InvalidRequestError:
+                tmp_text = tmp_text[:int((10-cut)/10*length)]
+                tmp_text += "\n" + MARK
+                # print(tmp_text)
+                cut += 1
+
+            else:
+                get_result = 1
 
         # print(response)
-        print(response["choices"][0]["text"])
+        # print(response["choices"][0]["text"])
 
-        return
+        summarized_text = response["choices"][0]["text"]
+
+        return summarized_text
 
     
 def main():
@@ -102,10 +164,19 @@ def main():
 
     text_summarizing = TextSummarizer()
 
-    text = "A neutron star is the collapsed core of a massive supergiant star, which had a total mass of between 10 and 25 solar masses, possibly more if the star was especially metal-rich.[1] Neutron stars are the smallest and densest stellar objects, excluding black holes and hypothetical white holes, quark stars, and strange stars.[2] Neutron stars have a radius on the order of 10 kilometres (6.2 mi) and a mass of about 1.4 solar masses.[3] They result from the supernova explosion of a massive star, combined with gravitational collapse, that compresses the core past white dwarf star density to that of atomic nuclei. tl;dr"
+    # get the converted text usable for Text Summarizer
+    original_text = text_summarizing.convert_file(FILE_PATH)
 
-    text_summarizing.text_summarization(text)
+    # apply the first piece of text for testing
+    text = original_text[0]
+    # print(text)
+    
+    # summarize the text with OpenAPI
+    answer = text_summarizing.text_summarization(text)
+    print("++++++++++ SUMMARIZED ANSWER ++++++++++")
+    print(answer)
 
+    return
 
 
 
