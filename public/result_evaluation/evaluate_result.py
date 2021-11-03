@@ -21,6 +21,7 @@ class ResultEvaluation():
     def __init__( self ):
         pass
 
+
     def get_rouge_scores( self, test_text, reference_text ):
 
         '''
