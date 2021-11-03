@@ -22,6 +22,7 @@ from googlesearch import search
 STRING_LENGTH = 5
 DOC = "./public/data_collection/tmp_website.html"
 DOC_2 = "./public/data_collection/original_text.txt"
+DOC_3 = "./public/data_collection/original_text_with_paragraphs.txt"
 TIME_OUT = 60
 FAIL = -1
 
@@ -129,9 +130,12 @@ class CollectData():
         '''
 
         original_text = []
+        original_text_2 = []
+
         for website_idx in range(result_num):
 
             tmp_text = ""
+            tmp_text_2 = ""
 
             # store the website into the temporary file
             url = websites[website_idx]
@@ -147,8 +151,12 @@ class CollectData():
             for p_idx in soup.select("p"):
                 if len(p_idx.get_text().split()) > STRING_LENGTH:
                     tmp_text += p_idx.get_text()
+                    # tmp_text_2 += p_idx.get_text() + "\n"
+                    original_text_2.append(p_idx.get_text())
+
             
             original_text.append(tmp_text)
+            # original_text_2.append(tmp_text)
             
             # The loop is too long for the one-line coding style
             # original_text = [p_idx.get_text() for p_idx in soup.select("p") if len(p_idx.get_text().split()) > STRING_LENGTH]
@@ -161,7 +169,7 @@ class CollectData():
         if len(original_text) != result_num:
             original_text = FAIL
 
-        return original_text
+        return [original_text, original_text_2]
 
         
 def main( question, res_num ):
@@ -185,7 +193,9 @@ def main( question, res_num ):
         print("The Google Search is invalid.")
         text_list = FAIL
     else:
-        text_list = collect_data.web_clawer(website_list, res_num)
+        text_list = collect_data.web_clawer(website_list, res_num)[0]
+        text_list_2 = collect_data.web_clawer(website_list, res_num)[1]
+
         # test if the Web Clawer results are valid
         if text_list == FAIL:
             print("The Web Clawer is invalid.")
@@ -206,12 +216,19 @@ def main( question, res_num ):
             file.write(DELIMETER + "\n")
     file.close()
 
+    file_2 = open(DOC_3, "w", encoding = "UTF-8")
+    for text_id in range(len(text_list_2)):
+        file_2.write(text_list_2[text_id])
+        if text_id != len(text_list) - 1:
+            file_2.write(DELIMETER + "\n")
+    file_2.close()
+
     return text_list
 
 
 if __name__ == "__main__":
     question = "What is TensorFlow?"
-    number = 3
+    number = 6
     if main(question, number) == FAIL:
         print("++++++++++ DATA COLLECTION FAIL ++++++++++")
     else:

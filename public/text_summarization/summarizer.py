@@ -12,6 +12,10 @@ import os
 import openai
 
 
+# import the retrieval from another file
+from retrieval import Retrieval
+
+
 # OpenAI API parameters setting
 openai.api_key = "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"
 
@@ -151,10 +155,10 @@ class TextSummarizer():
         return summarized_text
 
     
-def main():
+def main1():
 
     '''
-        There are mainly two steps to summarize the text 
+        There are mainly two steps to summarize the text
         1. Convert the original text extracted from Google Search results to the form recognized by the OpenAI API
         2. Abstractively summarize the text with the OpenAI API
 
@@ -179,6 +183,22 @@ def main():
     return
 
 
+def main2():
+
+    '''
+        There are mainly three steps to summarize the text
+        1. Apply the DPR retrieval to evaluate the relevance between the question and text from Google Search
+        2. Select the ones most relevant as the input for OpenAI API to do the Text Summarization
+        3. Abstractively summarize the text with the OpenAI API
+    '''
+
+    text_summarizing = TextSummarizer()
+    text_retrieval = Retrieval()
+
+    return
+
+
 
 if __name__ == "__main__":
-    main()
+    # main1()
+    main2()
