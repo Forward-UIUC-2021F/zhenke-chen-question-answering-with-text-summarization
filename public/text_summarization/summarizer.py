@@ -13,7 +13,7 @@ import openai
 
 
 # OpenAI API parameters setting
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 # define the file path which stores the original file
