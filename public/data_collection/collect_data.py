@@ -29,9 +29,9 @@ FAIL = -1
 USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36"
 
 
-# These parameters for Google API are not used now
-GOOGLE_CLOUD_KEY = "AIzaSyA-Wb9q_61coW7iPJtGlJJOrB9oTRAdcVg"
-SEARCH_ENGINE_CX = "64828619eec714ab8"
+# These parameters for Google API are not used now, so they are deleted for protection
+GOOGLE_CLOUD_KEY = None
+SEARCH_ENGINE_CX = None
 
 
 class CollectData():
