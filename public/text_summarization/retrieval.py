@@ -30,6 +30,10 @@ FILE_PATH_2 = "./public/data_collection/original_text_with_paragraphs.txt"
 DELIMETER = "######"
 
 
+# define the number of paragraphs to construct the original text
+PARA_NUM = 5
+
+
 class Retrieval():
 
     def __init__( self ):
@@ -46,35 +50,25 @@ class Retrieval():
             file_path -- the path of file string the text from Google Search and Data Clawer
         '''
 
-        raw_text = []
-        tmp_text = ""
-        space_mark = 0
+        text_list = []
+        idx = 0
 
         # read the original text file and fetch the text as certain format with ID
         with open(file_path, "r") as f:
             data = f.readlines()
             for i in range(len(data)):
-                line = data[i].strip("\n")
-                if line == DELIMETER:
-                    raw_text.append(tmp_text)
-                    tmp_text = ""
-                    space_mark = 0
-                elif line != DELIMETER:
-                    if i != len(data) - 1 and space_mark == 1:
-                        tmp_text += " " + line
-                    elif i != len(data) - 1 and space_mark == 0:
-                        tmp_text += line
-                        space_mark = 1
-                    else:
-                        raw_text.append(tmp_text)
+                if len(data[i]) > 50:
+                    idx += 1
+                    text_list.append([str(idx), data[i]])
+        
+        # print out the text list for testing
+        # for i in text_list:
+        #     print(i)
+        # print(len(text_list))
+        
         f.close()
 
-        # print(len(raw_text))
-        # print(raw_text)
-
-        # todo
-
-        return
+        return text_list
 
 
     def select_paragraphs( self, question, passages, paragraph_num ):
@@ -104,8 +98,8 @@ class Retrieval():
         texts = [ Text(p[1], {'docid': p[0]}, 0) for p in passages]
 
         # print out the ranking before the reranking
-        for i in range(0, len(passages)):
-            print(f'{i+1:2} {texts[i].metadata["docid"]:15} {texts[i].score:.5f} {texts[i].text}')
+        # for i in range(0, len(passages)):
+        #     print(f'{i+1:2} {texts[i].metadata["docid"]:15} {texts[i].score:.5f} {texts[i].text}')
 
         # re-rank
         reranked = reranker.rerank(query, texts)
@@ -115,20 +109,20 @@ class Retrieval():
             print(f'{i+1:2} {reranked[i].metadata["docid"]:15} {reranked[i].score:.5f} {reranked[i].text}')
             tmp_score = reranked[i].score
             ranking_result[tmp_score] = reranked[i].text
+        print("")
 
         # sort out the ranking result with scores from high to low
         # then output the ones with the highest socres
         sorted_reranked = sorted(ranking_result, reverse = True)
+        # print(sorted_reranked)
         for i in range(paragraph_num):
-            original_text += ranking_result[sorted_reranked[i]]
+            original_text += ranking_result[sorted_reranked[i]].strip('\n')
             if i != paragraph_num - 1:
                 original_text += " "
         # print(original_text)
         # print(len(original_text))
 
         return original_text
-
-
 
 
 
@@ -144,13 +138,18 @@ def main():
     retrieval = Retrieval()
 
     # define the question and possible answers for testing
-    question = "What is Natural Language Processing?"
+    test_question = "What is Natural Language Processing?"
     test_passages = [["1", "The Python programing language provides a wide range of tools and libraries for attacking specific NLP tasks. Many of these are found in the Natural Language Toolkit, or NLTK, an open source collection of libraries, programs, and education resources for building NLP programs."], ["2", "Natural language processing (NLP) refers to the branch of computer science—and more specifically, the branch of artificial intelligence or AI—concerned with giving computers the ability to understand text and spoken words in much the same way human beings can."], ["3", "I wish I have a cat."], ["4","IBM has innovated in the artificial intelligence space by pioneering NLP-driven tools and services that enable organizations to automate their complex business processes while gaining essential business insights."]]
 
-    retrieval.process_text(FILE_PATH_1)
+    # extract the passage from the stored file and convert to the certain format with ID
+    passages = retrieval.process_text(FILE_PATH_1)
+    question = "What is data structure?"
 
-    # retrieval.select_paragraphs(question, test_passages, 4)
+    # apply the retrieval to get the top related pieces of text and combine them as the original text
     # retrieval.select_paragraphs(question, test_passages, 3)
+    result = retrieval.select_paragraphs(question, passages, PARA_NUM)
+    print("+++++++++ Original Text +++++++++")
+    print(result)
 
     return
 
