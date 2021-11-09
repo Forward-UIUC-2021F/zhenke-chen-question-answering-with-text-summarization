@@ -94,6 +94,12 @@ class CollectData():
             # test the websites list
             # print(i)
 
+        # print out the source of the original text
+        print("\nThe results are from:")
+        for i in websites_list:
+            print (i)
+        print("")
+        
         # check if the websites number fits the requirement
         if len(websites_list) != result_num:
             print("The number of websites does not match the requirement.")
@@ -227,9 +233,9 @@ def main( question, res_num ):
 
 
 if __name__ == "__main__":
-    question = "What is TensorFlow?"
+    question = "What is data structure?"
     number = 6
     if main(question, number) == FAIL:
-        print("++++++++++ DATA COLLECTION FAIL ++++++++++")
+        print("++++++++++ DATA COLLECTION FAIL ++++++++++\n")
     else:
-        print("++++++++++ DATA COLLECTION SUCCESS ++++++++++")
+        print("++++++++++ DATA COLLECTION SUCCESS ++++++++++\n")
