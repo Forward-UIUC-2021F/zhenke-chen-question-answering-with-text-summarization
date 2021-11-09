@@ -39,6 +39,10 @@ SEARCH_ENGINE_CX = None
 DELIMETER = "######"
 
 
+# define the overload number of webistes got from googlesearch
+OVERLOAD_NUM = 30
+
+
 class CollectData():
 
     def __init__( self ):
@@ -77,22 +81,38 @@ class CollectData():
             result_num -- the intended result number (default 2)
         '''
 
+        raw_websites_list = []
         websites_list = []
+        existed_websites_list = []
+        tmp_num = 0
 
-        # apply the googlesearch package to get the websites list
+        # apply the googlesearch package to get the raw websites list,
+        # which has the overload number of websites to avoid the irrelevant websites
         for i in search(
             query = question,           # define the question to search
             tld = "com",                # define the top level domain
             lang = "en",                # define the searching language
             num = 10,                   # define the number of results per page
             start = 0,                  # define the first result to retrieve
-            stop = result_num,          # define the last result to retrieve
+            stop = OVERLOAD_NUM,          # define the last result to retrieve
             pause = 2.0                 # define the lapse to wait between HTTP requests
         ):
-            websites_list.append(i)
-
-            # test the websites list
-            # print(i)
+            raw_websites_list.append(i)
+            
+        # for i in raw_websites_list:
+        #     print(i)
+        
+        for web in raw_websites_list:
+            if tmp_num >= result_num:
+                break
+            main_part = web.split("//")[1]
+            main_part_1 = main_part.split("/")[0]
+            # print(main_part)
+            # print(main_part_1)
+            if main_part_1 not in existed_websites_list:
+                existed_websites_list.append(main_part_1)
+                websites_list.append(web)
+                tmp_num += 1
 
         # print out the source of the original text
         print("\nThe results are from:")

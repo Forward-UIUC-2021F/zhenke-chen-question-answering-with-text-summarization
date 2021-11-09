@@ -106,10 +106,10 @@ class Retrieval():
 
         # print out and store the re-ranked results
         for i in range(0, len(passages)):
-            print(f'{i+1:2} {reranked[i].metadata["docid"]:15} {reranked[i].score:.5f} {reranked[i].text}')
+            # print(f'{i+1:2} {reranked[i].metadata["docid"]:15} {reranked[i].score:.5f} {reranked[i].text}')
             tmp_score = reranked[i].score
             ranking_result[tmp_score] = reranked[i].text
-        print("")
+        # print("")
 
         # sort out the ranking result with scores from high to low
         # then output the ones with the highest socres
@@ -123,7 +123,6 @@ class Retrieval():
         # print(len(original_text))
 
         return original_text
-
 
 
 def main():

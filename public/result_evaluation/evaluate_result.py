@@ -39,6 +39,20 @@ class ResultEvaluation():
 
         # return the Rouge scores according to the type of scores
         return rouge_score[ROUGE_SCORE_TYPE]
+    
+    
+    def get_retrieval_scores( self, question, test_text ):
+        
+        '''
+            Get the DPR Retrieval socres for relevance based on the comparison
+            between the question and summarized text
+            
+            Keyword arguments:
+            question -- the question asked by the user
+            test_text -- the summarized text 
+        '''
+        
+        return
 
 
 def main():

@@ -17,7 +17,7 @@ from retrieval import Retrieval
 
 
 # OpenAI API parameters setting
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 # define the file path which stores the original file
@@ -39,6 +39,10 @@ PRE_P = 0.0
 
 # define the mark to separate text from different sources while storing in the file
 DELIMETER = "######"
+
+
+# define the number of paragraphs to construct the original text
+PARA_NUM = 5
 
 
 class TextSummarizer():
@@ -194,6 +198,33 @@ def main2():
 
     text_summarizing = TextSummarizer()
     text_retrieval = Retrieval()
+    
+    # define the question and passge before retrieval
+    question = "What is data structure?"
+    passage = text_retrieval.process_text(FILE_PATH)
+    
+    # apply the DPR Retrieval to get the orginal text
+    original_text = text_retrieval.select_paragraphs(question, passage, PARA_NUM)
+    original_text += "\n" + MARK
+    print("++++++++++ ORIGINAL TEXT ++++++++++")
+    print(original_text)
+    print("")
+    
+    # summarize the text and get the result
+    answer = text_summarizing.text_summarization(original_text)
+    
+    # make sure the last piece of the result is a complete sentence
+    if answer[len(answer) - 1] != ".":
+        answer = answer.split(".")[:len(answer.split(".")) - 1]
+    tmp_answer = ""
+    for i in range(len(answer)):
+        if i != len(answer) - 1:
+            tmp_answer += answer[i] + "."
+        if i == len(answer):
+            tmp_answer += answer[i]
+    answer += "."
+    print("++++++++++ SUMMARIZED ANSWER ++++++++++")
+    print(tmp_answer)
 
     return
 
