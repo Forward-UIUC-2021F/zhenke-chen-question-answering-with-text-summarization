@@ -66,12 +66,12 @@ def optimizeResultsWithConcept( keywords, resNum, originalText ):
    * training_data: training data with sentences from original text
    * word2vec_word_num: number of words used in word embedding with word2vec
    * word_num: maximum number of words to keep (with relatively large frequency)
-* ***Output***: trained model -->
+* ***Output***: trained model
 ```python
 def train_model( reference_text, training_data, word2vec_word_num, word_num ):
    xxxxxx
    return trained_model
-```
+``` -->
 
 <!-- ### Function 3 preprocess
 * ***Functionality***: Preprocess the sentences from original text by Rouge method compared with reference data to get each sentence's saliency scores
@@ -137,19 +137,18 @@ def summarizer( original_text ):
    return summarized_text
 ```
 
-## Module 3: Text Summarization
-### Function 2 retrieval
-* ***Functionality***: Apply the Dense Passage Retrieval (DPR) to evaluate and rank the relevance between the question and text, then select the most relevant ones as the original text
+## Module 3: Result Evaluation
+### Function 4 rouge_evaluation
+* ***Functionality***: Apply the Rouge scores to evaluate the summarized text compared with the reference text
 * ***Input***:
-   * question: the question asked by the user
-   * raw_text: the raw text fetched from the Data Collection module 
-   * paragraph_num: the number of paragraphs user wants to apply for the original text
+   * summarized_text: the text from the result of Text Summarization module
+   * reference_text: the reference text to test if the summarization is good enough
 * ***Output***:
-   * original_text: the text most relevant to the question, which is ranked by DPR
+   * rouge_scores: the Rouge-L scores, with Pricision (higher the better), Recall (higher the better) and F-Measure (higher the better)
 ```python
-def retrieval( question, raw_text, paragraph_num ):
+def rouge_evaluation( summarized_text, reference_text ):
    xxxxxx
-   return original_text
+   return rouge_scores
 ```
 
 <!-- ## Module 3: Results Selection and Evaluation
