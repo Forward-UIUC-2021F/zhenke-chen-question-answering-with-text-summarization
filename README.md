@@ -262,8 +262,9 @@ def getAnswer( searchResNum, keywords, sentenceNum ):
 There are three parts of algorithmic designs for this project, which are corresponding the three parts from the functional design, which are **Data Collection**, **Model Training** as well as **Results Selection and Evaluation**.
 
 ## Module 1: Data Collection
-* For data collection, since the data are collected from the Google Search, the websites of raw text result corresponding to the questions will be listed by the **APIs** offered by Google.
-* Then, with the **BeautifulSoup** web clawer, the raw text will be extracted from the raw website data and compose the original text for the text summarization.<br>
+* For data collection, since the data are collected from the Google Search, the websites of raw text result corresponding to the questions will be listed by the google search **APIs**
+* Then, with the **BeautifulSoup** web clawer, the raw text will be extracted from the raw website data and compose the original text for the text summarization.
+* However, because of the design of googlesearch API, some of the subpages in the Google Search result page will also be caught into the websites list, which have the less relevant content with the question. To solve this problem, I will checkout the websites, if they have the same prefix, then the second one will not be accepted.<br>
 <!-- * Then, since some of the searching results may not be relevant enough with the keywords presented by the user, there will be a filter algorithm to opimize the searching results. In details, the ones most related to the concept will be chosed to form the text to be summarized. For this part, I will temporarily apply the algorithms from Zicheng to pursue the best performance.<br> -->
 
 
