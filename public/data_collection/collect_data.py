@@ -34,6 +34,10 @@ GOOGLE_CLOUD_KEY = "AIzaSyA-Wb9q_61coW7iPJtGlJJOrB9oTRAdcVg"
 SEARCH_ENGINE_CX = "64828619eec714ab8"
 
 
+# define the mark to separate text from different sources while storing in the file
+DELIMETER = "######"
+
+
 class CollectData():
 
     def __init__( self ):
@@ -199,14 +203,14 @@ def main( question, res_num ):
         file.write(text_list[text_id])
         # to make the demonstration more clear, split each result with three blank lines
         if text_id != len(text_list) - 1:
-            file.write("\n\n\n")
+            file.write(DELIMETER + "\n")
     file.close()
 
     return text_list
 
 
 if __name__ == "__main__":
-    question = "What is NLP?"
+    question = "What is TensorFlow?"
     number = 3
     if main(question, number) == FAIL:
         print("++++++++++ DATA COLLECTION FAIL ++++++++++")
