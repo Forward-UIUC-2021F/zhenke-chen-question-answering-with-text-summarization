@@ -38,7 +38,8 @@ def getGoogleResults( question, resNum, conditionId ):
    * keywords: the keywords for the question
    * res_num: the number of results as original text for summarization
    <br>e.g. if the conditions are pre-defined with specific id for each one, such as only with “.edu“ websites, then the source of original text will only be ".edu" websites
-* ***Output***: Original text stored in a list of length res_num, with each element from one piece of Google Search result
+* ***Output***:
+   * original_text: the text stored in a list of length res_num, with each element from one piece of Google Search result
 ```python
 def get_google_results( keywords, res_num ):
    xxxxxx
@@ -151,6 +152,19 @@ def rouge_evaluation( summarized_text, reference_text ):
    return rouge_scores
 ```
 
+### Function 5 DPR_evaluation
+* ***Functionality***: Apply the DPR scores to evaluate the relevance between the question and summarized text
+* ***Input***:
+   * summarized_text: the text from the result of Text Summarization module
+   * question: the question asked by the user
+* ***Output***:
+   * DPR_scores: the DPR retrieval scores, when it is closer to 0, the relevance between the question and summarizer is larger
+```python
+def DPR_evaluation( summarized_text, question ):
+   xxxxxx
+   return DPR_scores
+```
+
 <!-- ## Module 3: Results Selection and Evaluation
 ### Function 3 get_result
 * ***Functionality***: Get the saliency scores from the trained model and select the sentences with highest scores
@@ -158,12 +172,12 @@ def rouge_evaluation( summarized_text, reference_text ):
    * model: trained model
    * sentence_num: number of sentences from the summarization
    * threshold: limit the similarity if the sentences with all the sentences already in the summary
-* ***Output***: summarized text -->
+* ***Output***: summarized text
 ```python
 def get_result ( data, model, sentence_num, threshold ):
    xxxxxx
    return summarized_text
-```
+``` -->
 
 <!-- ### Function 6 getModelOutput
 * ***Functionality***: Get the saliency scores output by the trained model
