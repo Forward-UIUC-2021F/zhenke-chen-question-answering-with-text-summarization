@@ -3,17 +3,28 @@
     @date 2/11/2021
 
     Apply Rouge-L to evaluate the Text Summarization result
+    Apply DPR Retrieval to evaluate the relavance between the question and text
 '''
 
 
 # import the required packages
 import rouge
 from rouge import Rouge
+import pygaggle
+from pygaggle.rerank.base import Query, Text
+from pygaggle.rerank.transformer import MonoT5
+from pygaggle.rerank.transformer import MonoBERT
+from pyserini.search import SimpleSearcher
+from pygaggle.rerank.base import hits_to_texts
 
 
 # define the parameters for Rouge evaluation
 GET_SCORE_AVG = True
 ROUGE_SCORE_TYPE = "rouge-l"
+
+
+# apply the proper transformer for the DPR
+reranker = MonoT5()
 
 
 class ResultEvaluation():
@@ -52,7 +63,18 @@ class ResultEvaluation():
             test_text -- the summarized text 
         '''
         
-        return
+        # define the query
+        query = Query(question)
+        
+        # transfer the format of the test text to fit the retrieval
+        text = [["1", test_text]]
+        texts = [ Text(p[1], {'docid': p[0]}, 0) for p in text]
+        
+        # get the evaluation scores
+        reranked = reranker.rerank(query, texts)
+        print(reranked)
+        
+        return reranked[0].score
 
 
 def main():
@@ -68,11 +90,14 @@ def main():
     '''
 
     result_evaluation = ResultEvaluation()
+    
+    # define the question to test
+    question = "What is Natural Language Processing?"
 
     # input the test text and reference text
     # for comparison, there are two groups of test text
 
-    test_text_1 = ["Natual language processing is a science to help computer interact with, process and analyze human language. The computer is expected to understand the data from the language."]
+    test_text_1 = ["Natural language processing is a science to help computer interact with, process and analyze human language. The computer is expected to understand the data from the language."]
 
     test_text_2 = ["Natural language processing has its roots in the 1950s. Already in 1950, Alan Turing published an article titled Computing Machinery and Intelligence which proposed what is now called the Turing test as a criterion of intelligence, a task that involves the automated interpretation and generation of natural language, but at the time not articulated as a problem separate from artificial intelligence."]
 
@@ -80,11 +105,17 @@ def main():
 
     # output the Rouge result for each group
 
-    print("+++++++++ Rouge Result for Group 1 +++++++++")
+    print("\n+++++++++ Rouge Result for Group 1 +++++++++")
     print(result_evaluation.get_rouge_scores(test_text_1, reference_text))
 
-    print("+++++++++ Rouge Result for Group 2 +++++++++")
+    print("\n+++++++++ Rouge Result for Group 2 +++++++++")
     print(result_evaluation.get_rouge_scores(test_text_2, reference_text))
+    
+    print("\n+++++++++ DPR Result for Group 1 +++++++++")
+    print(result_evaluation.get_retrieval_scores(question, test_text_1))
+    
+    print("\n+++++++++ DPR Result for Group 2 +++++++++")
+    print(result_evaluation.get_retrieval_scores(question, test_text_2))
 
 
 if __name__ == "__main__":
