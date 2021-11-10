@@ -126,7 +126,7 @@ def retrieval( question, raw_text, paragraph_num ):
    return original_text
 ```
 
-### Function 3 text_summarizer
+### Function 3 summarizer
 * ***Functionality***: Apply the OpenAI GPT-3 Abstractive Text Summarization model to summarize the original text
 * ***Input***:
    * original_text: the original text to be summarized
