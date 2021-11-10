@@ -270,17 +270,22 @@ There are three parts of algorithmic designs for this project, which are corresp
 
   ![Routine for Module 1](https://github.com/Forward-UIUC-2021F/Question-answering-with-extracted-text-summarization/blob/milestone_1/Images_for_md/Module_1.png)
 
-## Module 2: Model Training
+<!-- ## Module 2: Model Training
 * For data training, in order to provide comparison for supervised learning, the train data will be preprocessed. The widely-accepted automatic summarization evaluation metric, ROUGE, is applied to get the salience score for each sentence. Those scores will be used in a further training process.
 * To promote the performance of training, the raw training data, also known as sentences, are not used as inputs directly. Instead, the word embedding technique, **word2vec** will be applied to make better use of the semantic and grammatical association of words. So, the human feature enginnering is not needed.
 * For the training, the Convolutional Neural Networds (**CNN**) is applied with Convolution (Sigmoid as Activation Function), Max-pooling and Regularization. And the goal is to minimized the cross-entropy (CE) compared with the salience scores from train data.<br>
 
-   ![CNN Training Model](https://github.com/Forward-UIUC-2021F/Question-answering-with-extracted-text-summarization/blob/milestone_1/Images_for_md/Module_2.png)
+   ![CNN Training Model](https://github.com/Forward-UIUC-2021F/Question-answering-with-extracted-text-summarization/blob/milestone_1/Images_for_md/Module_2.png) -->
+   
+## Module 2: Text Summarization
+* In this module, it mainly completes the task of Text Summarization. There are two steps. The first one is to choose the most relevant paragraphs from the raw text fetch from the websites compared with the question to compose the original text for Text Summarization. And the second step is to apply models to summarize the original text.
+* For the first step, it uses the **Dense Passage Retrieval (DPR)** to evaluate the relevance between the question and paragraphs from the Data Collection model. Then, the DPR will rank the paragraphs based on the relevance, and the most relevant ones will compose the original text.
+* For the second step, it mainly uses the **OpenAI tl;dr** Text Summarization model (with Davinci Model) to summarize the text. Before the summarization, the original text will be preprocessed to the format accepted by the model. Then, the summarizer will summarize the original text and the output will be the answer to the question asked by the user.
 
 ## Module 3: Results Selection and Evaluation
-* To get all the salience scores for the input test results, also known as the text from Google Search, the text needs to be input into the trained model, and the results are salience scores for each sentence.
-* In order to select the most appropriate sentences to form a summary, the salience socres of sentences are compared, and the highest ones will be chosen. In order not collect too many sentences with similar meanings, there is a threahold measuring the similarity of the collected sentences, and if the similarity reaches the threshold, no more similar sentences will be chosen. The routine will start from the beginning until required number of sentences are collected.
-* For performance evaluation after the sentence selection, the **ROUGE-L** method with measurement of **F-Measure** value will be applied. This evaluation perspective considers both the Precision and Recall values. With larger the value, the performance is better.
+* The result evaluation includes the comparision between summarized text and reference text, as well as the comparision between question and answer. 
+* For performance evaluation after the Text Summarization, the **ROUGE-L** method with measurement of Precision, Recall and F-Measure value will be applied. With larger the value, the performance is better.
+* Then, the DPR scores evaluation will be applied to evaluate the relevance between the question and answer (which is also the summarized text). With the scores closest to 0, the answer is most relevant to the question.
 
 # References
 ## Datasets:
