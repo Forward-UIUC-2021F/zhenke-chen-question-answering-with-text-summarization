@@ -39,11 +39,11 @@ def getGoogleResults( question, resNum, conditionId ):
    * res_num: the number of results as original text for summarization
    <br>e.g. if the conditions are pre-defined with specific id for each one, such as only with “.edu“ websites, then the source of original text will only be ".edu" websites
 * ***Output***:
-   * original_text: the text stored in a list of length res_num, with each element from one piece of Google Search result
+   * raw_text: the text stored in a list of length res_num, with each element from one piece of Google Search result
 ```python
 def get_google_results( keywords, res_num ):
    xxxxxx
-   return original_text
+   return raw_text
 ```
 
 <!-- ### Function 2 optimizeResultsWithConcept
@@ -282,7 +282,7 @@ There are three parts of algorithmic designs for this project, which are corresp
 * For the first step, it uses the **Dense Passage Retrieval (DPR)** to evaluate the relevance between the question and paragraphs from the Data Collection model. Then, the DPR will rank the paragraphs based on the relevance, and the most relevant ones will compose the original text.
 * For the second step, it mainly uses the **OpenAI tl;dr** Text Summarization model (with Davinci Model) to summarize the text. Before the summarization, the original text will be preprocessed to the format accepted by the model. Then, the summarizer will summarize the original text and the output will be the answer to the question asked by the user.
 
-## Module 3: Results Selection and Evaluation
+## Module 3: Results Evaluation
 * The result evaluation includes the comparision between summarized text and reference text, as well as the comparision between question and answer. 
 * For performance evaluation after the Text Summarization, the **ROUGE-L** method with measurement of Precision, Recall and F-Measure value will be applied. With larger the value, the performance is better.
 * Then, the DPR scores evaluation will be applied to evaluate the relevance between the question and answer (which is also the summarized text). With the scores closest to 0, the answer is most relevant to the question.
@@ -292,5 +292,11 @@ There are three parts of algorithmic designs for this project, which are corresp
 * Google's Word2vec. Link: https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz.
 * DUC Dataset. Link: https://duc.nist.gov/data.html.
 ## Papers:
-* Extractive Document Summarization Based on Convolutional Neural Networks. Link: https://ieeexplore.ieee.org/document/7793761.
-* Extractive Document Summarization Using Convolutional Neural Networks - Reimplementation. Link: https://leolaugier.github.io/doc/summarization.pdf.
+* Summarizing Papers With Python and GPT-3. Link: https://medium.com/geekculture/a-paper-summarizer-with-python-and-gpt-3-2c718bc3bc88
+* Dense Passage Retrieval for Open-Domain Question Answering. Link: https://arxiv.org/abs/2004.04906
+* ROUGE - A Package for Automatic Evaluation of Summaries. Link: https://www.aclweb.org/anthology/W04-1013.pdf
+## APIs:
+* googlesearch API. Link: https://python-googlesearch.readthedocs.io/en/latest/ 
+* OpenAI API. Link: https://beta.openai.com/docs/introduction
+<!-- * Extractive Document Summarization Based on Convolutional Neural Networks. Link: https://ieeexplore.ieee.org/document/7793761.
+* Extractive Document Summarization Using Convolutional Neural Networks - Reimplementation. Link: https://leolaugier.github.io/doc/summarization.pdf. -->
