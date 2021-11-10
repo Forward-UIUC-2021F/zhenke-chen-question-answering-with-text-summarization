@@ -58,7 +58,7 @@ def optimizeResultsWithConcept( keywords, resNum, originalText ):
    return optimizedText
 ``` -->
 
-## Module 2: Model Training (if necessary for the user)
+<!-- ## Module 2: Model Training (if necessary for the user)
 ### Function 2 train_model
 * ***Functionality***: Train the model if it is necessary for the user
 * ***Input***:
@@ -66,7 +66,7 @@ def optimizeResultsWithConcept( keywords, resNum, originalText ):
    * training_data: training data with sentences from original text
    * word2vec_word_num: number of words used in word embedding with word2vec
    * word_num: maximum number of words to keep (with relatively large frequency)
-* ***Output***: trained model
+* ***Output***: trained model -->
 ```python
 def train_model( reference_text, training_data, word2vec_word_num, word_num ):
    xxxxxx
@@ -110,14 +110,56 @@ def trainModel( embeddedData, dataWithScores ):
    return trainedModel
 ``` -->
 
-## Module 3: Results Selection and Evaluation
+## Module 2: Text Summarization
+### Function 2 retrieval
+* ***Functionality***: Apply the Dense Passage Retrieval (DPR) to evaluate and rank the relevance between the question and text, then select the most relevant ones as the original text
+* ***Input***:
+   * question: the question asked by the user
+   * raw_text: the raw text fetched from the Data Collection module 
+   * paragraph_num: the number of paragraphs user wants to apply for the original text
+* ***Output***:
+   * original_text: the text most relevant to the question, which is ranked by DPR
+```python
+def retrieval( question, raw_text, paragraph_num ):
+   xxxxxx
+   return original_text
+```
+
+### Function 3 text_summarizer
+* ***Functionality***: Apply the OpenAI GPT-3 Abstractive Text Summarization model to summarize the original text
+* ***Input***:
+   * original_text: the original text to be summarized
+* ***Output***:
+   * summarized_text: the summarized text, which is also the answer to the question asked by the user
+```python
+def summarizer( original_text ):
+   xxxxxx
+   return summarized_text
+```
+
+## Module 3: Text Summarization
+### Function 2 retrieval
+* ***Functionality***: Apply the Dense Passage Retrieval (DPR) to evaluate and rank the relevance between the question and text, then select the most relevant ones as the original text
+* ***Input***:
+   * question: the question asked by the user
+   * raw_text: the raw text fetched from the Data Collection module 
+   * paragraph_num: the number of paragraphs user wants to apply for the original text
+* ***Output***:
+   * original_text: the text most relevant to the question, which is ranked by DPR
+```python
+def retrieval( question, raw_text, paragraph_num ):
+   xxxxxx
+   return original_text
+```
+
+<!-- ## Module 3: Results Selection and Evaluation
 ### Function 3 get_result
 * ***Functionality***: Get the saliency scores from the trained model and select the sentences with highest scores
    * data: raw data to summarize
    * model: trained model
    * sentence_num: number of sentences from the summarization
    * threshold: limit the similarity if the sentences with all the sentences already in the summary
-* ***Output***: summarized text
+* ***Output***: summarized text -->
 ```python
 def get_result ( data, model, sentence_num, threshold ):
    xxxxxx
