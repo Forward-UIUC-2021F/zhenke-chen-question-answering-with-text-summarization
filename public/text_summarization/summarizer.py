@@ -17,7 +17,8 @@ from retrieval import Retrieval
 
 
 # OpenAI API parameters setting
-openai.api_key = "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"
+########### this key should be changed to your own OpenAI API key ###########
+openai.api_key = "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"
 
 
 # define the file path which stores the original file

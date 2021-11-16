@@ -26,6 +26,8 @@ DOC_3 = "./public/data_collection/original_text_with_paragraphs.txt"
 TIME_OUT = 60
 FAIL = -1
 
+
+########### this user agent should be modified to your own user agent ###########
 # parameters setting for the Google Programmable Search Engine, which can be modified based on different users
 USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36"
 

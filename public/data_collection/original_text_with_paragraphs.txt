@@ -44,119 +44,30 @@ All Articles on MatrixCoding Practice on MatrixRecent Articles on Matrix.######
 4. DSA Self PacedStart learning Data Structures and Algorithms to prepare for the interviews of top IT giants like Microsoft, Amazon, Adobe, etc. with DSA Self-Paced Course where you will get to learn and master DSA from basic to advanced level and that too at your own pace and convenience.######
 5. Company Specific Courses – Amazon, Microsoft, TCS & WiproCrack the interview of any product-based giant company by specifically preparing with the questions that these companies usually ask in their coding interview round. Refer GeeksforGeeks Company Specific Courses: Amazon SDE Test Series, etc.######
 Writing code in comment? Please use ide.geeksforgeeks.org, generate link and share the link here.######
-Data Structures are a specialized means of organizing and storing data in computers in such a way that we can perform operations on the stored data more efficiently. Data structures have a wide and diverse scope of usage across the fields of Computer Science and Software Engineering.######
-Data structures are being used in almost every program or software system that has been developed. Moreover, data structures come under the fundamentals of Computer Science and Software Engineering. It is a key topic when it comes to Software Engineering interview questions. Hence as developers, we must have good knowledge about data structures.######
-In this article, I will be briefly explaining 8 commonly used data structures every programmer must know.######
-An array is a structure of fixed-size, which can hold items of the same data type. It can be an array of integers, an array of floating-point numbers, an array of strings or even an array of arrays (such as 2-dimensional arrays). Arrays are indexed, meaning that random access is possible.######
-Inserting elements to an array and deleting elements from an array cannot be done straight away as arrays are fixed in size. If you want to insert an element to an array, first you will have to create a new array with increased size (current size + 1), copy the existing elements and add the new element. The same goes for the deletion with a new array of reduced size.######
-A linked list is a sequential structure that consists of a sequence of items in linear order which are linked to each other. Hence, you have to access data sequentially and random access is not possible. Linked lists provide a simple and flexible representation of dynamic sets.######
-Let’s consider the following terms regarding linked lists. You can get a clear idea by referring to Figure 2.######
-Following are the various types of linked lists available.######
-A stack is a LIFO (Last In First Out — the element placed at last can be accessed at first) structure which can be commonly found in many programming languages. This structure is named as “stack” because it resembles a real-world stack — a stack of plates.######
-Given below are the 2 basic operations that can be performed on a stack. Please refer to Figure 3 to get a better understanding of the stack operations.######
-Furthermore, the following additional functions are provided for a stack in order to check its status.######
-A queue is a FIFO (First In First Out — the element placed at first can be accessed at first) structure which can be commonly found in many programming languages. This structure is named as “queue” because it resembles a real-world queue — people waiting in a queue.######
-Given below are the 2 basic operations that can be performed on a queue. Please refer to Figure 4 to get a better understanding of the queue operations.######
-A Hash Table is a data structure that stores values which have keys associated with each of them. Furthermore, it supports lookup efficiently if we know the key associated with the value. Hence it is very efficient in inserting and searching, irrespective of the size of the data.######
-Direct Addressing uses the one-to-one mapping between the values and keys when storing in a table. However, there is a problem with this approach when there is a large number of key-value pairs. The table will be huge with so many records and may be impractical or even impossible to be stored, given the memory available on a typical computer. To avoid this issue we use hash tables.######
-A special function named as the hash function (h) is used to overcome the aforementioned problem in direct addressing.######
-In direct accessing, a value with key k is stored in the slot k. Using the hash function, we calculate the index of the table (slot) to which each value goes. The value calculated using the hash function for a given key is called the hash value which indicates the index of the table to which the value is mapped.######
-Consider the hash function h(k) = k % 20, where the size of the hash table is 20. Given a set of keys, we want to calculate the hash value of each to determine the index where it should go in the hash table. Consider we have the following keys, the hash and the hash table index.######
-From the last two examples given above, we can see that collision can arise when the hash function generates the same index for more than one key. We can resolve collisions by selecting a suitable hash function h and use techniques such as chaining and open addressing.######
-A tree is a hierarchical structure where data is organized hierarchically and are linked together. This structure is different from a linked list whereas, in a linked list, items are linked in a linear order.######
-Various types of trees have been developed throughout the past decades, in order to suit certain applications and meet certain constraints. Some examples are binary search tree, B tree, treap, red-black tree, splay tree, AVL tree and n-ary tree.######
-A binary search tree (BST), as the name suggests, is a binary tree where data is organized in a hierarchical structure. This data structure stores values in sorted order.######
-Every node in a binary search tree comprises the following attributes.######
-A binary search tree exhibits a unique property that distinguishes it from other trees. This property is known as the binary-search-tree property.######
-Let x be a node in a binary search tree.######
-Check my articles below on 8 useful tree data structures and self-balancing binary search trees.######
-A Heap is a special case of a binary tree where the parent nodes are compared to their children with their values and are arranged accordingly.######
-Let us see how we can represent heaps. Heaps can be represented using trees as well as arrays. Figures 7 and 8 show how we can represent a binary heap using a binary tree and an array.######
-Heaps can be of 2 types.######
-Check my article below on implementing a heap using the python heapq module.######
-A graph consists of a finite set of vertices or nodes and a set of edges connecting these vertices.######
-The order of a graph is the number of vertices in the graph. The size of a graph is the number of edges in the graph.######
-Two nodes are said to be adjacent if they are connected to each other by the same edge.######
-A graph G is said to be a directed graph if all its edges have a direction indicating what is the start vertex and what is the end vertex.######
-We say that (u, v) is incident from or leaves vertex u and is incident to or enters vertex v.######
-Self-loops: Edges from a vertex to itself.######
-A graph G is said to be an undirected graph if all its edges have no direction. It can go in both ways between the two vertices.######
-If a vertex is not connected to any other node in the graph, it is said to be isolated.######
-You can read more about graph algorithms from my article 10 Graph Algorithms Visually Explained.######
-A cheat sheet for the time complexities of the data structure operations can be found in this link. Moreover, check out my article below where I have implemented a few common data structures from scratch using C++.######
-Finally, I would like to thank Mr. A Alkaff Ahamed for providing valuable feedback and suggestions to improve this article.######
-I hope you found this article useful as a simple introduction to data structures. I would love to hear your thoughts. 😇######
-Thanks a lot for reading. 😊######
-[1] Introduction to Algorithms, Third Edition By Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest and Clifford Stein.######
-[2] List of data structures from Wikipedia (https://en.wikipedia.org/wiki/List_of_data_structures)######
-PhD Student 🇱🇰 at ANU 🇦🇺 | Computational Genomics 👩🏻‍🔬🧬 | Data Science 👩🏻‍💻 | Music 🎵 | Astronomy 🔭 | Travel 🎒 | vijinimallawaarachchi.com######
-Your home for data science. A Medium publication sharing concepts, ideas and codes.######
-A data structure is a specialized format for organizing, processing, retrieving and storing data. There are several basic and advanced types of data structures, all designed to arrange data to suit a specific purpose. Data structures make it easy for users to access and work with the data they need in appropriate ways. Most importantly, data structures frame the organization of information so that machines and humans can better understand it.######
-In computer science and computer programming, a data structure may be selected or designed to store data for the purpose of using it with various algorithms. In some cases, the algorithm's basic operations are tightly coupled to the data structure's design. Each data structure contains information about the data values, relationships between the data and -- in some cases -- functions that can be applied to the data.######
-For instance, in an object-oriented programming language, the data structure and its associated methods are bound together as part of a class definition. In non-object-oriented languages, there may be functions defined to work with the data structure, but they are not technically part of the data structure.######
-Typical base data types, such as integers or floating-point values, that are available in most computer programming languages are generally insufficient to capture the logical intent for data processing and use. Yet applications that ingest, manipulate and produce information must understand how data should be organized to simplify processing. Data structures bring together the data elements in a logical way and facilitate the effective use, persistence and sharing of data. They provide a formal model that describes the way the data elements are organized.######
-Data structures are the building blocks for more sophisticated applications. They are designed by composing data elements into a logical unit representing an abstract data type that has relevance to the algorithm or application. An example of an abstract data type is a "customer name" that is composed of the character strings for "first name," "middle name" and "last name."######
-It is not only important to use data structures, but it is also important to choose the proper data structure for each task. Choosing an ill-suited data structure could result in slow runtimes or unresponsive code. Five factors to consider when picking a data structure include the following:######
-In general, data structures are used to implement the physical forms of abstract data types. Data structures are a crucial part of designing efficient software. They also play a critical role in algorithm design and how those algorithms are used within computer programs.######
-Early programming languages -- such as Fortran, C and C++ -- enabled programmers to define their own data structures. Today, many programming languages include an extensive collection of built-in data structures to organize code and information. For example, Python lists and dictionaries, and JavaScript arrays and objects are common coding structures used for storing and retrieving information.######
-Software engineers use algorithms that are tightly coupled with the data structures -- such as lists, queues and mappings from one set of values to another. This approach can be fused in a variety of applications, including managing collections of records in a relational database and creating an index of those records using a data structure called a binary tree.######
-Some examples of how data structures are used include the following:######
-Data structures are often classified by their characteristics. The following three characteristics are examples:######
-If data structures are the building blocks of algorithms and computer programs, the primitive -- or base -- data types are the building blocks of data structures. The typical base data types include the following:######
-The data structure type used in a particular situation is determined by the type of operations that will be required or the kinds of algorithms that will be applied. The various data structure types include the following:######
-These are considered complex data structures as they can store large amounts of interconnected data.######
-When choosing a data structure for a program or application, developers should consider the answers to the following three questions:######
-Since its introduction in 2016, Amazon QuickSight has offered solid but not top-of-market BI capabilities. The addition of a new ...######
-In 'The Enrichment Game,' the latest book by 'Data Guy' Doug Needham, you'll learn why and how to cull data to gain valuable ...######
-The tech giant added a prebuilt SaaS application for supply chain management to its set of Fusion Cloud applications. Other ...######
-Kyndryl, the IBM services spinoff, debuted this week amidst varying analyst opinions as to how it would fare. Kyndryl CTO Antoine...######
-Use these 50 Unix commands to manage and modify files, navigate directories, monitor your network and users, gather data, and ...######
-Keeping edge devices powered constantly can present challenges in sourcing and managing it. Learn the basics of getting and ...######
-Deephaven Data Labs has built a platform financial services organizations use to operationalize real-time data for queries and ...######
-The DBaaS vendor looks to enable developers to control and manage the flow of data from one data service to another with open ...######
-Reltio now has a valuation of $1.7 billion as it raises new funding to help grow its cloud connected data platform to enable ...######
-Think you're ready for the AWS Certified Solutions Architect certification exam? Test your knowledge with these 12 questions, and...######
-Amazon said its van monitoring system is designed solely for driver safety. But many industry experts have concerns regarding the...######
-Amazon would like to strengthen its global footprint, but the e-commerce giant faces roadblocks and challenges today that did not...######
-The Supreme Court ruled 6-2 that Java APIs used in Android phones are not subject to American copyright law, ending a ...######
-This handbook looks at what Oracle Autonomous Database offers to Oracle users and issues that organizations should consider ...######
-Oracle Autonomous Database can automate routine administrative and operational tasks for DBAs and improve productivity, but ...######
-Analyst: Latest features added to Acquia's marketing, commerce and customer data platform offerings show the company is serious ...######
-Adobe begins long task of integrating Workfront with its universe of popular creative collaboration cloud that includes Photoshop...######
-Like Salesforce, Box and Adobe, OpenText invests in AI and machine learning to enable smartphone document capture so users can ...######
-Need to work with remote Linux systems? A PowerShell module with file-handling functionality can help Windows shops looking for a...######
-Microsoft is expected to highlight the features in its new Windows desktop and server products as well as company efforts in ...######
-Azure Stack HCI users now have more management features, better integration with Arc and the ability to run Windows virtual ...######
-All Rights Reserved, 
-Copyright 2005 - 2021, TechTarget
-
-
-Privacy Policy
-
-
-
-Cookie Preferences 
-
-
-
-Do Not Sell My Personal Info
-######
-At the backbone of every program or piece of software are two entities: data and algorithms. Algorithms transform data into something a program can effectively use. Therefore, it is important to understand how to structure data so algorithms can maintain, utilize, and iterate through data quickly.######
-Data structures are the way we are able to store and retrieve data. You may already be familiar with Python lists and dictionaries, or Javascript arrays and objects. If so, you know that lists and arrays are sequential with data accessed by index while dictionaries and objects use a named key to store and retrieve information.######
-The data structures that exist in programming languages are pretty similar to real-world systems that we use outside of the digital sphere. Imagine that you go to the grocery store. At this particular grocery store, the frozen pizza is stored next to the bell peppers and the toothbrushes are next to the milk. The store does not have signs that indicate where different items are located. In this disorganized grocery store, you would have a pretty difficult time trying to find what you were looking for!######
-Fortunately, most grocery stores have a clear order to the way the store is stocked and laid out. Similarly, data structures provide us with a way to organize information (including other data structures!) in a digital space.######
-Data structures handle four main functions for us:######
-Inputting is largely concerned with how the data is received. What kind of information can be included? Will the new data be added to the beginning, end, or somewhere in the middle of the existing data? Does an existing point of data need to be updated or destroyed?######
-Processing gets at the way that data is manipulated in the data structure. This can occur concurrently or as a result of other processes that data structures handle. How does existing data that has been stored need to change to accommodate new, updated, or removed data?######
-Maintaining is focused on how the data is organized within the structure. Which relationships need to be maintained between pieces of data? How much memory must the system reserve (allocate) to accommodate the data?######
-Retrieving is devoted to finding and returning the data that is stored in the structure. How can we access that information again? What steps does the data structure need to take to get the information back to us?######
-Different types and use cases for data will be better suited to different manners of inputting, processing, storing, and retrieving. This is why we have several data structures to choose from... and the ability to create our own!######
-Your plumber probably would not be the best professional to diagnose an illness and your doctor probably wouldn't be the best person to do your taxes — they are each better suited for other tasks! Similarly, different data structures are better suited for different tasks. Choosing the wrong data structure can result in slow or unresponsive code (and mess up your program!), so it's important to consider a few factors as you make your decision:######
-As you've seen, data structures are the essential building blocks that we use to organize all of our digital information. Choosing the right data structure allows us to use the algorithms we want and keeps our code running smoothly. Understanding data structures and how to use them well can play a vital role in many situations including:######
-Note: This article appears in our newest Pro Intensive, "Computer Science Basics: Data Structures."######
-Mariel Frank is a Curriculum Developer at Codecademy.######
-We're providing an in-depth comparison of two of the most popular code editors: Visual Studio and Sublime Text.######
-How the first browser war— and an especially productive 10 days—led to the creation of JavaScript, the most important language in modern web development.######
+Data Structures (DS) tutorial provides basic and advanced concepts of Data Structure. Our Data Structure tutorial is designed for beginners and professionals.######
+Data Structure is a way to store and organize data so that it can be used efficiently.######
+Our Data Structure tutorial includes all topics of Data Structure such as Array, Pointer, Structure, Linked List, Stack, Queue, Graph, Searching, Sorting, Programs, etc.######
+The data structure name indicates itself that organizing the data in memory. There are many ways of organizing the data in the memory as we have already seen one of the data structures, i.e., array in C language. Array is a collection of memory elements in which data is stored sequentially, i.e., one after another. In other words, we can say that array stores the elements in a continuous manner. This organization of data is done with the help of an array of data structures. There are also other ways to organize the data in memory. Let's see the different types of data structures.######
+The data structure is not any programming language like C, C++, java, etc. It is a set of algorithms that we can use in any programming language to structure the data in the memory.######
+To structure the data in memory, 'n' number of algorithms were proposed, and all these algorithms are known as Abstract data types. These abstract data types are the set of rules.######
+There are two types of data structures:######
+The primitive data structures are primitive data types. The int, char, float, double, and pointer are the primitive data structures that can hold a single value.######
+The non-primitive data structure is divided into two types:######
+The arrangement of data in a sequential manner is known as a linear data structure. The data structures used for this purpose are Arrays, Linked list, Stacks, and Queues. In these data structures, one element is connected to only one another element in a linear form.######
+When one element is connected to the 'n' number of elements known as a non-linear data structure. The best example is trees and graphs. In this case, the elements are arranged in a random manner.######
+We will discuss the above data structures in brief in the coming topics. Now, we will see the common operations that we can perform on these data structures.######
+Data structures can also be classified as:######
+The major or the common operations that can be performed on the data structures are:######
+A data structure is a way of organizing the data so that it can be used efficiently. Here, we have used the word efficiently, which in terms of both the space and time. For example, a stack is an ADT (Abstract data type) which uses either arrays or linked list data structure for the implementation. Therefore, we conclude that we require some data structure to implement a particular ADT.######
+An ADT tells what is to be done and data structure tells how it is to be done. In other words, we can say that ADT gives us the blueprint while data structure provides the implementation part. Now the question arises: how can one get to know which data structure to be used for a particular ADT?.######
+As the different data structures can be implemented in a particular ADT, but the different implementations are compared for time and space. For example, the Stack ADT can be implemented by both Arrays and linked list. Suppose the array is providing time efficiency while the linked list is providing space efficiency, so the one which is the best suited for the current user's requirements will be selected.######
+The following are the advantages of a data structure:######
+Before learning Data Structure, you must have the basic knowledge of C.######
+Our Data Structure tutorial is designed to help beginners and professionals.######
+We assure that you will not find any problem in this Data Structure tutorial. But if there is any mistake, please post it in the contact form.######
+JavaTpoint offers too many high quality services. Mail us on [email protected], to get more information about given services. ######
+JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at [email protected] Duration: 1 week to 2 week######
+© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.######
 In this Data structure tutorial for beginners you will learn about: ######
 As the name indicates, Data Structure is used for organizing the data in memory. There are various ways of organizing the data in the memory for eg. array, list, stack, queue and many more.######
 Data structure isn’t a programming language like C, C++, java, etc. It is a set of algorithms that can be used in any programming language to organize the data in the memory.######
@@ -182,3 +93,64 @@ The common operations that can be performed on the data structures are as follow
 Please enter an answer in digits:######
 Great Learning is an ed-tech company that offers impactful and industry-relevant programs in high-growth areas. With a strong presence across the globe, we have empowered 10,000+ learners from over 50 countries in achieving positive outcomes for their careers.  Know More######
 © 2021 Great Learning All rights reserved######
+
+      Get access to free blogs and industry reports from India's most trusted
+      educational platform
+    ######
+
+      Get access to free blogs and industry reports from India's most trusted
+      educational platform
+    ######
+A data structure is a specialized format for organizing, processing, retrieving and storing data. There are several basic and advanced types of data structures, all designed to arrange data to suit a specific purpose. Data structures make it easy for users to access and work with the data they need in appropriate ways. Most importantly, data structures frame the organization of information so that machines and humans can better understand it.######
+In computer science and computer programming, a data structure may be selected or designed to store data for the purpose of using it with various algorithms. In some cases, the algorithm's basic operations are tightly coupled to the data structure's design. Each data structure contains information about the data values, relationships between the data and -- in some cases -- functions that can be applied to the data.######
+For instance, in an object-oriented programming language, the data structure and its associated methods are bound together as part of a class definition. In non-object-oriented languages, there may be functions defined to work with the data structure, but they are not technically part of the data structure.######
+Typical base data types, such as integers or floating-point values, that are available in most computer programming languages are generally insufficient to capture the logical intent for data processing and use. Yet applications that ingest, manipulate and produce information must understand how data should be organized to simplify processing. Data structures bring together the data elements in a logical way and facilitate the effective use, persistence and sharing of data. They provide a formal model that describes the way the data elements are organized.######
+Data structures are the building blocks for more sophisticated applications. They are designed by composing data elements into a logical unit representing an abstract data type that has relevance to the algorithm or application. An example of an abstract data type is a "customer name" that is composed of the character strings for "first name," "middle name" and "last name."######
+It is not only important to use data structures, but it is also important to choose the proper data structure for each task. Choosing an ill-suited data structure could result in slow runtimes or unresponsive code. Five factors to consider when picking a data structure include the following:######
+In general, data structures are used to implement the physical forms of abstract data types. Data structures are a crucial part of designing efficient software. They also play a critical role in algorithm design and how those algorithms are used within computer programs.######
+Early programming languages -- such as Fortran, C and C++ -- enabled programmers to define their own data structures. Today, many programming languages include an extensive collection of built-in data structures to organize code and information. For example, Python lists and dictionaries, and JavaScript arrays and objects are common coding structures used for storing and retrieving information.######
+Software engineers use algorithms that are tightly coupled with the data structures -- such as lists, queues and mappings from one set of values to another. This approach can be fused in a variety of applications, including managing collections of records in a relational database and creating an index of those records using a data structure called a binary tree.######
+Some examples of how data structures are used include the following:######
+Data structures are often classified by their characteristics. The following three characteristics are examples:######
+If data structures are the building blocks of algorithms and computer programs, the primitive -- or base -- data types are the building blocks of data structures. The typical base data types include the following:######
+The data structure type used in a particular situation is determined by the type of operations that will be required or the kinds of algorithms that will be applied. The various data structure types include the following:######
+These are considered complex data structures as they can store large amounts of interconnected data.######
+When choosing a data structure for a program or application, developers should consider the answers to the following three questions:######
+The data storytelling vendor revealed that it has reached an agreement to be acquired by Salesforce and will then become part of ...######
+The vendor completed its Series F round, and has more than doubled its valuation from $1.95 billion in August 2019 when it last ...######
+Frustrated after winning silver in the 200 meters at the 2004 and 2008 Olympics, the sprinter used analytics to identify ...######
+Learn more about these three big data frameworks and what use case best suits each one. You might also examine options such as ...######
+High-performance computing requires specialized hardware to collect data, and a software framework to help sort and process that ...######
+Kyndryl, the IBM services spinoff, debuted this week amidst varying analyst opinions as to how it would fare. Kyndryl CTO Antoine...######
+The cloud data vendor’s winter release updates its data platform with new capabilities to enable organizations to query and ...######
+Connecting disparate sources of data for analytics and machine learning gets faster in the vendor’s latest platform update, ...######
+Apollo GraphQL is updating its graph federation capabilities as its users outline how they are using the technology to enable ...######
+Think you're ready for the AWS Certified Solutions Architect certification exam? Test your knowledge with these 12 questions, and...######
+Amazon said its van monitoring system is designed solely for driver safety. But many industry experts have concerns regarding the...######
+Amazon would like to strengthen its global footprint, but the e-commerce giant faces roadblocks and challenges today that did not...######
+The Supreme Court ruled 6-2 that Java APIs used in Android phones are not subject to American copyright law, ending a ...######
+This handbook looks at what Oracle Autonomous Database offers to Oracle users and issues that organizations should consider ...######
+Oracle Autonomous Database can automate routine administrative and operational tasks for DBAs and improve productivity, but ...######
+As organizations plan enterprise content management strategies, challenges may arise -- like cost, security and storage. Careful ...######
+OpenText intends to acquire Zix email security technology to broaden its portfolio, adds developer tools and connects OneDrive ...######
+Analyst: Latest features added to Acquia's marketing, commerce and customer data platform offerings show the company is serious ...######
+Microsoft released a security update to shut down a publicly exploited vulnerability in the beleaguered on-premises messaging ...######
+A switch to PowerShell 7 will bring performance benefits along with expanded functionality to help administrators keep pace with ...######
+Need to work with remote Linux systems? A PowerShell module with file-handling functionality can help Windows shops looking for a...######
+All Rights Reserved, 
+Copyright 2005 - 2021, TechTarget
+
+
+Privacy Policy
+
+
+
+Cookie Preferences 
+
+
+
+Do Not Sell My Personal Info
+######
+Our editors will review what you’ve submitted and determine whether to revise the article.######
+data structure,  way in which data are stored for efficient search and retrieval. Different data structures are suited for different problems. Some data structures are useful for simple general problems, such as retrieving data that has been stored with a specific identifier. For example, an online dictionary can be structured so that it can retrieve the definition of a word. On the other hand, specialized data structures have been devised to solve complex specific search problems.######
+The simplest data structure is the one-dimensional (linear) array, in which stored elements are numbered with consecutive integers and contents are accessed by these numbers. Data items stored nonconsecutively in memory may be linked by pointers (memory addresses stored with items to indicate where the “next” item or items in the structure are located). Many algorithms have been developed for sorting data efficiently; these apply to structures residing in main memory and also to structures that constitute information systems and databases. More-complex data structures may incorporate elements of simpler data structures.######
