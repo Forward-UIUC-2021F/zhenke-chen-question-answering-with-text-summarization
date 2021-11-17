@@ -1,156 +1,275 @@
-In computer science, a data structure is a data organization, management, and storage format that enables efficient access and modification.[1][2][3] More precisely, a data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data,[4] i.e., it is an algebraic structure about data.
-######
-Data structures serve as the basis for abstract data types (ADT). The ADT defines the logical form of the data type. The data structure implements the physical form of the data type.[5]
-######
-Different types of data structures are suited to different kinds of applications, and some are highly specialized to specific tasks. For example, relational databases commonly use B-tree indexes for data retrieval,[6] while compiler implementations usually use hash tables to look up identifiers.[7]
-######
-Data structures provide a means to manage large amounts of data efficiently for uses such as large databases and internet indexing services. Usually, efficient data structures are key to designing efficient algorithms. Some formal design methods and programming languages emphasize data structures, rather than algorithms, as the key organizing factor in software design. Data structures can be used to organize the storage and retrieval of information stored in both main memory and secondary memory.[8]
-######
-Data structures are generally based on the ability of a computer to fetch and store data at any place in its memory, specified by a pointer—a bit string, representing a memory address, that can be itself stored in memory and manipulated by the program. Thus, the array and record data structures are based on computing the addresses of data items with arithmetic operations, while the linked data structures are based on storing addresses of data items within the structure itself. 
-######
-The implementation of a data structure usually requires writing a set of procedures that create and manipulate instances of that structure. The efficiency of a data structure cannot be analyzed separately from those operations. This observation motivates the theoretical concept of an abstract data type, a data structure that is defined indirectly by the operations that may be performed on it, and the mathematical properties of those operations (including their space and time cost).[9]
-There are numerous types of data structures, generally built upon simpler primitive data types:[10]
-######
-In addition, hashes, graphs and binary trees are other commonly used data structures.
-######
-Most assembly languages and some low-level languages, such as BCPL (Basic Combined Programming Language), lack built-in support for data structures. On the other hand, many high-level programming languages and some higher-level assembly languages, such as MASM, have special syntax or other built-in support for certain data structures, such as records and arrays. For example, the C (a direct descendant of BCPL) and Pascal languages support structs and records, respectively, in addition to vectors (one-dimensional arrays) and multi-dimensional arrays.[12][13]
-######
-Most programming languages feature some sort of library mechanism that allows data structure implementations to be reused by different programs. Modern languages usually come with standard libraries that implement the most common data structures. Examples are the C++ Standard Template Library, the Java Collections Framework, and the Microsoft .NET Framework.
-######
-Modern languages also generally support modular programming, the separation between the interface of a library module and its implementation. Some provide opaque data types that allow clients to hide implementation details. Object-oriented programming languages, such as C++, Java, and Smalltalk, typically use classes for this purpose.
-######
-Many known data structures have concurrent versions which allow multiple computing threads to access a single concrete instance of a data structure simultaneously.[14]
-######
-A data structure is a particular way of organizing data in a computer so that it can be used effectively.######
-For example, we can store a list of items having the same data-type using the array data structure.######
-This page contains detailed tutorials on different data structures (DS) with topic-wise problems.######
-All Articles of Linked ListQuiz on Linked ListCoding Practice on Linked ListRecent Articles on Linked List######
-Quiz on StackAll Articles on StackCoding Practice on StackRecent Articles on Stack######
-Quiz on QueueAll Articles on QueueCoding Practice on QueueRecent Articles on Queue######
-Quiz on Binary TreeQuiz on Binary Tree TraversalsAll articles on Binary TreeCoding Practice on Binary TreeRecent Articles on Tree######
-Quiz on Binary Search TreesQuiz on Balanced Binary Search TreesAll Articles on Binary Search TreeCoding Practice on Binary Search TreeRecent Articles on BST######
-All Articles on HeapQuiz on HeapCoding Practice on HeapRecent Articles on Heap######
-Quiz on HashingAll Articles on HashingCoding Practice on HashingRecent Articles on Hashing######
-All Articles on Graph Data StructureQuiz on GraphQuiz on Graph TraversalsQuiz on Graph Shortest PathsQuiz on Graph Minimum Spanning TreeCoding Practice on GraphRecent Articles on Graph######
-All Articles on TrieBinary Indexed Tree:######
-All Articles on Binary Indexed TreeSuffix Array and Suffix Tree:######
-All Articles on Suffix TreeAVL Tree:######
-Recent Articles on Advanced Data Structures.######
-All Articles on ArrayCoding Practice on ArrayQuiz on ArrayCoding Practice on ArrayRecent Articles on Array######
-All Articles on MatrixCoding Practice on MatrixRecent Articles on Matrix.######
-1. Language Foundation Courses [C++ / JAVA / Python ]Learn any programming language from scratch and understand all its fundamentals concepts for a strong programming foundation in the easiest possible manner with help of GeeksforGeeks Language Foundation Courses – Java Foundation | Python Foundation | C++ Foundation######
-2. Geeks Classes LiveGet interview-centric live online classes on Data Structure and Algorithms from any geographical location to learn and master DSA concepts for enhancing your problem-solving & programming skills and to crack the interview of any product-based company – Geeks Classes: Live Session######
-3. Complete Interview PreparationGet fulfilled all your interview preparation needs at a single place with the Complete Interview Preparation Course that provides you all the required stuff to prepare for any product-based, service-based, or start-up company at the most affordable prices.######
-4. DSA Self PacedStart learning Data Structures and Algorithms to prepare for the interviews of top IT giants like Microsoft, Amazon, Adobe, etc. with DSA Self-Paced Course where you will get to learn and master DSA from basic to advanced level and that too at your own pace and convenience.######
-5. Company Specific Courses – Amazon, Microsoft, TCS & WiproCrack the interview of any product-based giant company by specifically preparing with the questions that these companies usually ask in their coding interview round. Refer GeeksforGeeks Company Specific Courses: Amazon SDE Test Series, etc.######
-Writing code in comment? Please use ide.geeksforgeeks.org, generate link and share the link here.######
-Data Structures (DS) tutorial provides basic and advanced concepts of Data Structure. Our Data Structure tutorial is designed for beginners and professionals.######
-Data Structure is a way to store and organize data so that it can be used efficiently.######
-Our Data Structure tutorial includes all topics of Data Structure such as Array, Pointer, Structure, Linked List, Stack, Queue, Graph, Searching, Sorting, Programs, etc.######
-The data structure name indicates itself that organizing the data in memory. There are many ways of organizing the data in the memory as we have already seen one of the data structures, i.e., array in C language. Array is a collection of memory elements in which data is stored sequentially, i.e., one after another. In other words, we can say that array stores the elements in a continuous manner. This organization of data is done with the help of an array of data structures. There are also other ways to organize the data in memory. Let's see the different types of data structures.######
-The data structure is not any programming language like C, C++, java, etc. It is a set of algorithms that we can use in any programming language to structure the data in the memory.######
-To structure the data in memory, 'n' number of algorithms were proposed, and all these algorithms are known as Abstract data types. These abstract data types are the set of rules.######
-There are two types of data structures:######
-The primitive data structures are primitive data types. The int, char, float, double, and pointer are the primitive data structures that can hold a single value.######
-The non-primitive data structure is divided into two types:######
-The arrangement of data in a sequential manner is known as a linear data structure. The data structures used for this purpose are Arrays, Linked list, Stacks, and Queues. In these data structures, one element is connected to only one another element in a linear form.######
-When one element is connected to the 'n' number of elements known as a non-linear data structure. The best example is trees and graphs. In this case, the elements are arranged in a random manner.######
-We will discuss the above data structures in brief in the coming topics. Now, we will see the common operations that we can perform on these data structures.######
-Data structures can also be classified as:######
-The major or the common operations that can be performed on the data structures are:######
-A data structure is a way of organizing the data so that it can be used efficiently. Here, we have used the word efficiently, which in terms of both the space and time. For example, a stack is an ADT (Abstract data type) which uses either arrays or linked list data structure for the implementation. Therefore, we conclude that we require some data structure to implement a particular ADT.######
-An ADT tells what is to be done and data structure tells how it is to be done. In other words, we can say that ADT gives us the blueprint while data structure provides the implementation part. Now the question arises: how can one get to know which data structure to be used for a particular ADT?.######
-As the different data structures can be implemented in a particular ADT, but the different implementations are compared for time and space. For example, the Stack ADT can be implemented by both Arrays and linked list. Suppose the array is providing time efficiency while the linked list is providing space efficiency, so the one which is the best suited for the current user's requirements will be selected.######
-The following are the advantages of a data structure:######
-Before learning Data Structure, you must have the basic knowledge of C.######
-Our Data Structure tutorial is designed to help beginners and professionals.######
-We assure that you will not find any problem in this Data Structure tutorial. But if there is any mistake, please post it in the contact form.######
-JavaTpoint offers too many high quality services. Mail us on [email protected], to get more information about given services. ######
-JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at [email protected] Duration: 1 week to 2 week######
-© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.######
-In this Data structure tutorial for beginners you will learn about: ######
-As the name indicates, Data Structure is used for organizing the data in memory. There are various ways of organizing the data in the memory for eg. array, list, stack, queue and many more.######
-Data structure isn’t a programming language like C, C++, java, etc. It is a set of algorithms that can be used in any programming language to organize the data in the memory.######
-‘n’ number of algorithms were proposed to organize the data in memory. These algorithms are referred to as Abstract data types. Abstract data types are nothing but a set of rules.######
-As applications are becoming more complex and the amount of data is increasing day by day, which may cause problems with processing speed, searching data, handling multiple requests etc. Data structure provides a way of organizing, managing, and storing data efficiently. With the help of data structure, the data items can be traversed easily. Data structure provides efficiency, reusability and abstraction. It plays an important role in enhancing the performance of a program because the main function of the program is to store and retrieve the user’s data as fast as possible.######
-There are 2 types of Data Structure :######
-Primitive Data Structures directly operate according to the machine instructions. These are the primitive data types. Data types like int, char, float, double, and pointer are the primitive data structures that can hold a single value.######
-Non-primitive data structures are complex data structures that are derived from primitive data structures. Non – Primitive data types are further divided into two categories.######
-Linear Data Structure consists of data elements arranged in a sequential manner where every element is connected to its previous and next element. This connection helps to traverse a linear arrangement in a single level and in a single run. Such data structures are easy to implement as memory is additionally sequential. Some examples of Linear Data Structure are List, Queue, Stack, Array etc.######
-An array is a collection of similar data elements stored at contiguous memory locations. It is the simplest data structure where each data element can be accessed directly by only using its index number. ######
-Linked list is a linear data structure which is used to maintain a list-like structure in the computer memory. It is a group of nodes that are not stored at contiguous locations. Each node of the list is linked to its adjacent node with the help of pointers.######
-Stack is a linear data structure that follows a specific order during which the operations are performed. The order could be FILO (First In Last Out) or LIFO (Last In First Out).######
-Queue is a linear data structure in which elements can be inserted from only one end which is known as rear and deleted from another end known as front. It follows the FIFO (First In First Out) order.######
-Non – Linear Data Structure – ######
-Non-linear Data Structures do not have any set sequence of connecting all its elements and every element can have multiple paths to attach to other elements. Such data structures support multi-level storage and sometimes can’t be traversed in a single run. Such data structures aren’t easy to implement but are more efficient in utilizing memory. Some examples of non-linear data structures are Tree, BST, Graphs etc.######
-Tree is a multilevel data structure defined as a set of nodes.  The topmost node is named root node while the bottom most nodes are called leaf nodes. Each node has only one parent but can have multiple children.######
-A graph is a pictorial representation of a set of objects connected by links known as edges. The interconnected nodes are represented by points named vertices, and the links that connect the vertices are called edges.######
-A graph is a pair of sets (V, E), where V is the set of vertices and E is the set of edges.######
-Data Structure can be further classified as ######
-Static Data Structures are data structures where the size is allocated at the compile time.Hence, the maximum size is fixed and cannot be changed.######
-Dynamic Data Structures are data structures where the size is allocated at the run time. Hence, the maximum size is flexible and can be changed as per requirement.######
-The common operations that can be performed on the data structures are as follows :######
-Please enter an answer in digits:######
-Great Learning is an ed-tech company that offers impactful and industry-relevant programs in high-growth areas. With a strong presence across the globe, we have empowered 10,000+ learners from over 50 countries in achieving positive outcomes for their careers.  Know More######
-© 2021 Great Learning All rights reserved######
+Data Mining is primarily used today by companies with a strong consumer focus — retail, financial, communication, and marketing organizations, to “drill down” into their transactional data and determine pricing, customer preferences and product positioning, impact on sales, customer satisfaction and corporate profits. With data mining, a retailer can use point-of-sale records of customer purchases to develop products and promotions to appeal to specific customer segments.######
+Here is the list of 14 other important areas where data mining is widely used:######
+Data mining holds great potential to improve health systems. It uses data and analytics to identify best practices that improve care and reduce costs. Researchers use data mining approaches like multi-dimensional databases, machine learning, soft computing, data visualization and statistics. Mining can be used to predict the volume of patients in every category. Processes are developed that make sure that the patients receive appropriate care at the right place and at the right time. Data mining can also help healthcare insurers to detect fraud and abuse.######
+Market basket analysis is a modelling technique based upon a theory that if you buy a certain group of items you are more likely to buy another group of items. This technique may allow the retailer to understand the purchase behaviour of a buyer. This information may help the retailer to know the buyer’s needs and change the store’s layout accordingly. Using differential analysis comparison of results between different stores, between customers in different demographic groups can be done.######
+There is a new emerging field, called Educational Data Mining, concerns with developing methods that discover knowledge from data originating from educational Environments. The goals of EDM are identified as predicting students’ future learning behaviour, studying the effects of educational support, and advancing scientific knowledge about learning. Data mining can be used by an institution to take accurate decisions and also to predict the results of the student. With the results the institution can focus on what to teach and how to teach. Learning pattern of the students can be captured and used to develop techniques to teach them.######
+Knowledge is the best asset a manufacturing enterprise would possess. Data mining tools can be very useful to discover patterns in complex manufacturing process. Data mining can be used in system-level designing to extract the relationships between product architecture, product portfolio, and customer needs data. It can also be used to predict the product development span time, cost, and dependencies among other tasks.Customer Relationship Management is all about acquiring and retaining customers, also improving customers’ loyalty and implementing customer focused strategies. To maintain a proper relationship with a customer a business need to collect data and analyse the information. This is where data mining plays its part. With data mining technologies the collected data can be used for analysis. Instead of being confused where to focus to retain customer, the seekers for the solution get filtered results.######
+Billions of dollars have been lost to the action of frauds. Traditional methods of fraud detection are time consuming and complex. Data mining aids in providing meaningful patterns and turning data into information. Any information that is valid and useful is knowledge. A perfect fraud detection system should protect information of all the users. A supervised method includes collection of sample records. These records are classified fraudulent or non-fraudulent. A model is built using this data and the algorithm is made to identify whether the record is fraudulent or not.######
+Any action that will compromise the integrity and confidentiality of a resource is an intrusion. The defensive measures to avoid an intrusion includes user authentication, avoid programming errors, and information protection. Data mining can help improve intrusion detection by adding a level of focus to anomaly detection. It helps an analyst to distinguish an activity from common everyday network activity. Data mining also helps extract data which is more relevant to the problem.######
+Apprehending a criminal is easy whereas bringing out the truth from him is difficult. Law enforcement can use mining techniques to investigate crimes, monitor communication of suspected terrorists. This filed includes text mining also. This process seeks to find meaningful patterns in data which is usually unstructured text. The data sample collected from previous investigations are compared and a model for lie detection is created. With this model processes can be created according to the necessity.######
+Traditional market research may help us to segment customers but data mining goes in deep and increases market effectiveness. Data mining aids in aligning the customers into a distinct segment and can tailor the needs according to the customers. Market is always about retaining the customers. Data mining allows to find a segment of customers based on vulnerability and the business could offer them with special offers and enhance satisfaction.######
+With computerised banking everywhere huge amount of data is supposed to be generated with new transactions. Data mining can contribute to solving business problems in banking and finance by finding patterns, causalities, and correlations in business information and market prices that are not immediately apparent to managers because the volume data is too large or is generated too quickly to screen by experts. The managers may find these information for better segmenting,targeting, acquiring, retaining and maintaining a profitable customer.######
+Corporate surveillance is the monitoring of a person or group’s behaviour by a corporation. The data collected is most often used for marketing purposes or sold to other corporations, but is also regularly shared with government agencies. It can be used by the business to tailor their products desirable by their customers. The data can be used for direct marketing purposes, such as the targeted advertisements on Google and Yahoo, where ads are targeted to the user of the search engine by analyzing their search history and emails.######
+History shows that we have witnessed revolutionary changes in research. Data mining is helpful in data cleaning, data pre-processing and integration of databases. The researchers can find any similar data from the database that might bring any change in the research. Identification of any co-occurring sequences and the correlation between any activities can be known. Data visualisation and visual data mining provide us with a clear view of the data.######
+Criminology is a process that aims to identify crime characteristics. Actually crime analysis includes exploring and detecting crimes and their relationships with criminals. The high volume of crime datasets and also the complexity of relationships between these kinds of data have made criminology an appropriate field for applying data mining techniques. Text based crime reports can be converted into word processing files. These information can be used to perform crime matching process.######
+Data Mining approaches seem ideally suited for Bioinformatics, since it is data-rich. Mining biological data helps to extract useful knowledge from massive datasets gathered in biology, and in other related life sciences areas such as medicine and neuroscience. Applications of data mining to bioinformatics include gene finding, protein function inference, disease diagnosis, disease prognosis, disease treatment optimization, protein and gene interaction network reconstruction, data cleansing, and protein sub-cellular location prediction.######
+Rajkumar is a blogger and software engineer.######
+Big Data - An ultimate weapon in the field of sports?######
+5 controversies and debates around Big Data today!######
+Didn’t know that lie detection can be done through data-Mining. A useful article with helpful content.######
+Incredible points. Great arguments. Keep up the great work.######
+A good and comprehensive list of Areas where data mining can be used giving reader a good overview.  Thanks for sharing.######
+What about in the marketing industry? I feel like they are huge when it comes to data mining, taking information from all other companies that they bring together to run targeted advertising campaigns and tailor their marketing efforts towards their data mined consumer profiles.######
+This is my first time go to see at here and i am truly happy to read everthing at single place.######
+Remarkable issues here. I’m very glad to look your article. Thanks a lot and I am having a look ahead to touch you. Will you please drop me a mail?######
+Nice post. I was checking constantly this blog and I am impressed! Very helpful info specially the last part 🙂 I care for such information much. I was looking for this certain info for a very long time. Thank you and good luck.######
+I’m not sure why but this web site is loading very slow for me. Is anyone else having this problem or is it a issue on my end?######
+I’ll check back later and see if the problem still exists.######
+I’m not sure exactly why but this website is loading very slow for me. Is anyone else having this issue or is it a problem on my end? I’ll check back later and see if the problem still exists.######
+Woah! I’m really loving the template/theme of this blog. It’s simple, yet effective. A lot of times it’s very hard to get that “perfect balance” between usability and visual appearance. I must say that you’ve done a superb job with this. Additionally, the blog loads super quick for me on Safari. Superb Blog!######
+Your email address will not be published.######
+Great effort from team BDMS and Crayon Data to put up a portal like this. Great work.######
+Big Data Made Simple is one of the best big data content portals that I know. Great resource. Keep it up.######
+Copyright © 2020 Crayon Data. All rights reserved.######
 
-      Get access to free blogs and industry reports from India's most trusted
-      educational platform
-    ######
+											Rohit Sharma is the Program Director for the UpGrad-IIIT Bangalore, PG Diploma Data Analytics Program.										######
+Data mining is a method of extracting data from multiple sources and organizing it to derive valuable insights. Read on to discover the wide-ranging data mining applications that are changing the industry as we know it!######
+Modern-day companies cannot live in a data lacuna. They have to evolve and keep up with technological evolution and upcoming digital trends to stay ahead of the competition. So, businesses today are prioritizing staying abreast of all the new developments in the field of data science and analytics. Data mining is one such process in data science. Check out the common examples of data mining.######
+It involves an examination of pre-existing datasets to gain new and useful information. The complex data mining algorithms allow companies to make sense of raw data by segmenting large datasets, identifying patterns, and predicting outcomes. ######
+Let us look at some of the major applications of data mining. ######
+The banking and finance industry relies on high-quality, reliable data. In loan markets, financial and user data can be used for a variety of purposes, like predicting loan payments and determining credit ratings. And data mining methods make such tasks more manageable. ######
+Classification techniques facilitate the separation of crucial factors that influence customers’ banking decisions from the irrelevant ones. Further, multidimensional clustering techniques allow the identification of customers with similar loan payment behaviours. Data analysis and mining can also help detect money laundering and other financial crimes. Read more about data science applications in finance industry######
+Expanding and growing at a fast pace, especially with the advent of the internet. Data mining can enable key industry players to improve their service quality to stay ahead in the game. ######
+Pattern analysis of spatiotemporal databases can play a huge role in mobile telecommunication, mobile computing, and also web and information services. And techniques like outlier analysis can detect fraudulent users. Also, OLAP and visualization tools can help compare information, such as user group behaviour, profit, data traffic, system overloads, etc. ######
+Global connectivity in today’s technology-driven economy has presented security challenges for network administration. Network resources can face threats and actions that intrude on their confidentiality or integrity. Therefore, detection of intrusion has emerged as a crucial data mining practice. ######
+It encompasses association and correlation analysis, aggregation techniques, visualization, and query tools, which can effectively detect any anomalies or deviations from normal behaviour. ######
+The organized retail sector holds sizable quantities of data points covering sales, purchasing history, delivery of goods, consumption, and customer service. The databases have become even larger with the arrival of e-commerce marketplaces. ######
+In modern-day retail, data warehouses are being designed and constructed to get the full benefits of data mining. Multidimensional data analysis helps deal with data related to different types of customers, products, regions, and time zones. Online retailers can also recommend products to drive more sales revenue and analyze the effectiveness of their promotional campaigns. So, from noticing buying patterns to improving customer service and satisfaction, data mining opens many doors in this sector. ######
+Read: Data Mining Projects in India######
+As the demand for higher education goes up worldwide, institutions are looking for innovative solutions to cater to the rising needs. Institutions can use data mining to predict which students would enrol in a particular program, who would require additional assistance to graduate, refining enrollment management overall. ######
+Moreover, the prognosis of students’ career paths and presentation of data would become more comfortable with effective analytics. In this manner, data mining techniques can help uncover the hidden patterns in massive databases in the field of higher education.######
+Big Data is available even in the energy sector nowadays, which points to the need for appropriate data mining techniques. Decision tree models and support vector machine learning are among the most popular approaches in the industry, providing feasible solutions for decision-making and management. Additionally, data mining can also achieve productive gains by predicting power outputs and the clearing price of electricity.  ######
+Geographic Information Systems (GIS) and several other navigation applications make use of data mining to secure vital information and understand its implications. This new trend includes extraction of geographical, environment, and astronomical data, including images from outer space. Typically, spatial data mining can reveal aspects like topology and distance. ######
+Biological data mining practices are common in genomics, proteomics, and biomedical research. From characterizing patients’ behaviour and predicting office visits to identifying medical therapies for their illnesses, data science techniques provide multiple advantages. ######
+Some of the data mining applications in the Bioinformatics field are:######
+Fast numerical simulations in scientific fields like chemical engineering, fluid dynamics, climate, and ecosystem modeling generate vast datasets. Data mining brings capabilities like data warehouses, data preprocessing, visualization, graph-based mining, etc. ######
+System-level designing makes use of data mining to extract relationships between portfolios and product architectures. Moreover, the methods also come in handy for predicting product costs and span time for development. ######
+Data mining activities are also used in Criminology, which is a study of crime characteristics. First, text-based crime reports need to be converted into word processing files. Then, the identification and crime-machining process would take place by discovering patterns in massive stores of data. ######
+Sophisticated mathematical algorithms can indicate which intelligence unit should play the headliner in counter-terrorism activities. Data mining can even help with police administration tasks, like determining where to deploy the workforce and denoting the searches at border crossings. ######
+Data mining lies at the junction of machine learning, statistics, and database systems. As we discussed earlier, it can empower modern-day industries in diverse ways. The selection of a suitable data mining system generally depends on the following factors.######
+In this blog, we understood various data mining applications and explored emerging trends in this sphere. ######
+If you are curious about learning data science to be in the front of fast-paced technological advancements, check out upGrad & IIIT-B’s Executive PG Programme in Data Science.######
 
-      Get access to free blogs and industry reports from India's most trusted
-      educational platform
-    ######
-A data structure is a specialized format for organizing, processing, retrieving and storing data. There are several basic and advanced types of data structures, all designed to arrange data to suit a specific purpose. Data structures make it easy for users to access and work with the data they need in appropriate ways. Most importantly, data structures frame the organization of information so that machines and humans can better understand it.######
-In computer science and computer programming, a data structure may be selected or designed to store data for the purpose of using it with various algorithms. In some cases, the algorithm's basic operations are tightly coupled to the data structure's design. Each data structure contains information about the data values, relationships between the data and -- in some cases -- functions that can be applied to the data.######
-For instance, in an object-oriented programming language, the data structure and its associated methods are bound together as part of a class definition. In non-object-oriented languages, there may be functions defined to work with the data structure, but they are not technically part of the data structure.######
-Typical base data types, such as integers or floating-point values, that are available in most computer programming languages are generally insufficient to capture the logical intent for data processing and use. Yet applications that ingest, manipulate and produce information must understand how data should be organized to simplify processing. Data structures bring together the data elements in a logical way and facilitate the effective use, persistence and sharing of data. They provide a formal model that describes the way the data elements are organized.######
-Data structures are the building blocks for more sophisticated applications. They are designed by composing data elements into a logical unit representing an abstract data type that has relevance to the algorithm or application. An example of an abstract data type is a "customer name" that is composed of the character strings for "first name," "middle name" and "last name."######
-It is not only important to use data structures, but it is also important to choose the proper data structure for each task. Choosing an ill-suited data structure could result in slow runtimes or unresponsive code. Five factors to consider when picking a data structure include the following:######
-In general, data structures are used to implement the physical forms of abstract data types. Data structures are a crucial part of designing efficient software. They also play a critical role in algorithm design and how those algorithms are used within computer programs.######
-Early programming languages -- such as Fortran, C and C++ -- enabled programmers to define their own data structures. Today, many programming languages include an extensive collection of built-in data structures to organize code and information. For example, Python lists and dictionaries, and JavaScript arrays and objects are common coding structures used for storing and retrieving information.######
-Software engineers use algorithms that are tightly coupled with the data structures -- such as lists, queues and mappings from one set of values to another. This approach can be fused in a variety of applications, including managing collections of records in a relational database and creating an index of those records using a data structure called a binary tree.######
-Some examples of how data structures are used include the following:######
-Data structures are often classified by their characteristics. The following three characteristics are examples:######
-If data structures are the building blocks of algorithms and computer programs, the primitive -- or base -- data types are the building blocks of data structures. The typical base data types include the following:######
-The data structure type used in a particular situation is determined by the type of operations that will be required or the kinds of algorithms that will be applied. The various data structure types include the following:######
-These are considered complex data structures as they can store large amounts of interconnected data.######
-When choosing a data structure for a program or application, developers should consider the answers to the following three questions:######
-The data storytelling vendor revealed that it has reached an agreement to be acquired by Salesforce and will then become part of ...######
-The vendor completed its Series F round, and has more than doubled its valuation from $1.95 billion in August 2019 when it last ...######
-Frustrated after winning silver in the 200 meters at the 2004 and 2008 Olympics, the sprinter used analytics to identify ...######
-Learn more about these three big data frameworks and what use case best suits each one. You might also examine options such as ...######
-High-performance computing requires specialized hardware to collect data, and a software framework to help sort and process that ...######
-Kyndryl, the IBM services spinoff, debuted this week amidst varying analyst opinions as to how it would fare. Kyndryl CTO Antoine...######
-The cloud data vendor’s winter release updates its data platform with new capabilities to enable organizations to query and ...######
-Connecting disparate sources of data for analytics and machine learning gets faster in the vendor’s latest platform update, ...######
-Apollo GraphQL is updating its graph federation capabilities as its users outline how they are using the technology to enable ...######
-Think you're ready for the AWS Certified Solutions Architect certification exam? Test your knowledge with these 12 questions, and...######
-Amazon said its van monitoring system is designed solely for driver safety. But many industry experts have concerns regarding the...######
-Amazon would like to strengthen its global footprint, but the e-commerce giant faces roadblocks and challenges today that did not...######
-The Supreme Court ruled 6-2 that Java APIs used in Android phones are not subject to American copyright law, ending a ...######
-This handbook looks at what Oracle Autonomous Database offers to Oracle users and issues that organizations should consider ...######
-Oracle Autonomous Database can automate routine administrative and operational tasks for DBAs and improve productivity, but ...######
-As organizations plan enterprise content management strategies, challenges may arise -- like cost, security and storage. Careful ...######
-OpenText intends to acquire Zix email security technology to broaden its portfolio, adds developer tools and connects OneDrive ...######
-Analyst: Latest features added to Acquia's marketing, commerce and customer data platform offerings show the company is serious ...######
-Microsoft released a security update to shut down a publicly exploited vulnerability in the beleaguered on-premises messaging ...######
-A switch to PowerShell 7 will bring performance benefits along with expanded functionality to help administrators keep pace with ...######
-Need to work with remote Linux systems? A PowerShell module with file-handling functionality can help Windows shops looking for a...######
-All Rights Reserved, 
-Copyright 2005 - 2021, TechTarget
+						The importance of data mining is consistently growing in every sector around the world. Big Data is analyzed by every organization with the use of data mining and its tools. No matter what sector the company is in, they need to analyze and understand the data for coming up with actionable insights. This process will completely impact the sales of that particular company with time. Some of the most common applications of data mining are in the below sectors
+1. Mobile Service Providers.
+2. Crime Prevention.
+3. Farming.
+4. Insurance
+5. Transportation.
+6. Retail Sector.
+7. Research.
+8. Science and Engineering.
+9. Artificial Intelligence.######
+Data Mining has turned out to be an essential part of every organization in every sector. If you wish to understand your customer's behavior, then you need to focus on data mining.                    ######
 
+						With the increase in the number of channels (mobile banking, retail banking, ATM, internet banking, etc.), banks have a huge amount of data collection. In order to help the banks in making better decisions, it is necessary to extract meaningful information from these loads of data available.
+For instance, classification is the most common as well as the most popular method being used in data mining. This can help a lot to churn out data, and it could be utilized for estimating bank customer churns, detecting frauds, evaluating loan approvals, and even predicting bank failures.
+Other than that, data mining is also useful in various other sectors of banking such as customer segmentation and profitability, cash management, forecasting operations, optimizing stock portfolios, credit score and approval, and also marketing.                    ######
 
-Privacy Policy
-
-
-
-Cookie Preferences 
-
-
-
-Do Not Sell My Personal Info
+						Right now, data is of the essence for every industry. A company with a huge amount of data can easily convert the data into customers with the help of the right knowledge, tools, and methods. By applying different patterns on junk datasets, one can obtain valuable insights and also understand upcoming market trends. Every company wants to gain more customers and also retain the existing ones. This is made possible with the help of insights generated through the extracted data. This is the main reason behind the immense popularity of data mining among companies.                     ######
+Your email address will not be published.######
+Data mining is widely used in diverse areas. There are a number of commercial data mining system available today and yet there are many challenges in this field. In this tutorial, we will discuss the applications and the trend of data mining.######
+Here is the list of areas where data mining is widely used −######
+The financial data in banking and financial industry is generally reliable and of high quality which facilitates systematic data analysis and data mining. Some of the typical cases are as follows −######
+Design and construction of data warehouses for multidimensional data analysis and data mining.######
+Loan payment prediction and customer credit policy analysis.######
+Classification and clustering of customers for targeted marketing.######
+Detection of money laundering and other financial crimes.######
+Data Mining has its great application in Retail Industry because it collects large amount of data from on sales, customer purchasing history, goods transportation, consumption and services. It is natural that the quantity of data collected will continue to expand rapidly because of the increasing ease, availability and popularity of the web.######
+Data mining in retail industry helps in identifying customer buying patterns and trends that lead to improved quality of customer service and good customer retention and satisfaction. Here is the list of examples of data mining in the retail industry −######
+Design and Construction of data warehouses based on the benefits of data mining.######
+Multidimensional analysis of sales, customers, products, time and region.######
+Analysis of effectiveness of sales campaigns.######
+Product recommendation and cross-referencing of items.######
+Today the telecommunication industry is one of the most emerging industries providing various services such as fax, pager, cellular phone, internet messenger, images, e-mail, web data transmission, etc. Due to the development of new computer and communication technologies, the telecommunication industry is rapidly expanding. This is the reason why data mining is become very important to help and understand the business.######
+Data mining in telecommunication industry helps in identifying the telecommunication patterns, catch fraudulent activities, make better use of resource, and improve quality of service. Here is the list of examples for which data mining improves telecommunication services −######
+Multidimensional association and sequential patterns analysis.######
+Use of visualization tools in telecommunication data analysis.######
+In recent times, we have seen a tremendous growth in the field of biology such as genomics, proteomics, functional Genomics and biomedical research. Biological data mining is a very important part of Bioinformatics. Following are the aspects in which data mining contributes for biological data analysis −######
+Semantic integration of heterogeneous, distributed genomic and proteomic databases.######
+Alignment, indexing, similarity search and comparative analysis multiple nucleotide sequences.######
+Discovery of structural patterns and analysis of genetic networks and protein pathways.######
+Visualization tools in genetic data analysis.######
+The applications discussed above tend to handle relatively small and homogeneous data sets for which the statistical techniques are appropriate. Huge amount of data have been collected from scientific domains such as geosciences, astronomy, etc. A large amount of data sets is being generated because of the fast numerical simulations in various fields such as climate and ecosystem modeling, chemical engineering, fluid dynamics, etc. Following are the applications of data mining in the field of Scientific Applications −######
+Intrusion refers to any kind of action that threatens integrity, confidentiality, or the availability of network resources. In this world of connectivity, security has become the major issue. With increased usage of internet and availability of the tools and tricks for intruding and attacking network prompted intrusion detection to become a critical component of network administration. Here is the list of areas in which data mining technology may be applied for intrusion detection −######
+Development of data mining algorithm for intrusion detection.######
+Association and correlation analysis, aggregation to help select and build discriminating attributes.######
+There are many data mining system products and domain specific data mining applications. The new data mining systems and applications are being added to the previous systems. Also, efforts are being made to standardize data mining languages.######
+The selection of a data mining system depends on the following features −######
+Data Types − The data mining system may handle formatted text, record-based data, and relational data. The data could also be in ASCII text, relational database data or data warehouse data. Therefore, we should check what exact format the data mining system can handle.######
+System Issues − We must consider the compatibility of a data mining system with different operating systems. One data mining system may run on only one operating system or on several. There are also data mining systems that provide web-based user interfaces and allow XML data as input.######
+Data Sources − Data sources refer to the data formats in which data mining system will operate. Some data mining system may work only on ASCII text files while others on multiple relational sources. Data mining system should also support ODBC connections or OLE DB for ODBC connections.######
+Data Mining functions and methodologies − There are some data mining systems that provide only one data mining function such as classification while some provides multiple data mining functions such as concept description, discovery-driven OLAP analysis, association mining, linkage analysis, statistical analysis, classification, prediction, clustering, outlier analysis, similarity search, etc.######
+Coupling data mining with databases or data warehouse systems − Data mining systems need to be coupled with a database or a data warehouse system. The coupled components are integrated into a uniform information processing environment. Here are the types of coupling listed below −######
+Scalability − There are two scalability issues in data mining −######
+Row (Database size) Scalability − A data mining system is considered as row scalable when the number or rows are enlarged 10 times. It takes no more than 10 times to execute a query.######
+Column (Dimension) Salability − A data mining system is considered as column scalable if the mining query execution time increases linearly with the number of columns.######
+Visualization Tools − Visualization in data mining can be categorized as follows −######
+Data Mining query language and graphical user interface − An easy-to-use graphical user interface is important to promote user-guided, interactive data mining. Unlike relational database systems, data mining systems do not share underlying data mining query language.######
+Data mining concepts are still evolving and here are the latest trends that we get to see in this field −######
+Scalable and interactive data mining methods.######
+Integration of data mining with database systems, data warehouse systems and web database systems.######
+SStandardization of data mining query language.######
+New methods for mining complex types of data.######
+Privacy protection and information security in data mining.######
+Analytics India Salary Study 2020.
+India Salary Report presented by AIM and Jigsaw Academy.######
+Realize your cloud computing dreams.
+Rise & growth of the demand for cloud computing In India.######
+Analytics India Salary Study 2020.
+India Salary Report presented by AIM and Jigsaw Academy.######
+Realize your cloud computing dreams.
+Rise & growth of the demand for cloud computing In India.######
+Data mining technology is a systematic process used by large scale institutions to transform raw scattered data into usefully structured information. With the world advancing dramatically on the technological stance and everything becoming online, data today has become extremely vital for the big companies to know their customers well. Data mining thus depends on efficient collection of data, data warehousing and processing. Data-mining applications can be used by the institutions and business conglomerates to develop or modify new products to appeal the sentiment of their clients. ######
+Data-mining applications are used to model applications that enhance search engine and website technology. Data mining consists of screening and analysing large chunks of data to derive concrete patterns and trending activities. The broad applications of data-mining include database marketing, risk management, detecting fraudulent deals and spam Emails. Although the most primary application of data-mining is to identify the sentiments or opinions of the target users.######
+Data-mining technology and its application can be broken down into five major steps. The very first step for the institutions is to collect data and load the same into database-warehouses. Following the loading of data, the data is stored either on the company’s in-house servers or the cloud server. The company’s data analysts, business teams and the management professionals access the data and organize it in a structured way.######
+One of the most significant data-mining applications is its implementation in healthcare. Data mining in healthcare can dramatically improve health-care systems. Data-mining technology can be used to predict the volume of patients in multiple categories. Data mining applications are used to design models that can help to ensure patients receive appropriate healthcare and facilities.######
+The banking and financial systems have been benefited the most by the data-mining technology. The entire financial framework is significantly dependent on reliable data of a large number of users. The user data is used for tracking loans payments, determining credit ratings. Data-mining applications in banking are also used for preventing crimes and frauds.######
+Market basket analysis is a practical theory according to which if a buyer purchases a certain quantity of items, he will tend to buy it more in the future. This theory helps retailers to grasp the buying frequency and behaviour of customers. Data mining applications helps to analyse the data using differential analysis of customers in various demographic groups.######
+With the enhancing telecommunication industries and internet facilities, data-mining applications in telecommunication have enabled major industry players to know their customer base well and develop their services. ######
+Educational data mining is a relatively new branch of data-mining which helps in predicting learning proclivity of students. Its major focus is the development of methods to enhance scientific learning.######
+The Fast Moving Consumer Goods (FMCG) are heavily dependent on data-mining applications wearing the data of clients and customers play a major role in placing orders and delivering the same. ######
+One of the applications of data-mining can be seen in the sector of manufacturing wherein the data-mining models can be used to discover various patterns in complex manufacturing processes. The data mining technology is used to define relationships between the architecture of the product and its portfolio. The data mining tools are also used to figure out the development time of a product.######
+Hefty data is even available in the cyclical sector of energy which necessitates the execution of data mining applications in the industry. Machine learning applications of data mining are the most used in the industry in the prediction of power outputs and energy demands.######
+Law enforcement use applications of data mining to collect, structure and analysis data from previous investigations to forge a model for lie detection. This enhances the probability of correct judgement and bringing out the truths from criminals. ######
+In genetics and biomedical research, data mining applications are common to characterize patients’ behavioural patterns and identifying medical therapies for illnesses.######
+The mathematical algorithms of data mining trends help to predict the probabilities of any malicious acts of the probable terrorist institutes. The data mining technology helps to determine where strategically the workforce should be deployed.  ######
+Data mining tools are used to monitor a person’s or group’s behaviour by a corporation.######
+This data is collected for marketing or is shared with government agencies. ######
+Mining biological and genetic data is essential in extracting critical information from massive datasets gathered in biology. Data mining tools and data mining applications are useful in applications like protein function inference and disease prognosis. ######
+Data mining applications are used for data cleaning, data processing and integration of various database warehouses which are essential for executing research.######
+The movement of stocks relies on capital flow and capital exit from the markets. Analysts can use data mining tools to conduct a technical analysis of the stock and index charts.######
+With the growing reach of the internet, the issues of confidentiality and security have become essential. Data mining tools can be used to design algorithms to inhibit malicious intrusion of unethical entities and thus shield confidential information. ######
+Television and radio networks apply real time data mining tools and algorithms to keep a track of their live audiences. Data mining applications allow networks to make recommendations to the audience.######
+The output patterns of the artificial systems come from data mining applications and so data mining technology forms a major constituent of the artificial intelligence systems.######
+Modern day farmers are using data mining applications and algorithms to calculate the yield of vegetables with the number of nutrients as required by the crops. ######
+The data mining technology is implemented in modern day transportation facilities wherein it helps in the scheduling of vehicles moving in and out from warehouses and outlets. The data mining tools help to optimize time and reduce costs.######
+If you are interested in making a career in the Data Science domain, our 11-month in-person Postgraduate Certificate Diploma in Data Science course can help you immensely in becoming a successful Data Science professional. ######
+© 2021 Jigsaw Academy Education Pvt Ltd.######
+Upskilling to emerging technologies has become the need of the hour, with technological changes shaping the career landscape. Jigsaw Academy (Recognized as No.1 among the ‘Top 10 Data Science Institutes in India’ in 2014, 2015, 2017, 2018 & 2019) offers programs in data science & emerging technologies to help you upskill, stay relevant & get noticed.
 ######
-Our editors will review what you’ve submitted and determine whether to revise the article.######
-data structure,  way in which data are stored for efficient search and retrieval. Different data structures are suited for different problems. Some data structures are useful for simple general problems, such as retrieving data that has been stored with a specific identifier. For example, an online dictionary can be structured so that it can retrieve the definition of a word. On the other hand, specialized data structures have been devised to solve complex specific search problems.######
-The simplest data structure is the one-dimensional (linear) array, in which stored elements are numbered with consecutive integers and contents are accessed by these numbers. Data items stored nonconsecutively in memory may be linked by pointers (memory addresses stored with items to indicate where the “next” item or items in the structure are located). Many algorithms have been developed for sorting data efficiently; these apply to structures residing in main memory and also to structures that constitute information systems and databases. More-complex data structures may incorporate elements of simpler data structures.######
+
+
+         +91 90198 87000 (Corporate Solutions) 
+          
+
+         +91 90199 87000 (IIM Indore Program / Online Courses) 
+          
+
+         +91 9739147000 (Cloud Computing) 
+          
+
+         +91 90192 27000 (Cyber Security) 
+          
+
+         +91 90199 97000 (PG Data Science & Machine Learning) 
+          
+######
+
+
+          +91 90198 87000 (Corporate Solutions)          
+
+          +91 90199 87000 (IIM Indore Program / Online Courses)          
+
+          +91 9739147000 (Cloud Computing)          
+
+          +91 90192 27000 (Cyber Security)          
+
+          +91 90199 97000 (PG Data Science & Machine Learning)          
+######
+© 2021 Jigsaw Academy Education Pvt Ltd.######
+Data is a set of discrete objective facts about an event or a process that have little use by themselves unless converted into information. We have been collecting numerous data, from simple numerical measurements and text documents to more complex information such as spatial data, multimedia channels, and hypertext documents. ######
+Nowadays, large quantities of data are being accumulated. The amount of data collected is said to be almost doubled every year. An extracting data or seeking knowledge from this massive data, data mining techniques are used. Data mining is used in almost all places where a large amount of data is stored and processed. For example, banks typically use ‘data mining’ to find out their prospective customers who could be interested in credit cards, personal loans, or insurance as well. Since banks have the transaction details and detailed profiles of their customers, they analyze all this data and try to find out patterns that help them predict that certain customers could be interested in personal loans, etc.######
+Attention reader! Don’t stop learning now. Get hold of all the important CS Theory concepts for SDE interviews with the CS Theory Course at a student-friendly price and become industry ready.######
+Basically, the motive behind mining data, whether commercial or scientific, is the same – the need to find useful information in data to enable better decision-making or a better understanding of the world around us.######
+“Extraction of interesting information or patterns from data in large databases is known as data mining.”######
+According to William J.Frawley “Data mining or KDD(Knowledge Discovery in Databases) as it is also known, is the nontrivial extraction of implicit, previously unknown, and potentially useful information from data.”######
+Technically, data mining is the computational process of analyzing data from different perspectives, dimensions, angles and categorizing/summarizing it into meaningful information. Data Mining can be applied to any type of data e.g. Data Warehouses, Transactional Databases, Relational Databases, Multimedia Databases, Spatial Databases, Time-series Databases, World Wide Web.######
+Data mining provides competitive advantages in the knowledge economy. It does this by providing the maximum knowledge needed to rapidly make valuable business decisions despite the enormous amounts of available data. ######
+There are many measurable benefits that have been achieved in different application areas from data mining. So, let’s discuss different applications of Data Mining:######
+Scientific Analysis: Scientific simulations are generating bulks of data every day. This includes data collected from nuclear laboratories, data about human psychology, etc. Data mining techniques are capable of the analysis of these data. Now we can capture and store more new data faster than we can analyze the old data already accumulated. Example of scientific analysis:######
+Intrusion Detection: A network intrusion refers to any unauthorized activity on a digital network. Network intrusions often involve stealing valuable network resources. Data mining technique plays a vital role in searching intrusion detection, network attacks, and anomalies. These techniques help in selecting and refining useful and relevant information from large data sets. Data mining technique helps in classify relevant data for Intrusion Detection System. Intrusion Detection system generates alarms for the network traffic about the foreign invasions in the system. For example:######
+Business Transactions: Every business industry is memorized for perpetuity. Such transactions are usually time-related and can be inter-business deals or intra-business operations. The effective and in-time use of the data in a reasonable time frame for competitive decision-making is definitely the most important problem to solve for businesses that struggle to survive in a highly competitive world. Data mining helps to analyze these business transactions and identify marketing approaches and decision-making. Example :######
+Market Basket Analysis: Market Basket Analysis is a technique that gives the careful study of purchases done by a customer in a supermarket. This concept identifies the pattern of frequent purchase items by customers. This analysis can help to promote deals, offers, sale by the companies and data mining techniques helps to achieve this analysis task. Example:######
+Education: For analyzing the education sector, data mining uses Educational Data Mining (EDM) method. This method generates patterns that can be used both by learners and educators. By using data mining EDM we can perform some educational task:######
+Research: A data mining technique can perform predictions, classification, clustering, associations, and grouping of data with perfection in the research area. Rules generated by data mining are unique to find results. In most of the technical research in data mining, we create a training model and testing model. The training/testing model is a strategy to measure the precision of the proposed model. It is called Train/Test because we split the data set into two sets: a training data set and a testing data set. A training data set used to design the training model whereas testing data set is used in the testing model. Example:######
+Healthcare and Insurance: A Pharmaceutical sector can examine its new deals force activity and their outcomes to improve the focusing of high-value physicians and figure out which promoting activities will have the best effect in the following upcoming months, Whereas the Insurance sector, data mining can help to predict which customers will buy new policies, identify behavior patterns of risky customers and identify fraudulent behavior of customers.######
+Transportation: A diversified transportation company with a large direct sales force can apply data mining to identify the best prospects for its services. A large consumer merchandise organization can apply information mining to improve its business cycle to retailers.######
+Financial/Banking Sector: A credit card company can leverage its vast warehouse of customer transaction data to identify customers most likely to be interested in a new credit product. ######
+Writing code in comment?
+Please use ide.geeksforgeeks.org,
+generate link and share the link here.######
+Data is a collection of discrete objective facts about an event or a process that, unless transformed into information, are of limited utility. ######
+We've been gathering a variety of information, ranging from simple numerical measures and text documents to more sophisticated information including geographical data, multimedia channels, and hypertext texts. ######
+The technique of collecting useful information from a huge amount of data is known as data mining. It assists in the exploration and identification of important trends and patterns in datasets. ######
+Data mining is an interdisciplinary field that employs statistics, database systems, artificial intelligence, and machine learning techniques. Algorithms are used in data mining to extract patterns from databases.######
+Today, companies with a strong consumer focus — retail, financial, communication, and marketing organizations — use data mining to “drill down” into transactional data to determine pricing, customer preferences, and product positioning, as well as their impact on sales, customer satisfaction, and corporate profits. ######
+A shop can utilize data mining to design items and promotions that appeal to certain consumer categories based on point-of-sale records of customer purchases.######
+(Also Read: Data Mining Software )######
+Large amounts of data are being collected nowadays. Every year, the amount of data gathered is said to nearly double. Data mining techniques are used to extract data or seek information from this enormous data. ######
+Data mining is utilized nearly anywhere there is a lot of data to store and analyze. Banks, for example, frequently employ ‘data mining' to identify potential clients who could be interested in credit cards, personal loans, or insurance. ######
+Because banks have transaction records and extensive profiles on their clients, they analyze this data and look for trends that might help them anticipate which consumers would be interested in personal loans or other financial products.######
+Whether commercial or scientific, the goal of data mining is the same: to uncover relevant information in order to improve decision-making or get a better knowledge of the world around us.######
+(Also Read: Top Data Mining Tools)######
+Data mining has a lot of promise for improving healthcare systems. It identifies best practices for improving treatment and lowering costs using data and analytics. ######
+Multi-dimensional databases, machine learning, soft computing, data visualization, and statistics are among the data mining techniques used by researchers. The volume of patients in each group may be predicted using data mining. ######
+Patients receive appropriate care at the correct place and at the right time thanks to the development of processes. Healthcare insurers can employ data mining to detect fraud and misuse.
+ ######
+The banking industry is now dealing with and managing massive volumes of data and transaction information as a result of digitalization. ######
+With its capacity to detect patterns, casualties, market risks, and other connections that are critical for managers to be aware of, data mining applications in banking can easily be the suitable answer. ######
+Despite the large amounts of data, outcomes may be created fairly immediately and interpreted by management with little effort. All of the data will be put to good use by bank authorities and workers to enhance and optimize segmentation, targeting, acquisition, management, and retention of lucrative clients. ######
+Data mining may also assist banks in swiftly identifying prospective defaulters and making choices on the issue of credit cards, loans, and other financial products.
+ ######
+( Also Read: Banking and AI )######
+So, Financial data in the banking and financial industries are typically trustworthy and of high quality, making systematic data analysis and data mining easier. The following are some examples of typical scenarios:######
+Read About: Feature Scopes of Data Mining Applications, a study from IJSR######
+Educational Data Mining is a rapidly growing area that is concerned with creating ways for discovering information from data originating from educational environments. Predicting students' future learning behavior, researching the impacts of educational assistance, and improving scientific understanding about learning are all aims of EDM. ######
+An institution may utilize data mining to make correct judgments and anticipate student outcomes. As a consequence of the findings, the institution may concentrate on what to teach and how to teach it. Students' learning patterns may be recorded and used to create teaching approaches.######
+We can accomplish various educational tasks utilizing data mining EDM:######
+( Also Read: Applications of Data Science in Education )######
+Fraud has resulted in the loss of billions of dollars. Traditional fraud detection approaches are time-consuming and complicated. Data mining assists in the identification of significant patterns and the transformation of data into information. ######
+Knowledge is defined as any information that is both valid and helpful. The information of all users should be protected by a flawless fraud detection system. The gathering of sample records is part of a supervised technique. ######
+These records are divided into two categories: fraudulent and non-fraudulent. The data is used to create a model, and the algorithm is used to determine whether or not the record is fake.######
+Market Basket Analysis is a method for analyzing the purchases made by a consumer in a supermarket. This notion identifies a customer's habit of regular purchases. This study may assist firms in to advertise bargains, offers, and sales, and data mining tools can aid with this work. Example:######
+Any activity that jeopardizes the resource's integrity and confidentiality is considered an incursion. User authentication, avoiding programming mistakes, and information protection are some of the defensive measures taken to prevent infiltration. ######
+By adding a degree of emphasis to anomaly detection, data mining can assist enhance intrusion detection. It allows an analyst to discern between unusual network activity and normal network activity. Data mining also aids in the extraction of data that is more relevant to the issue.######
+The following is a list of places where data mining technologies may be used to identify intrusions:######
+Traditional market research may aid in consumer segmentation, but data mining digs deeper and improves market effectiveness. Data mining assists in grouping clients into separate segments and tailoring services to their specific demands. ######
+It's always about keeping customers in the market. Data mining enables businesses to identify a group of consumers depending on their susceptibility, allowing them to receive unique offers and improve customer happiness. ######
+Rapid expansion and growth, especially since the internet's introduction. To stay ahead of the competition, data mining may help important industry players enhance their service quality.######
+Mobile communications, mobile computing, as well as online and information services, may all benefit from pattern analysis of spatiotemporal datasets. Outlier analysis, for example, can be used to discover fake users. ######
+OLAP and visualization tools may also aid in the comparison of data, such as user group behavior, profit, data traffic, and system overloads, among other things.######
+We have seen dramatic advances in research throughout history. Data mining is useful for data cleansing, data pre-processing, and database integration. The researchers can scan the database for any similar data that could affect the research. ######
+Any co-occurring sequences may be identified, as well as the link between any activity. Visual data mining and data visualization provide us a clear picture of the data.######
+Read More: Beginners’ guide to Market Research Analysis######
+Sales, purchase history, delivery of goods, consumption, and customer service are all covered by the organized retail sector's data. With the introduction of e-commerce platforms, databases have grown even larger.######
+Data warehouses are being developed and built-in modern retail to reap the full benefits of data mining. Multidimensional data analysis aids in the management of information pertaining to many sorts of consumers, goods, locations, and time zones. ######
+Online merchants may also provide product recommendations to increase sales and assess the success of their promotional efforts. So, data mining offers numerous possibilities in this industry, from recognizing purchase trends to enhancing customer service and happiness.######
+Client relationship management includes gaining and keeping customers, as well as increasing customer loyalty, and adopting customer-centric initiatives. A firm must gather data and analyze the information in order to establish a healthy relationship with a consumer. ######
+Here's when data mining comes in handy. The gathered data may be analyzed using data mining methods. Instead of being perplexed about where to focus in order to retain customers, solution seekers receive filtered results.######
+Read More: Advantages of Customer Relationship Management (CRM)######
+Criminology is a method of determining the features of criminal behavior. Actually, crime analysis entails investigating and detecting crimes as well as their links to criminals. ######
+Because of the large number of crime datasets and the intricacy of interactions between them, criminology is an ideal subject for using data mining techniques. Word processing files can be created from text-based crime reports. These details can be utilized in a crime matching procedure.######
+Read this Document from International Journal of Science and Research (IJSR) on: An Overview of Data Mining Techniques and Applications######
+For analysis, data mining explains the past and forecasts the future. There are numerous applications and uses in various sectors and businesses as a result of this. ######
+Although not a standalone entity, data mining is the quintessential process that brings the best insights and solutions by combining pre-processing techniques such as data preparation, data exploration, and so on, with post-processing techniques such as model validation, model performance monitoring, scoring, and so on.######
+Be a part of our Instagram community ######
+Elasticity of Demand and its Types######
+6 Major Branches of Artificial Intelligence (AI)######
+What is PESTLE Analysis? Everything you need to know about it######
+Reliance Jio and JioMart: Marketing Strategy, SWOT Analysis, and Working Ecosystem######
+8 Most Popular Business Analysis Techniques used by Business Analyst######
+5 Factors Affecting the Price Elasticity of Demand (PED)######
+Dijkstra’s Algorithm: The Shortest Path Algorithm######
+I want to take this moment to say that I really love this blog. It has been a good resource of information for me in my research. Thank you so much.https://www.sparity.com/######
+Copyright © Analytics Steps Infomedia LLP 2020-21. All Rights Reserved.######

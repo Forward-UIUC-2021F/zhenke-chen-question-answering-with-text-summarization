@@ -10,6 +10,7 @@
 
 # import the required packages
 import pygaggle
+import sys
 from pygaggle.rerank.base import Query, Text
 from pygaggle.rerank.transformer import MonoT5
 from pygaggle.rerank.transformer import MonoBERT
@@ -82,6 +83,11 @@ class Retrieval():
             passges -- all passages fetched from Google Search with specific format
             paragraph_num -- number of paragraphs of original text for text summarization
         '''
+        
+        # test if passages is empty
+        if passages == []:
+            print("There are no data collected!")
+            sys.exit()
 
         ranking_result = {}
         original_text = ""
@@ -96,6 +102,7 @@ class Retrieval():
 
         # extract the text with certain format
         texts = [ Text(p[1], {'docid': p[0]}, 0) for p in passages]
+        # print(texts)
 
         # print out the ranking before the reranking
         # for i in range(0, len(passages)):
@@ -115,10 +122,11 @@ class Retrieval():
         # then output the ones with the highest socres
         sorted_reranked = sorted(ranking_result, reverse = True)
         # print(sorted_reranked)
+        # print(paragraph_num)
         for i in range(paragraph_num):
             original_text += ranking_result[sorted_reranked[i]].strip('\n')
             if i != paragraph_num - 1:
-                original_text += " "
+                original_text += "\n"
         # print(original_text)
         # print(len(original_text))
 

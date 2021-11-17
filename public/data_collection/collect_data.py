@@ -68,7 +68,7 @@ class CollectData():
 
         # fetch the results from API and store it as JSON
         content = urlrequest.urlopen(url, TIME_OUT).read()
-        json_content = json.loads(content.decode("utf8"))
+        json_content = json.loads(content.decode("utf8", "ignore"))
 
         return json_content
 
@@ -169,13 +169,19 @@ class CollectData():
             url = websites[website_idx]
             header = {"User-Agent": USER_AGENT}
             request = urllib.request.Request(url, headers = header)
-            response = urllib.request.urlopen(request).read()
-            file = open(DOC, "wb")
-            file.write(response)
-            file.close()
+            response = urllib.request.urlopen(request)
+            # file = open(DOC, "wb")
+            # file.write(response)
+            # file.close()
 
             # fetch the appropriate text from the website
-            soup = BeautifulSoup(open(DOC), features = "lxml")
+            # try:
+            #     soup = BeautifulSoup(open(DOC), features = "lxml")
+            # except UnicodeDecodeError:
+            #     return["", ""]
+            # soup = BeautifulSoup(open(DOC), features = "lxml", from_encoding="utf-8")
+            soup = BeautifulSoup(response.read().decode('utf-8', 'ignore'), features = "lxml")
+            
             for p_idx in soup.select("p"):
                 if len(p_idx.get_text().split()) > STRING_LENGTH:
                     tmp_text += p_idx.get_text()
@@ -252,13 +258,13 @@ def main( question, res_num ):
             file_2.write(DELIMETER + "\n")
     file_2.close()
 
-    return text_list
+    return text_list, website_list
 
 
 if __name__ == "__main__":
-    question = "What is data structure?"
-    number = 6
-    if main(question, number) == FAIL:
+    question = "Application of machine learning"
+    number = 1
+    if main(question, number)[0] == FAIL:
         print("++++++++++ DATA COLLECTION FAIL ++++++++++\n")
     else:
         print("++++++++++ DATA COLLECTION SUCCESS ++++++++++\n")

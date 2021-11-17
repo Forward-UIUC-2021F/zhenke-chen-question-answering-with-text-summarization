@@ -1,0 +1,38 @@
+1. What is data mining
+
+ Data mining is a process of extracting and discovering patterns in large data sets involving methods at the intersection of machine learning, statistics, and database systems.
+
+References:
+https://www.tibco.com/reference-center/what-is-data-mining
+https://en.wikipedia.org/wiki/Data_mining
+https://www.investopedia.com/terms/d/datamining.asp
+https://www.talend.com/resources/what-is-data-mining/
+https://www.sas.com/en_us/insights/analytics/data-mining.html
+https://economictimes.indiatimes.com/definition/data-mining
+
+2. History of data mining
+
+ Data mining is the process of analyzing large data sets (Big Data) from different perspectives and uncovering correlations and patterns to summarize them into useful information. Nowadays it is blended with many techniques such as artificial intelligence, statistics, data science, database theory and machine learning.
+ Increasing power of technology and complexity of data sets has lead Data Mining to evolve from static data delivery to more dynamic and proactive information deliveries; from tapes and disks to advanced algorithms and massive databases (see the table below). In the late 80`s Data Mining term began to be known and used within the research community by statisticians, data analysts, and the management information systems (MIS) communities.
+ By the early 1990`s, data mining was recognized as a sub-process or a step within a larger process called Knowledge Discovery in Databases (KDD) — which gave rise to actually making it ‘the popular guy’. The most commonly used definition of KDD is “The nontrivial process of identifying valid, novel, potentially useful, and ultimately understandable patterns in data” (Fayyad, 1996).
+
+References:
+https://www.javatpoint.com/history-of-data-mining
+https://www.kdnuggets.com/2016/06/rayli-history-data-mining.html
+https://en.wikipedia.org/wiki/Data_mining
+https://www.researchgate.net/figure/1-Steps-in-the-evolution-of-Data-Mining_tbl1_319767257
+https://medium.com/@exastax/the-history-of-data-mining-d2aeb0f587ce
+https://www.britannica.com/technology/data-mining
+
+3. Applications of data mining
+
+ Data mining is the process of extracting useful information from large datasets. It is used by businesses to gain insights about their customers, products, and services. Data mining is used in a variety of industries, including finance, healthcare, and education. Data mining is used in a variety of industries, including finance, healthcare, and education. Data mining is the process of extracting useful information from large datasets. It is used by businesses to gain insights about their customers, products, and services. Data mining is used in a variety of industries, including finance, healthcare, and education. Data mining is the process of extracting useful information from large datasets. It is used by businesses to gain insights about their customers, products, and services. Data mining is used in a variety of industries, including finance, healthcare, and education. Data mining is the process of extracting useful information from large datasets. It is used by businesses to gain insights about their customers, products, and services.
+
+References:
+https://bigdata-madesimple.com/14-useful-applications-of-data-mining/
+https://www.upgrad.com/blog/12-most-useful-data-mining-applications-of-2020/
+https://www.tutorialspoint.com/data_mining/dm_applications_trends.htm
+https://www.jigsawacademy.com/blogs/data-science/data-mining-applications/
+https://www.geeksforgeeks.org/applications-of-data-mining/
+https://www.analyticssteps.com/blogs/12-applications-data-mining
+

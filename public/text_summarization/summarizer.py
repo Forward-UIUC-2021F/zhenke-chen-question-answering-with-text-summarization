@@ -10,15 +10,18 @@
 import numpy as np
 import os
 import openai
+import sys
+import os
 
 
 # import the retrieval from another file
-from retrieval import Retrieval
+# from retrieval import Retrieval
+from public.text_summarization.retrieval import Retrieval
 
 
 # OpenAI API parameters setting
 ########### this key should be changed to your own OpenAI API key ###########
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 # define the file path which stores the original file
@@ -97,10 +100,9 @@ class TextSummarizer():
                     
 
     def text_summarization( self, original_text ):
-
+    
         '''
             Summarize the original text with OpenAI API TL;DR summarization
-
             Keyword arguments:
             original_text -- the original text to be summarized
         '''
@@ -150,6 +152,7 @@ class TextSummarizer():
                 cut += 1
 
             else:
+                print(tmp_text)
                 get_result = 1
 
         # print(response)
@@ -158,6 +161,87 @@ class TextSummarizer():
         summarized_text = response["choices"][0]["text"]
 
         return summarized_text
+
+
+    # def text_summarization( self, original_text ):
+
+    #     '''
+    #         Summarize the original text with OpenAI API TL;DR summarization
+
+    #         Keyword arguments:
+    #         original_text -- the original text to be summarized
+    #     '''
+
+    #     get_result = 0
+    #     cut = 1
+    #     length = len(original_text)
+    #     # print(length)
+    #     tmp_text = original_text
+
+    #     while(get_result == 0):
+    #         try:
+    #             response = openai.Completion.create(
+
+    #                 # define the NLP engine
+    #                 # davinci proper for Text Summarization
+    #                 engine = ENGINE,
+
+    #                 # define the text to be summarize
+    #                 prompt = tmp_text,
+
+    #                 # define the randomness for completion
+    #                 # lower for less random
+    #                 temperature = TEMPERATURE,
+
+    #                 # define the maximum output tokens
+    #                 # approximately four characters for one token
+    #                 max_tokens = MAX_TOKENS,
+
+    #                 # define diversity via nucleus sampling
+    #                 top_p = TOP_P,
+
+    #                 # define how much to penalize the new tokens based on their existing frequency
+    #                 # increase the value will decrease the likelihood to repeat the same line verbatim
+    #                 frequency_penalty = FREQ_P,
+
+    #                 # define how much to penalize the new tokens based on whether they appear in the text so far
+    #                 # increase the value will increase the likelihood to discuss about new topics
+    #                 presence_penalty = PRE_P
+    #             )
+            
+    #         # deal with the case when the original text is too long
+    #         except openai.error.InvalidRequestError:
+    #             if cut < 10:
+    #                 tmp_text = tmp_text[:int((10-cut)/10*length)]
+    #             else:
+    #                 tmp_text = tmp_text[:int((19-cut)/100*length)]
+                
+    #             # make sure the last piece of the result is a complete sentence
+    #             print(len(tmp_text))
+    #             if tmp_text[len(tmp_text) - 1] != ".":
+    #                 tmp_text = tmp_text.split(".")[:len(tmp_text.split(".")) - 1]
+    #             tmp_answer = ""
+    #             for i in range(len(tmp_text)):
+    #                 if i == len(tmp_text) - 1:
+    #                     tmp_answer += tmp_text[i] + ". "
+    #                 else:
+    #                     tmp_answer += tmp_text[i]
+    #             tmp_answer += "."
+    #             tmp_answer += "\n" + MARK
+    #             tmp_text = tmp_answer
+    #             # print(tmp_text)
+    #             cut += 1
+
+    #         else:
+    #             print(tmp_text)
+    #             get_result = 1
+
+    #     # print(response)
+    #     # print(response["choices"][0]["text"])
+
+    #     summarized_text = response["choices"][0]["text"]
+
+    #     return summarized_text
 
     
 def main1():
@@ -188,7 +272,7 @@ def main1():
     return
 
 
-def main2():
+def main2(question):
 
     '''
         There are mainly three steps to summarize the text
@@ -201,36 +285,49 @@ def main2():
     text_retrieval = Retrieval()
     
     # define the question and passge before retrieval
-    question = "What is data structure?"
+    # question = "What is data structure?"
     passage = text_retrieval.process_text(FILE_PATH)
     
     # apply the DPR Retrieval to get the orginal text
     original_text = text_retrieval.select_paragraphs(question, passage, PARA_NUM)
-    original_text += "\n" + MARK
-    print("++++++++++ ORIGINAL TEXT ++++++++++")
-    print(original_text)
-    print("")
+    # original_text += "\n" + MARK
+    # print("++++++++++ ORIGINAL TEXT ++++++++++")
+    # print(original_text)
+    # print("")
     
     # summarize the text and get the result
     answer = text_summarizing.text_summarization(original_text)
     
     # make sure the last piece of the result is a complete sentence
-    if answer[len(answer) - 1] != ".":
-        answer = answer.split(".")[:len(answer.split(".")) - 1]
-    tmp_answer = ""
+    
+    # if answer[len(answer) - 1] != ".":
+    #     answer = answer.split(".")[:len(answer.split(".")) - 1]
+    # tmp_answer = ""
+    # for i in range(len(answer)):
+    #     if i != len(answer) - 1:
+    #         tmp_answer += answer[i] + ". "
+    #     else:
+    #         tmp_answer += answer[i]
+    # tmp_answer += "."
+    
+    answer = str(answer)
+    # print(len(answer))
     for i in range(len(answer)):
-        if i != len(answer) - 1:
-            tmp_answer += answer[i] + "."
-        if i == len(answer):
-            tmp_answer += answer[i]
-    answer += "."
+        # print(answer[len(answer)-i-1])
+        if answer[len(answer)-i-1] == ".":
+            answer = answer[:len(answer)-i]
+            break
+    # print(answer)
+    tmp_answer = answer
+        
     print("++++++++++ SUMMARIZED ANSWER ++++++++++")
     print(tmp_answer)
 
-    return
+    return tmp_answer
 
 
 
 if __name__ == "__main__":
     # main1()
-    main2()
+    question = "What is machine learning"
+    main2(question)
