@@ -21,7 +21,7 @@ from public.text_summarization.retrieval import Retrieval
 
 # OpenAI API parameters setting
 ########### this key should be changed to your own OpenAI API key ###########
-openai.api_key = "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"
+openai.api_key = ""
 
 
 # define the file path which stores the original file
