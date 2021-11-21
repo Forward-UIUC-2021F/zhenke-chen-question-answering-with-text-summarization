@@ -117,7 +117,7 @@ def trainModel( embeddedData, dataWithScores ):
 * ***Input***:
    * question: the question asked by the user
    * raw_text: the raw text fetched from the Data Collection module 
-   * paragraph_num: the number of paragraphs user wants to apply for the original text
+   * paragraph_num:  the number of paragraphs to compose the original text
 * ***Output***:
    * original_text: the text most relevant to the question, which is ranked by DPR
 ```python

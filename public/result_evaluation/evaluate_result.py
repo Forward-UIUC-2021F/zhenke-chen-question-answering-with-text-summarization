@@ -8,7 +8,6 @@
 
 
 # import the required packages
-import rouge
 from rouge import Rouge
 import pygaggle
 from pygaggle.rerank.base import Query, Text
