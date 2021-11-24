@@ -1,38 +1,35 @@
-1. What is data mining
+1. What is machine learning
 
- Data mining is a process of extracting and discovering patterns in large data sets involving methods at the intersection of machine learning, statistics, and database systems.
-
-References:
-https://www.tibco.com/reference-center/what-is-data-mining
-https://en.wikipedia.org/wiki/Data_mining
-https://www.investopedia.com/terms/d/datamining.asp
-https://www.talend.com/resources/what-is-data-mining/
-https://www.sas.com/en_us/insights/analytics/data-mining.html
-https://economictimes.indiatimes.com/definition/data-mining
-
-2. History of data mining
-
- Data mining is the process of analyzing large data sets (Big Data) from different perspectives and uncovering correlations and patterns to summarize them into useful information. Nowadays it is blended with many techniques such as artificial intelligence, statistics, data science, database theory and machine learning.
- Increasing power of technology and complexity of data sets has lead Data Mining to evolve from static data delivery to more dynamic and proactive information deliveries; from tapes and disks to advanced algorithms and massive databases (see the table below). In the late 80`s Data Mining term began to be known and used within the research community by statisticians, data analysts, and the management information systems (MIS) communities.
- By the early 1990`s, data mining was recognized as a sub-process or a step within a larger process called Knowledge Discovery in Databases (KDD) — which gave rise to actually making it ‘the popular guy’. The most commonly used definition of KDD is “The nontrivial process of identifying valid, novel, potentially useful, and ultimately understandable patterns in data” (Fayyad, 1996).
+Machine learning is a subset of artificial intelligence that allows computers to learn and improve from experience without being explicitly programmed. Machine learning algorithms build a model based on sample data, known as training data, in order to make predictions or decisions without being explicitly programmed to do so. Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can access data and use it to learn for themselves.The process of learning begins with observations or data, such as examples, direct experience, or instruction, in order to look for patterns in data and make better decisions in the future based on the examples that we provide. The primary aim is to allow the computers learn automatically without human intervention or assistance and adjust actions accordingly.But, using the classic algorithms of machine learning, text is considered as a sequence of keywords; instead, an approach based on semantic analysis mimics the human ability to understand the meaning of a text.Machine learning algorithms are often categorized as supervised or unsupervised.Machine learning enables analysis of massive quantities of data. While it generally delivers faster, more accurate results in order to identify profitable opportunities or dangerous risks, it may also require additional time and resources to train it properly. Combining machine learning with AI and cognitive technologies can make it even more effective in processing large volumes of information.Originally published March 2017, updated May 2020Practical AI is not easy.
 
 References:
-https://www.javatpoint.com/history-of-data-mining
-https://www.kdnuggets.com/2016/06/rayli-history-data-mining.html
-https://en.wikipedia.org/wiki/Data_mining
-https://www.researchgate.net/figure/1-Steps-in-the-evolution-of-Data-Mining_tbl1_319767257
-https://medium.com/@exastax/the-history-of-data-mining-d2aeb0f587ce
-https://www.britannica.com/technology/data-mining
+https://www.britannica.com/technology/machine-learning
+https://en.wikipedia.org/wiki/Machine_learning
+https://www.ibm.com/cloud/learn/machine-learning
+https://www.expert.ai/blog/machine-learning-definition/
+https://searchenterpriseai.techtarget.com/definition/machine-learning-ML
+https://www.sas.com/en_us/insights/analytics/machine-learning.html
 
-3. Applications of data mining
+2. Method of machine learning
 
- Data mining is the process of extracting useful information from large datasets. It is used by businesses to gain insights about their customers, products, and services. Data mining is used in a variety of industries, including finance, healthcare, and education. Data mining is used in a variety of industries, including finance, healthcare, and education. Data mining is the process of extracting useful information from large datasets. It is used by businesses to gain insights about their customers, products, and services. Data mining is used in a variety of industries, including finance, healthcare, and education. Data mining is the process of extracting useful information from large datasets. It is used by businesses to gain insights about their customers, products, and services. Data mining is used in a variety of industries, including finance, healthcare, and education. Data mining is the process of extracting useful information from large datasets. It is used by businesses to gain insights about their customers, products, and services.
+K-Means is a great way to start with clustering. But you can also use other clustering techniques, such as hierarchical clustering, fuzzy c-means, and Gaussian mixture models. With dimensionality reduction, we reduce the number of variables in a data set without losing information. The goal is to reduce the complexity of the data set so that it’s easier to understand and interpret. The most popular dimensionality reduction technique is principal component analysis (PCA). PCA is a linear transformation that transforms the data set into a new set of variables called principal components. The principal components are linear combinations of the original variables that are weighted by the amount of information they contain. The first principal component accounts for as much of the information as possible, the second accounts for as much of the remaining information as possible, and so on. The chart below shows the data set of buildings before and after PCA. The first principal component (PC1) accounts for most of the variation in the data, the second principal component (PC2) accounts for the remaining variation, and so on. The chart also shows the data set of buildings after applying PCA. The first two principal components account for most of the variation in the data set.
 
 References:
-https://bigdata-madesimple.com/14-useful-applications-of-data-mining/
-https://www.upgrad.com/blog/12-most-useful-data-mining-applications-of-2020/
-https://www.tutorialspoint.com/data_mining/dm_applications_trends.htm
-https://www.jigsawacademy.com/blogs/data-science/data-mining-applications/
-https://www.geeksforgeeks.org/applications-of-data-mining/
-https://www.analyticssteps.com/blogs/12-applications-data-mining
+https://towardsdatascience.com/10-machine-learning-methods-that-every-data-scientist-should-know-3cc96e0eeee9
+https://machinelearningmastery.com/types-of-learning-in-machine-learning/
+https://en.wikipedia.org/wiki/Machine_learning
+https://www.mathworks.com/discovery/machine-learning.html
+https://mobidev.biz/blog/5-essential-machine-learning-techniques
+https://www.analyticsvidhya.com/blog/2017/09/common-machine-learning-algorithms/
 
+3. Applications of machine learning
+
+Machine Learning is a field of computer science that gives computers the ability to learn without being explicitly programmed. In other words, it is the study of computer algorithms that can learn from data. Machine Learning is a very broad field of study and has many practical applications. It is used in many areas of computer science, such as data mining, pattern recognition, statistical modeling, and artificial intelligence.
+
+References:
+https://static.javatpoint.com/tutorial/machine-learning/images/applications-of-machine-learning.png?sa=X&ved=2ahUKEwiIy5XMu7D0AhV8KqYKHZ44Ct4Q_B16BAgGEAI
+https://www.javatpoint.com/applications-of-machine-learning
+https://www.edureka.co/blog/machine-learning-applications/
+https://en.wikipedia.org/wiki/Machine_learning
+https://data-flair.training/blogs/machine-learning-applications/
+https://www.simplilearn.com/tutorials/machine-learning-tutorial/machine-learning-applications

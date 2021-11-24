@@ -8,7 +8,6 @@
 
 
 # import the required packages
-import rouge
 from rouge import Rouge
 import pygaggle
 from pygaggle.rerank.base import Query, Text
@@ -60,7 +59,7 @@ class ResultEvaluation():
             
             Keyword arguments:
             question -- the question asked by the user
-            test_text -- the summarized text 
+            test_text -- the summarized text
         '''
         
         # define the query
