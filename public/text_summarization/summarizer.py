@@ -15,8 +15,8 @@ import os
 
 
 # import the retrieval from another file
-from retrieval import Retrieval
-# from public.text_summarization.retrieval import Retrieval
+# from retrieval import Retrieval
+from public.text_summarization.retrieval import Retrieval
 
 
 # OpenAI API parameters setting

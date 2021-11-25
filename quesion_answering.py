@@ -132,8 +132,8 @@ def result_selection(text_list):
         # deal with some cases that the answer has blank lines
         tmp_txt = tmp_txt.replace("\n\n", "")
         
-        # deal with some cases that there is no space after the period
-        tmp_txt = tmp_txt.replace("。 ", "。")
+        # deal with some cases that there is no space after the period for each sentence
+        tmp_txt = tmp_txt.replace(". ", ".")
             
         # split the answer sentence by sentence
         splitted = tmp_txt.split(".")
