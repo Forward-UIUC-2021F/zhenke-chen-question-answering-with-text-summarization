@@ -16,6 +16,7 @@ import json
 from bs4 import BeautifulSoup
 from bs4 import SoupStrainer
 from googlesearch import search
+import string
 
 
 # define the module level constants
@@ -39,6 +40,10 @@ SEARCH_ENGINE_CX = None
 
 # define the mark to separate text from different sources while storing in the file
 DELIMETER = "######"
+
+
+# define the potential tags the websites may have for subtitles
+SUB_TITLE_LIST = ["h", "h1", "h2", "h3"]
 
 
 # define the overload number of webistes got from googlesearch
@@ -204,10 +209,128 @@ class CollectData():
             original_text = FAIL
 
         return [original_text, original_text_2]
+    
+    def optimized_web_clawer( self, websites, result_num = 2 ):
+    
+        original_text = []
+        sub_mark = 0
+
+        for website_idx in range(result_num):
+
+            tmp_text = ""
+            header_list = []
+            idx = 0
+
+            # store the website into the temporary file
+            url = websites[website_idx]
+            header = {"User-Agent": USER_AGENT}
+            request = urllib.request.Request(url, headers = header)
+            response = urllib.request.urlopen(request)
+            soup = BeautifulSoup(response.read().decode('utf-8', 'ignore'), features = "lxml")
+            
+            for i in SUB_TITLE_LIST:
+                if len(soup.find_all(i)) == 0:
+                    continue
+                elif len(soup.find_all(i)) > 4:
+                    SUB = i
+                    sub_mark = 1
+                    break
+            
+            # print(len(soup.find_all(SUB)))
+            # print(sub_mark)
+            # print(SUB)
+            # print(soup.find_all(SUB))
+            # print(len(soup.find_all(SUB)))
+            if sub_mark == 1:
+            
+                curr_heading = soup.find(SUB)
+                sub_len = len(soup.find_all(SUB))
+                while idx < sub_len:
+                
+                    res_txt = ""
+                    if idx > 0:
+                        curr_heading = curr_heading.find_next_sibling(SUB)
+                    # print(paras.find_next(SUB))
+                    
+                    # print(idx)
+                    # print(curr_heading)
+                    # print(curr_heading.find_next_sibling(SUB))
+                    # print("\n")
+                    
+                    next_heading = curr_heading.find_next_sibling(SUB)
+                    if next_heading == None:
+                        break
+                    else:
+                        next_heading = next_heading.get_text()
+                    paras = curr_heading
+                    while paras.find_next().get_text() != next_heading:
+                        paras = paras.find_next()
+                        # print(paras)
+                        # print(paras.name)
+                        # if paras.name != "a" and paras.name != "style" and paras.name != "noscript" and paras.name != "aside":
+                        #     print(paras.name)
+                        #     res_txt += paras.get_text()
+                        if paras.name == "p" or paras.name == "p1" or paras.name == "p2" or paras.name == "p3":
+                            tmp_para_text = paras.get_text()
+                            if len(tmp_para_text) > STRING_LENGTH:
+                                res_txt += tmp_para_text
+                    top_sen = "One of the aspects is " + curr_heading.get_text().strip(string.digits).strip(". ") + ". "
+                    tmp_text = top_sen + res_txt
+                    
+                    # print(tmp_text)
+                    original_text.append(tmp_text)
+                    idx += 1
+                    
+                
+            elif sub_mark == 0:
+                
+                tmp_list = []
+                tmp_list.append(url)
+                original_text.append(CollectData.web_clawer( self, tmp_list, 1)[0][0])
+
+        return original_text
 
         
-def main( question, res_num ):
+def main2( question, res_num ):
 
+    collect_data = CollectData()
+
+    # apply Google Search to get the list of websites
+    website_list = collect_data.googlesearch_search(question, res_num)
+
+    # appply the web clawer to fetch the text
+    # test if the Google Search results are valid
+    if website_list == FAIL:
+        print("The Google Search is invalid.")
+        text_list = FAIL
+    else:
+        text_list = collect_data.optimized_web_clawer(website_list, res_num)
+
+        # test if the Web Clawer results are valid
+        if text_list == FAIL:
+            print("The Web Clawer is invalid.")
+            text_list = FAIL
+        else:
+            # print out the original text for demonstration
+            # for i in text_list:
+            #     print(i)
+            # print(i for i in text_list)
+            pass
+        
+    # store the orginal text into orginal_text.txt
+    file = open(DOC_2, "w", encoding = "UTF-8")
+    for text_id in range(len(text_list)):
+        file.write(text_list[text_id])
+        # to make the demonstration more clear, split each result with three blank lines
+        if text_id != len(text_list) - 1:
+            # file.write(DELIMETER + "\n")
+            file.write("\n")
+    file.close()
+
+    return text_list, website_list
+
+def main( question, res_num ):
+    
     '''
         Get searching results from Google Search with question and output as a list
 
@@ -262,7 +385,7 @@ def main( question, res_num ):
 
 
 if __name__ == "__main__":
-    question = "Application of machine learning"
+    question = "Methods of data mining"
     number = 1
     if main(question, number)[0] == FAIL:
         print("++++++++++ DATA COLLECTION FAIL ++++++++++\n")

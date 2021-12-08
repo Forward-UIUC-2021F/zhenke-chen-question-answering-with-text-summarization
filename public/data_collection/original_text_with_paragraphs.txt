@@ -57,6 +57,164 @@ All the visualizations of this blog were done using Watson Studio Desktop.######
 Special thanks to Steve Moore for his great feedback on this post.######
 Applied Mathematician and Art Lover | Opinions are My Own | Twitter: @castanan######
 Your home for data science. A Medium publication sharing concepts, ideas and codes.######
+Machine learning is a data analytics technique that teaches computers to do what comes naturally to humans and animals: learn from experience. Machine learning algorithms use computational methods to “learn” information directly from data without relying on a predetermined equation as a model. The algorithms adaptively improve their performance as the number of samples available for learning increases. Deep learning is a specialized form of machine learning.######
+With the rise in big data, machine learning has become a key technique for solving problems in areas, such as:######
+Machine learning algorithms find natural patterns in data that generate insight and help you make better decisions and predictions. They are used every day to make critical decisions in medical diagnosis, stock trading, energy load forecasting, and more. For example, media sites rely on machine learning to sift through millions of options to give you song or movie recommendations. Retailers use it to gain insight into their customers’ purchasing behavior.######
+Consider using machine learning when you have a complex task or problem involving a large amount of data and lots of variables, but no existing formula or equation. For example, machine learning is a good option if you need to handle situations like these:######
+Hand-written rules and equations are too complex—as in face recognition and speech recognition.
+######
+The rules of a task are constantly changing—as in fraud detection from transaction records.
+######
+The nature of the data keeps changing, and the program needs to adapt—as in automated trading, energy demand forecasting, and predicting shopping trends.
+######
+Machine learning uses two types of techniques: supervised learning, which trains a model on known input and output data so that it can predict future outputs, and unsupervised learning, which finds hidden patterns or intrinsic structures in input data.######
+Figure 1. Machine learning techniques include both unsupervised and supervised learning.
+######
+Supervised machine learning builds a model that makes predictions based on evidence in the presence of uncertainty. A supervised learning algorithm takes a known set of input data and known responses to the data (output) and trains a model to generate reasonable predictions for the response to new data. Use supervised learning if you have known data for the output you are trying to predict.######
+Supervised learning uses classification and regression techniques to develop machine learning models.######
+Classification techniques predict discrete responses—for example, whether an email is genuine or spam, or whether a tumor is cancerous or benign. Classification models classify input data into categories. Typical applications include medical imaging, speech recognition, and credit scoring.######
+Use classification if your data can be tagged, categorized, or separated into specific groups or classes. For example, applications for hand-writing recognition use classification to recognize letters and numbers. In image processing and computer vision, unsupervised pattern recognition techniques are used for object detection and image segmentation.######
+Common algorithms for performing classification include support vector machine (SVM), boosted and bagged decision trees, k-nearest neighbor, Naïve Bayes, discriminant analysis, logistic regression, and neural networks.######
+Regression techniques predict continuous responses—for example, changes in temperature or fluctuations in power demand. Typical applications include electricity load forecasting and algorithmic trading.######
+Use regression techniques if you are working with a data range or if the nature of your response is a real number, such as temperature or the time until failure for a piece of equipment.######
+Common regression algorithms include linear model, nonlinear model, regularization, stepwise regression, boosted and bagged decision trees, neural networks, and adaptive neuro-fuzzy learning.######
+Suppose clinicians want to predict whether someone will have a heart attack within a year. They have data on previous patients, including age, weight, height, and blood pressure. They know whether the previous patients had heart attacks within a year. So the problem is combining the existing data into a model that can predict whether a new person will have a heart attack within a year.
+######
+Unsupervised learning finds hidden patterns or intrinsic structures in data. It is used to draw inferences from datasets consisting of input data without labeled responses.######
+Clustering is the most common unsupervised learning technique. It is used for exploratory data analysis to find hidden patterns or groupings in data. Applications for cluster analysis include gene sequence analysis, market research, and object recognition.######
+For example, if a cell phone company wants optimize the locations where they build cell phone towers, they can use machine learning to estimate the number of clusters of people relying on their towers. A phone can only talk to one tower at a time, so the team uses clustering algorithms to design the best placement of cell towers to optimize signal reception for groups, or clusters, of their customers.######
+Common algorithms for performing clustering include k-means and k-medoids, hierarchical clustering, Gaussian mixture models, hidden Markov models, self-organizing maps, fuzzy c-means clustering, and subtractive clustering.######
+Figure 2. Clustering finds hidden patterns in your data.
+######
+Choosing the right algorithm can seem overwhelming—there are dozens of supervised and unsupervised machine learning algorithms, and each takes a different approach to learning.######
+There is no best method or one size fits all. Finding the right algorithm is partly just trial and error—even highly experienced data scientists can’t tell whether an algorithm will work without trying it out. But algorithm selection also depends on the size and type of data you’re working with, the insights you want to get from the data, and how those insights will be used.######
+
+
+
+		
+
+		
+			
+			Which Machine Learning Algorithm Is Right for You?
+######
+Here are some guidelines on choosing between supervised and unsupervised machine learning:######
+How can you harness the power of machine learning to use data to make better decisions? MATLAB makes machine learning easy. With tools and functions for handling big data, as well as apps to make machine learning accessible, MATLAB is an ideal environment for applying machine learning to your data analytics.######
+With MATLAB, engineers and data scientists have immediate access to prebuilt functions, extensive toolboxes, and specialized apps for classification, regression, and clustering.######
+
+
+
+		
+
+		
+			
+			How Much Do You Know About Machine Learning?
+######
+
+
+
+		
+
+		
+			
+			Deep Learning and Traditional Machine Learning: Choosing the Right Approach
+######
+Researchers at the Art and Artificial Intelligence Laboratory at Rutgers University wanted to see whether a computer algorithm could classify paintings by style, genre, and artist as easily as a human. They began by identifying visual features for classifying a painting’s style. The algorithms they developed classified the styles of paintings in the database with 60% accuracy, outperforming typical non-expert humans.######
+The researchers hypothesized that visual features useful for style classification (a supervised learning problem) could also be used to determine artistic influences (an unsupervised problem).######
+They used classification algorithms trained on Google images to identify specific objects. They tested the algorithms on more than 1,700 paintings from 66 different artists working over a span of 550 years. The algorithm readily identified connected works, including the influence of Diego Velazquez’s “Portrait of Pope Innocent X” on Francis Bacon’s “Study After Velazquez’s Portrait of Pope Innocent X.”######
+The  heating, ventilation, and air-conditioning (HVAC) systems in office buildings, hospitals, and other large-scale commercial buildings are often inefficient because they do not take into account changing weather patterns, variable energy costs, or the building’s thermal properties.######
+BuildingIQ’s cloud-based software platform addresses this problem. The platform uses advanced algorithms and machine learning methods to continuously process gigabytes of information from power meters, thermometers, and HVAC pressure sensors, as well as weather and energy cost. In particular, machine learning is used to segment data and determine the relative contributions of gas, electric, steam, and solar power to heating and cooling processes. The BuildingIQ platform reduces HVAC energy consumption in large-scale commercial buildings by 10–25% during normal operation.######
+With more than 8 million members, the RAC is one of the UK’s largest motoring organizations, providing roadside assistance, insurance, and other services to private and business motorists.######
+To enable rapid response to roadside incidents, reduce crashes, and mitigate insurance costs, the RAC developed an onboard crash sensing system that uses advanced machine learning algorithms to detect low-speed collisions and distinguish these events from more common driving events, such as driving over speed bumps or potholes. Independent tests showed the RAC system to be 92% accurate in detecting test crashes.######
+Choose a web site to get translated content where available and see local events and
+							offers. Based on
+							your location, we recommend that you select: .
+						######
+You can also select a web site from the following list:######
+Select the China site (in Chinese or English) for best site performance. Other MathWorks country
+						sites are not optimized for visits from your location.######
+Accelerating the pace of engineering and science######
+MathWorks is the leading developer of mathematical computing software for engineers and scientists.######
+Machine learning is a field of research aimed at teaching machines to perform cognitive activity, similar to the human mind. While they are typically much more limited in cognitive ability than the average human, they are able to process vast amounts of information quickly and derive useful business insights. ######
+“The goal of machine learning algorithms is to gain valuable business insights. Here the point is not to get more data, the point is to get the “right” data.”######
+The “learning” in machine learning refers to a process in which machines review existing data and learn new skills and knowledge from that data. Machine learning systems use algorithms to find patterns in datasets, which might include structured data, unstructured textual data, numeric data, or even rich media like audio files, images and videos. Machine learning algorithms are computationally intensive, requiring specialized infrastructure to run at large scale.######
+By submitting your email address you consent to our Privacy Policy and agree to receive information regarding our news and business offers. You can withdraw your consent at any time by sending a request to info@mobidev.biz.######
+The url to download PDF file was sent to your email######
+Below are the main disciplines in machine learning. Most machine learning algorithms fall into one of these categories:######
+Use supervised learning if you know in advance what you want to teach a machine. This typically requires exposing the algorithm to a huge set of training data, letting the model examine the output, and adjusting the parameters until getting the desired results. You can then test the machine by letting it make predictions for a “validation data set”, or in other words, new unseen data.######
+Common supervised learning tasks typically implement prediction, regression, or classification. A few examples of business  applications of supervised learning:######
+Unsupervised learning enables a machine to explore a set of data. After the initial exploration, the machine tries to identify hidden patterns that connect different variables. This type of learning can help turn data into groups, based only on statistical properties. Unsupervised learning does not require training on large data sets, and so it is much faster and easier to deploy, compared to supervised learning.######
+“Data scientists spend up to 80% of their time cleaning the gathered data before training the ML model, which is not a guarantee of the entire absence of errors and bias. That is why it is often difficult to reach the ideal data quality and meet all the data standard requirements. And that’s how we came to unsupervised machine learning approaches.”######
+A few examples of applications of unsupervised learning in business applications:######
+Semi-supervised learning combines techniques from unsupervised and supervised learning. For example, manually labeling some of the data can provide the algorithm with an example on how the rest of the data set should be grouped.######
+An example application of semi-supervised learning in business applications is detecting identity fraud. Supervised learning is used to define what is considered an “anomaly”, and anomalous cases are then categorized using unsupervised learning methods.######
+Reinforcement learning enables a machine to interact with an environment. A simple example is repeatedly playing a video game, and providing a reward when the algorithm takes the desired action. By repeating the process thousands or millions of times, the machine can eventually learn from its experience.######
+“Reinforcement learning is the best way to simulate human creativity in a machine by running many possible scenarios. The model can even be adapted to complete complex behavioral tasks. It’s an ideal solution for solving all kinds of optimization problems.”######
+Reinforcement learning is also applied in deep learning (DL). Deep reinforcement learning is often used for training autonomous decision-making, in cases that require more than what is possible to achieve with supervised learning or unsupervised learning techniques.######
+AlphaGo is a notable example of reinforcement learning. AlphaGo is an artificial intelligence (AI) engine that uses reinforcement learning to learn how to play the game of Go, possibly the world’s most complex strategy game, with 10^170 possible moves in every turn. The system trained itself repetitively until it managed to defeat the world champion in Go. ######
+Regression methods are used for training supervised ML. The goal of regression techniques is typically to explain or predict a specific numerical value while using a previous data set. For example, regression methods can take historical pricing data, and then predict the price of a similar property to retail demand forecasting.######
+Linear regression is considered the simplest and most basic method. In this case, a dataset is modeled using the following equation: ######
+( y = m * x + b ) ######
+It is possible to train a regression model with multiple pairs of data, such as x, y. To do this, you need to define a position, as well as the slope of the line, with a minimal distance from all known data points. This is the line that best approximates the observations in the data, and can help make predictions for new unseen data.######
+Classification algorithms can explain or predict a class value. Classification is an essential component for many AI applications, but it is especially useful for eCommerce applications. For example, classification algorithms can help predict if a customer will purchase a product, or not. The two classes in this case are “yes” and “no”. Classification algorithms are not limited to two classes and can be used to classify items into a large number of categories.######
+Logistic regression is considered the simplest and most basic classification algorithm. A logistic regression algorithm can take more than one input, and use the data to estimate the probability of an event occurring. An interesting use of this algorithm can be seen in predicting university admittance results. The algorithm, in this case, analyzes two test scores to estimate the university admittance probability. ######
+The output is a probable number between zero and one. The number ‘one’ represents absolute certainty in the admittance of the student, but any number greater than 0.5 predicts the student will be accepted by the university.######
+Clustering algorithms are unsupervised learning methods. A few common clustering algorithms are K-means, mean-shift, and expectation-maximization. They group data points according to similar or shared characteristics. ######
+Grouping or clustering techniques are particularly useful in business applications when there is a need to segment or categorize large volumes of data. Examples include segmenting customers by different characteristics to better target marketing campaigns, and recommending news articles that certain readers will enjoy. Clustering is also effective in discovering patterns in complex data sets that may not be obvious to the human eye.######
+The decision tree algorithm classifies objects by answering “questions” about their attributes located at the nodal points. Depending on the answer, one of the branches is selected, and at the next junction, another question is posed, until the algorithm reaches the tree’s “leaf”, which indicates the final answer. ######
+Decision tree applications include knowledge management platforms for customer service, predictive pricing, and product planning. ######
+A typical example of decision trees is identifying the insurance premium that should be charged based on an individual’s situation. The decision tree can define a complex map of criteria such as location, types of insured events, environmental conditions, etc., and determine risk categories based on claims submitted and amounts spent. The system can then evaluate new claims for insurance coverage, categorizing them by risk category and potential financial damage.######
+Neural networks mimic the structure of the brain: each artificial neuron connects to several other neurons, and together millions of neurons create a complex cognitive structure. Neural networks have a multilayer structure: neurons in one layer transmit data to several neurons on the next, and so on. Ultimately, the data reaches the output layer, where the network makes a decision about how to solve a problem, classify an object, etc. Due to the multi-layer nature of neural networks, their field of study is known as “deep learning”.######
+Neural networks are used for a wide variety of business applications. In healthcare, they are used in the analysis of medical images, to speed up diagnostic procedures and search for drugs. In the telecommunications and media industries, neural networks can be used for machine translation, fraud detection, and virtual assistant services. The financial industry uses them for fraud detection, portfolio management and risk analysis.######
+When working on projects involving machine learning techniques, we have gathered many useful insights. Here we will share some of them. ######
+1. The high quality of prepared data does not always lead to expected results. ######
+The process of data preparation often requires domain knowledge. Since data science engineers develop products in different domain areas, they are unlikely to know all of them in-depth. Considering this fact, no matter how high the gathered data’s quality is, this data is wrong. Thus, an ML model will not add value for business optimization when processing incorrect data.######
+A good way to avoid misconception is the utilization of unsupervised machine learning techniques. The idea is not to label data but to let the ML algorithm do it for you. By applying dimensionality reduction, data clustering, anomaly detection, and association mining algorithms, it’s possible not only to determine the well-known data categories but also to find the hidden structures of data and get the more valuable business insights. 
+######
+The example of Clustering algorithm in action######
+2. Predictive systems often require multiple machine learning techniques.######
+When developing demand forecasting systems for retail, we used several ML approaches involving regression, time series, random forest, decision tree, and feature engineering. Isn’t that much? – you may be asking. It depends on the expected result. For example, in the case of demand forecasting, the ML model may process different data categories from both internal and external, structured and unstructured. Thus, when it’s not enough to use just one ML technique to get the expected output accuracy, data scientists use more methods until reaching the most accurate results.######
+One more reason to use several ML techniques is the vulnerability of forecasting systems to anomalies. For example, the COVID-19 pandemic can be deemed by the demand forecasting algorithm as an anomaly. Since forecasting models process historical data mostly, they cannot recognize immediate changes in the demand. Thus, the accuracy of the forecasts will be low. ######
+There are several ways to avoid the vulnerability of that type:######
+3. Neural networks integration requires an elaborate software architecture.######
+The main requirements to those neural networks-based systems that process images and video records are related to the data storage capacity. For example, in manufacturing, AI-based visual inspection systems for defect detection commonly process video records from the production lines. ######
+The size of video records per one production lot might reach more than 10 GB, depending on the production process’s duration. Thus, it’s required to use an optimal data storage approach. In this case, it’s recommended to use a cloud streaming service, but it’s also possible to consider a local server or serverless architecture.######
+Machine learning approaches are not limited only to the techniques described in this article. The more sophisticated the use case is, the more advanced techniques are applied. It’s all about business ideas involving machine learning services, but not about inventing new approaches.######
+By submitting your email address you consent to our Privacy Policy and agree to receive information regarding our news and business offers. You can withdraw your consent at any time by sending a request to info@mobidev.biz.######
+The url to download PDF file was sent to your email######
+We will send you an email with the link to the requested file######
+By submitting your email address you consent to our Privacy Policy and agree to receive information regarding our news and business offers. You can withdraw your consent at any time by sending a request to info@mobidev.biz.######
+We are sending you an e-mail with the link to the requested file.######
+Subscribe to Tech Research & Insights Newsletter######
+By submitting your email address you consent to our Privacy Policy and agree to receive information regarding our news and business offers. You can withdraw your consent at any time by sending a request to info@mobidev.biz.######
+“Why should I care about a cool new technology until it’s solving any of my problems?”—This was the exact conversation I had with the executive of a water purification plant over a warm cup of coffee. 
+What started as id######
+Have you heard that Apache Cordova support is being retired from the App Center? Want to know how this will affect your existing Cordova app?
+Future trends of cross-platform mobile development are already starting to eme######
+What is it like chasing a tornado, and how did I find myself testing GPS app software on the border of Canada? With the car trunk packed to the brim and AC/DC playing at full power, you head central-east to Ontario. The ######
+
+US Office - MobiDev Corporation
+
+                                    3855 Holcomb Bridge Rd. Suite 300, 
+Norcross, GA 30092, USA
+######
+
+UK Office - MobiDev International Ltd
+
+                                    311 Shoreham Street, 
+Sheffield, South Yorkshire S24FA, England
+######
+
+R&D centers in Ukraine - Kharkiv, Mykolaiv, Chernivtsi
+
+######
+
+
+Call Us: +1 888 380 0276
+Mail: contact@mobidev.biz
+
+######
+
+                        Copyright © 2009-2021. All Rights Reserved.                    ######
 Last Updated on November 11, 2019######
 Machine learning is a large field of study that overlaps with and inherits ideas from many related fields such as artificial intelligence.######
 The focus of the field is learning, that is, acquiring skills or knowledge from experience. Most commonly, this means synthesizing useful concepts from historical data.######
@@ -343,6 +501,9 @@ What about association problems in unsupervised learning?######
 I’d  love to know about passive learning. Also, could you give specific examples of learning algorithms that are active and passive learners?######
 Thank you very much for the useful information. I have a question regarding the initial model for Federated Learning that must be for the first time be set in the server. Is the procedure of selecting such initial model (that will later be trained by every client), the same as selecting a model in Machine Learning? I mean evaluating different models using our preliminary datasets? And When we are sure that this model is the best model then send it into our server as a initial model. And then this will be pulled via every client and retrained over time?######
 Yes, it should be same (or at least similar) to selecting a model in non-federated situation. One way to do this is based on a small subset of data at central server. Then the richer data stays at the edge of each client, which will be used to retrain the initial model.######
+Hi  Sir , Hybrid crowd technique is a machine learning or not .######
+Dear All
+how can use machine learning for discrimination between inrush current and internal faults for power transformer differential relay######
 Email (will not be published) (required) ######
 Δdocument.getElementById( "ak_js" ).setAttribute( "value", ( new Date() ).getTime() );######
 Welcome!
@@ -362,6 +523,108 @@ Terms |
 Contact |
 Sitemap |
 Search######
+Google’s self-driving cars and robots get a lot of press, but the company’s real future is in machine learning, the technology that enables computers to get smarter and more personal.######
+We are probably living in the most defining period of human history. The period when computing moved from large mainframes to PCs to the cloud. But what makes it defining is not what has happened, but what is coming our way in years to come.######
+What makes this period exciting and enthralling for someone like me is the democratization of the various tools and techniques, which followed the boost in computing. Welcome to the world of data science!######
+Today, as a data scientist, I can build data-crunching machines with complex algorithms for a few dollars per hour. But reaching here wasn’t easy! I had my dark days and nights.######
+Are you a beginner looking for a place to start your data science journey? Presenting a list of comprehensive courses, full of knowledge and data science learning, curated just for you to learn data science (using Python) from scratch:######
+The idea behind creating this guide is to simplify the journey of aspiring data scientists and machine learning enthusiasts across the world. Through this guide, I will enable you to work on machine learning problems and gain from experience. I am providing a high-level understanding of various machine learning algorithms along with R & Python codes to run them. These should be sufficient to get your hands dirty. You can also check out our Machine Learning Course.######
+Essentials of machine learning algorithms with implementation in R and Python######
+I have deliberately skipped the statistics behind these techniques, as you don’t need to understand them at the start. So, if you are looking for a statistical understanding of these algorithms, you should look elsewhere. But, if you are looking to equip yourself to start building a machine learning project, you are in for a treat.######
+How it works: This algorithm consist of a target / outcome variable (or dependent variable) which is to be predicted from a given set of predictors (independent variables). Using these set of variables, we generate a function that map inputs to desired outputs. The training process continues until the model achieves a desired level of accuracy on the training data. Examples of Supervised Learning: Regression, Decision Tree, Random Forest, KNN, Logistic Regression etc.######
+How it works: In this algorithm, we do not have any target or outcome variable to predict / estimate. It is used for clustering population in different groups, which is widely used for segmenting customers in different groups for specific intervention. Examples of Unsupervised Learning: Apriori algorithm, K-means.######
+How it works: Using this algorithm, the machine is trained to make specific decisions. It works this way: the machine is exposed to an environment where it trains itself continually using trial and error. This machine learns from past experience and tries to capture the best possible knowledge to make accurate business decisions. Example of Reinforcement Learning: Markov Decision Process######
+Here is the list of commonly used machine learning algorithms. These algorithms can be applied to almost any data problem:######
+It is used to estimate real values (cost of houses, number of calls, total sales etc.) based on continuous variable(s). Here, we establish relationship between independent and dependent variables by fitting a best line. This best fit line is known as regression line and represented by a linear equation Y= a *X + b.######
+The best way to understand linear regression is to relive this experience of childhood. Let us say, you ask a child in fifth grade to arrange people in his class by increasing order of weight, without asking them their weights! What do you think the child will do? He / she would likely look (visually analyze) at the height and build of people and arrange them using a combination of these visible parameters. This is linear regression in real life! The child has actually figured out that height and build would be correlated to the weight by a relationship, which looks like the equation above.######
+These coefficients a and b are derived based on minimizing the sum of squared difference of distance between data points and regression line.######
+Look at the below example. Here we have identified the best fit line having linear equation y=0.2811x+13.9. Now using this equation, we can find the weight, knowing the height of a person.######
+Linear Regression is mainly of two types: Simple Linear Regression and Multiple Linear Regression. Simple Linear Regression is characterized by one independent variable. And, Multiple Linear Regression(as the name suggests) is characterized by multiple (more than 1) independent variables. While finding the best fit line, you can fit a polynomial or curvilinear regression. And these are known as polynomial or curvilinear regression.######
+Here’s a coding window to try out your hand and build your own linear regression model in Python:######
+Don’t get confused by its name! It is a classification not a regression algorithm. It is used to estimate discrete values ( Binary values like 0/1, yes/no, true/false ) based on given set of independent variable(s). In simple words, it predicts the probability of occurrence of an event by fitting data to a logit function. Hence, it is also known as logit regression. Since, it predicts the probability, its output values lies between 0 and 1 (as expected).######
+Again, let us try and understand this through a simple example.######
+Let’s say your friend gives you a puzzle to solve. There are only 2 outcome scenarios – either you solve it or you don’t. Now imagine, that you are being given wide range of puzzles / quizzes in an attempt to understand which subjects you are good at. The outcome to this study would be something like this – if you are given a trignometry based tenth grade problem, you are 70% likely to solve it. On the other hand, if it is grade fifth history question, the probability of getting an answer is only 30%. This is what Logistic Regression provides you.######
+Coming to the math, the log odds of the outcome is modeled as a linear combination of the predictor variables.######
+Above, p is the probability of presence of the characteristic of interest. It chooses parameters that maximize the likelihood of observing the sample values rather than that minimize the sum of squared errors (like in ordinary regression).######
+Now, you may ask, why take a log? For the sake of simplicity, let’s just say that this is one of the best mathematical way to replicate a step function. I can go in more details, but that will beat the purpose of this article.######
+Build your own logistic regression model in Python here and check the accuracy:######
+There are many different steps that could be tried in order to improve the model:######
+This is one of my favorite algorithm and I use it quite frequently. It is a type of supervised learning algorithm that is mostly used for classification problems. Surprisingly, it works for both categorical and continuous dependent variables. In this algorithm, we split the population into two or more homogeneous sets. This is done based on most significant attributes/ independent variables to make as distinct groups as possible. For more details, you can read: Decision Tree Simplified.######
+In the image above, you can see that population is classified into four different groups based on multiple attributes to identify ‘if they will play or not’. To split the population into different heterogeneous groups, it uses various techniques like Gini, Information Gain, Chi-square, entropy.######
+The best way to understand how decision tree works, is to play Jezzball – a classic game from Microsoft (image below). Essentially, you have a room with moving walls and you need to create walls such that maximum area gets cleared off with out the balls.######
+So, every time you split the room with a wall, you are trying to create 2 different populations with in the same room. Decision trees work in very similar fashion by dividing a population in as different groups as possible.######
+More: Simplified Version of Decision Tree Algorithms######
+Let’s get our hands dirty and code our own decision tree in Python!######
+It is a classification method. In this algorithm, we plot each data item as a point in n-dimensional space (where n is number of features you have) with the value of each feature being the value of a particular coordinate.######
+For example, if we only had two features like Height and Hair length of an individual, we’d first plot these two variables in two dimensional space where each point has two co-ordinates (these co-ordinates are known as Support Vectors)######
+Now, we will find some line that splits the data between the two differently classified groups of data. This will be the line such that the distances from the closest point in each of the two groups will be farthest away.######
+In the example shown above, the line which splits the data into two differently classified groups is the black line, since the two closest points are the farthest apart from the line. This line is our classifier. Then, depending on where the testing data lands on either side of the line, that’s what class we can classify the new data as.######
+More: Simplified Version of Support Vector Machine######
+Think of this algorithm as playing JezzBall in n-dimensional space. The tweaks in the game are:######
+Try your hand and design an SVM model in Python through this coding window:######
+It is a classification technique based on Bayes’ theorem with an assumption of independence between predictors. In simple terms, a Naive Bayes classifier assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature. For example, a fruit may be considered to be an apple if it is red, round, and about 3 inches in diameter. Even if these features depend on each other or upon the existence of the other features, a naive Bayes classifier would consider all of these properties to independently contribute to the probability that this fruit is an apple.######
+Naive Bayesian model is easy to build and particularly useful for very large data sets. Along with simplicity, Naive Bayes is known to outperform even highly sophisticated classification methods.######
+Bayes theorem provides a way of calculating posterior probability P(c|x) from P(c), P(x) and P(x|c). Look at the equation below:
+######
+Example: Let’s understand it using an example. Below I have a training data set of weather and corresponding target variable ‘Play’. Now, we need to classify whether players will play or not based on weather condition. Let’s follow the below steps to perform it.######
+Step 1: Convert the data set to frequency table######
+Step 2: Create Likelihood table by finding the probabilities like Overcast probability = 0.29 and probability of playing is 0.64.######
+Step 3: Now, use Naive Bayesian equation to calculate the posterior probability for each class. The class with the highest posterior probability is the outcome of prediction.######
+Problem: Players will pay if weather is sunny, is this statement is correct?######
+We can solve it using above discussed method, so P(Yes | Sunny) = P( Sunny | Yes) * P(Yes) / P (Sunny)######
+Here we have P (Sunny |Yes) = 3/9 = 0.33, P(Sunny) = 5/14 = 0.36, P( Yes)= 9/14 = 0.64######
+Now, P (Yes | Sunny) = 0.33 * 0.64 / 0.36 = 0.60, which has higher probability.######
+Naive Bayes uses a similar method to predict the probability of different class based on various attributes. This algorithm is mostly used in text classification and with problems having multiple classes.######
+Code a Naive Bayes classification model in Python:######
+It can be used for both classification and regression problems. However, it is more widely used in classification problems in the industry. K nearest neighbors is a simple algorithm that stores all available cases and classifies new cases by a majority vote of its k neighbors. The case being assigned to the class is most common amongst its K nearest neighbors measured by a distance function.######
+These distance functions can be Euclidean, Manhattan, Minkowski and Hamming distance. First three functions are used for continuous function and fourth one (Hamming) for categorical variables. If K = 1, then the case is simply assigned to the class of its nearest neighbor. At times, choosing K turns out to be a challenge while performing kNN modeling.######
+More: Introduction to k-nearest neighbors : Simplified.######
+KNN can easily be mapped to our real lives. If you want to learn about a person, of whom you have no information, you might like to find out about his close friends and the circles he moves in and gain access to his/her information!######
+Things to consider before selecting kNN:######
+It is a type of unsupervised algorithm which solves the clustering problem. Its procedure follows a simple and easy way to classify a given data set through a certain number of clusters (assume k clusters). Data points inside a cluster are homogeneous and heterogeneous to peer groups.######
+Remember figuring out shapes from ink blots? k means is somewhat similar this activity. You look at the shape and spread to decipher how many different clusters / population are present!######
+How to determine value of K:######
+In K-means, we have clusters and each cluster has its own centroid. Sum of square of difference between centroid and the data points within a cluster constitutes within sum of square value for that cluster. Also, when the sum of square values for all the clusters are added, it becomes total within sum of square value for the cluster solution.######
+We know that as the number of cluster increases, this value keeps on decreasing but if you plot the result you may see that the sum of squared distance decreases sharply up to some value of k, and then much more slowly after that. Here, we can find the optimum number of cluster.######
+Random Forest is a trademark term for an ensemble of decision trees. In Random Forest, we’ve collection of decision trees (so known as “Forest”). To classify a new object based on attributes, each tree gives a classification and we say the tree “votes” for that class. The forest chooses the classification having the most votes (over all the trees in the forest).######
+Each tree is planted & grown as follows:######
+For more details on this algorithm, comparing with decision tree and tuning model parameters, I would suggest you to read these articles:######
+Introduction to Random forest – Simplified######
+Comparing a CART model to Random Forest (Part 1)######
+Comparing a Random Forest to a CART model (Part 2)######
+Tuning the parameters of your Random Forest model######
+In the last 4-5 years, there has been an exponential increase in data capturing at every possible stages. Corporates/ Government Agencies/ Research organisations are not only coming with new sources but also they are capturing data in great detail.######
+For example: E-commerce companies are capturing more details about customer like their demographics, web crawling history, what they like or dislike, purchase history, feedback and many others to give them personalized attention more than your nearest grocery shopkeeper.######
+As a data scientist, the data we are offered also consist of many features, this sounds good for building good robust model but there is a challenge. How’d you identify highly significant variable(s) out 1000 or 2000? In such cases, dimensionality reduction algorithm helps us along with various other algorithms like Decision Tree, Random Forest, PCA, Factor Analysis, Identify based on correlation matrix, missing value ratio and others.######
+To know more about this algorithms, you can read “Beginners Guide To Learn Dimension Reduction Techniques“.######
+GBM is a boosting algorithm used when we deal with plenty of data to make a prediction with high prediction power. Boosting is actually an ensemble of learning algorithms which combines the prediction of several base estimators in order to improve robustness over a single estimator. It combines multiple weak or average predictors to a build strong predictor. These boosting algorithms always work well in data science competitions like Kaggle, AV Hackathon, CrowdAnalytix.######
+More: Know about Boosting algorithms in detail######
+GradientBoostingClassifier and Random Forest are two different boosting tree classifier and often people ask about the difference between these two algorithms.######
+Another classic gradient boosting algorithm that’s known to be the decisive choice between winning and losing in some Kaggle competitions.######
+The XGBoost has an immensely high predictive power which makes it the best choice for accuracy in events as it possesses both linear model and the tree learning algorithm, making the algorithm almost 10x faster than existing gradient booster techniques.######
+The support includes various objective functions, including regression, classification and ranking.######
+One of the most interesting things about the XGBoost is that it is also called a regularized boosting technique. This helps to reduce overfit modelling and has a massive support for a range of languages such as Scala, Java, R, Python, Julia and C++.######
+Supports distributed and widespread training on many machines that encompass GCE, AWS, Azure and Yarn clusters. XGBoost can also be integrated with Spark, Flink and other cloud dataflow systems with a built in cross validation at each iteration of the boosting process.######
+To learn more about XGBoost and parameter tuning, visit https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/.######
+LightGBM is a gradient boosting framework that uses tree based learning algorithms. It is designed to be distributed and efficient with the following advantages:######
+The framework is a fast and high-performance gradient boosting one based on decision tree algorithms, used for ranking, classification and many other machine learning tasks. It was developed under the Distributed Machine Learning Toolkit Project of Microsoft.######
+Since the LightGBM is based on decision tree algorithms, it splits the tree leaf wise with the best fit whereas other boosting algorithms split the tree depth wise or level wise rather than leaf-wise. So when growing on the same leaf in Light GBM, the leaf-wise algorithm can reduce more loss than the level-wise algorithm and hence results in much better accuracy which can rarely be achieved by any of the existing boosting algorithms.######
+Also, it is surprisingly very fast, hence the word ‘Light’.######
+Refer to the article to know more about LightGBM: https://www.analyticsvidhya.com/blog/2017/06/which-algorithm-takes-the-crown-light-gbm-vs-xgboost/######
+If you’re familiar with the Caret package in R, this is another way of implementing the LightGBM.######
+CatBoost is a recently open-sourced machine learning algorithm from Yandex. It can easily integrate with deep learning frameworks like Google’s TensorFlow and Apple’s Core ML.######
+The best part about CatBoost is that it does not require extensive data training like other ML models, and can work on a variety of data formats; not undermining how robust it can be.######
+Make sure you handle missing data well before you proceed with the implementation.######
+Catboost can automatically deal with categorical variables without showing the type conversion error, which helps you to focus on tuning your model better rather than sorting out trivial errors.######
+Learn more about Catboost from this article: https://www.analyticsvidhya.com/blog/2017/08/catboost-automated-categorical-data/######
+Now, its time to take the plunge and actually play with some other real datasets. So are you ready to take on the challenge? Accelerate your data science journey with the following Practice Problems:######
+By now, I am sure, you would have an idea of commonly used machine learning algorithms. My sole intention behind writing this article and providing the codes in R and Python is to get you started right away. If you are keen to master machine learning, start right away. Take up problems, develop a physical understanding of the process, apply these codes and see the fun!######
+Did you find this article useful ? Share your views and opinions in the comments section below.######
+I am a Business Analytics and Intelligence professional with deep experience in the Indian Insurance industry. I have worked for various multi-national Insurance companies in last 7 years.######
+Different Methods for Calculating Sentiment of Text######
+Tree Based Algorithms: A Complete Tutorial from Scratch (in R..######
+How do Neural Networks really work?######
+Creating ChatBot Using Natural Language Processing in Python######
 Machine learning (ML) is the study of computer algorithms that can improve automatically through experience and by the use of data.[1] It is seen as a part of artificial intelligence. Machine learning algorithms build a model based on sample data, known as training data, in order to make predictions or decisions without being explicitly programmed to do so.[2] Machine learning algorithms are used in a wide variety of applications, such as in medicine, email filtering, speech recognition, and computer vision, where it is difficult or unfeasible to develop conventional algorithms to perform the needed tasks.[3]
 ######
 A subset of machine learning is closely related to computational statistics, which focuses on making predictions using computers; but not all machine learning is statistical learning. The study of mathematical optimization delivers methods, theory and application domains to the field of machine learning. Data mining is a related field of study, focusing on exploratory data analysis through unsupervised learning.[5][6] Some implementations of machine learning use data and neural networks in a way that mimics the working of a biological brain.[7][8]  In its application across business problems, machine learning is also referred to as predictive analytics.
@@ -567,263 +830,3 @@ A physical neural network or Neuromorphic computer  is a type of artificial neur
 ######
 Software suites containing a variety of machine learning algorithms include the following:
 ######
-Machine learning is a data analytics technique that teaches computers to do what comes naturally to humans and animals: learn from experience. Machine learning algorithms use computational methods to “learn” information directly from data without relying on a predetermined equation as a model. The algorithms adaptively improve their performance as the number of samples available for learning increases. Deep learning is a specialized form of machine learning.######
-With the rise in big data, machine learning has become a key technique for solving problems in areas, such as:######
-Machine learning algorithms find natural patterns in data that generate insight and help you make better decisions and predictions. They are used every day to make critical decisions in medical diagnosis, stock trading, energy load forecasting, and more. For example, media sites rely on machine learning to sift through millions of options to give you song or movie recommendations. Retailers use it to gain insight into their customers’ purchasing behavior.######
-Consider using machine learning when you have a complex task or problem involving a large amount of data and lots of variables, but no existing formula or equation. For example, machine learning is a good option if you need to handle situations like these:######
-Hand-written rules and equations are too complex—as in face recognition and speech recognition.
-######
-The rules of a task are constantly changing—as in fraud detection from transaction records.
-######
-The nature of the data keeps changing, and the program needs to adapt—as in automated trading, energy demand forecasting, and predicting shopping trends.
-######
-Machine learning uses two types of techniques: supervised learning, which trains a model on known input and output data so that it can predict future outputs, and unsupervised learning, which finds hidden patterns or intrinsic structures in input data.######
-Figure 1. Machine learning techniques include both unsupervised and supervised learning.
-######
-Supervised machine learning builds a model that makes predictions based on evidence in the presence of uncertainty. A supervised learning algorithm takes a known set of input data and known responses to the data (output) and trains a model to generate reasonable predictions for the response to new data. Use supervised learning if you have known data for the output you are trying to predict.######
-Supervised learning uses classification and regression techniques to develop machine learning models.######
-Classification techniques predict discrete responses—for example, whether an email is genuine or spam, or whether a tumor is cancerous or benign. Classification models classify input data into categories. Typical applications include medical imaging, speech recognition, and credit scoring.######
-Use classification if your data can be tagged, categorized, or separated into specific groups or classes. For example, applications for hand-writing recognition use classification to recognize letters and numbers. In image processing and computer vision, unsupervised pattern recognition techniques are used for object detection and image segmentation.######
-Common algorithms for performing classification include support vector machine (SVM), boosted and bagged decision trees, k-nearest neighbor, Naïve Bayes, discriminant analysis, logistic regression, and neural networks.######
-Regression techniques predict continuous responses—for example, changes in temperature or fluctuations in power demand. Typical applications include electricity load forecasting and algorithmic trading.######
-Use regression techniques if you are working with a data range or if the nature of your response is a real number, such as temperature or the time until failure for a piece of equipment.######
-Common regression algorithms include linear model, nonlinear model, regularization, stepwise regression, boosted and bagged decision trees, neural networks, and adaptive neuro-fuzzy learning.######
-Suppose clinicians want to predict whether someone will have a heart attack within a year. They have data on previous patients, including age, weight, height, and blood pressure. They know whether the previous patients had heart attacks within a year. So the problem is combining the existing data into a model that can predict whether a new person will have a heart attack within a year.
-######
-Unsupervised learning finds hidden patterns or intrinsic structures in data. It is used to draw inferences from datasets consisting of input data without labeled responses.######
-Clustering is the most common unsupervised learning technique. It is used for exploratory data analysis to find hidden patterns or groupings in data. Applications for cluster analysis include gene sequence analysis, market research, and object recognition.######
-For example, if a cell phone company wants optimize the locations where they build cell phone towers, they can use machine learning to estimate the number of clusters of people relying on their towers. A phone can only talk to one tower at a time, so the team uses clustering algorithms to design the best placement of cell towers to optimize signal reception for groups, or clusters, of their customers.######
-Common algorithms for performing clustering include k-means and k-medoids, hierarchical clustering, Gaussian mixture models, hidden Markov models, self-organizing maps, fuzzy c-means clustering, and subtractive clustering.######
-Figure 2. Clustering finds hidden patterns in your data.
-######
-Choosing the right algorithm can seem overwhelming—there are dozens of supervised and unsupervised machine learning algorithms, and each takes a different approach to learning.######
-There is no best method or one size fits all. Finding the right algorithm is partly just trial and error—even highly experienced data scientists can’t tell whether an algorithm will work without trying it out. But algorithm selection also depends on the size and type of data you’re working with, the insights you want to get from the data, and how those insights will be used.######
-
-
-
-		
-
-		
-			
-			Which Machine Learning Algorithm Is Right for You?
-######
-Here are some guidelines on choosing between supervised and unsupervised machine learning:######
-How can you harness the power of machine learning to use data to make better decisions? MATLAB makes machine learning easy. With tools and functions for handling big data, as well as apps to make machine learning accessible, MATLAB is an ideal environment for applying machine learning to your data analytics.######
-With MATLAB, engineers and data scientists have immediate access to prebuilt functions, extensive toolboxes, and specialized apps for classification, regression, and clustering.######
-
-
-
-		
-
-		
-			
-			How Much Do You Know About Machine Learning?
-######
-
-
-
-		
-
-		
-			
-			Deep Learning and Traditional Machine Learning: Choosing the Right Approach
-######
-Researchers at the Art and Artificial Intelligence Laboratory at Rutgers University wanted to see whether a computer algorithm could classify paintings by style, genre, and artist as easily as a human. They began by identifying visual features for classifying a painting’s style. The algorithms they developed classified the styles of paintings in the database with 60% accuracy, outperforming typical non-expert humans.######
-The researchers hypothesized that visual features useful for style classification (a supervised learning problem) could also be used to determine artistic influences (an unsupervised problem).######
-They used classification algorithms trained on Google images to identify specific objects. They tested the algorithms on more than 1,700 paintings from 66 different artists working over a span of 550 years. The algorithm readily identified connected works, including the influence of Diego Velazquez’s “Portrait of Pope Innocent X” on Francis Bacon’s “Study After Velazquez’s Portrait of Pope Innocent X.”######
-The  heating, ventilation, and air-conditioning (HVAC) systems in office buildings, hospitals, and other large-scale commercial buildings are often inefficient because they do not take into account changing weather patterns, variable energy costs, or the building’s thermal properties.######
-BuildingIQ’s cloud-based software platform addresses this problem. The platform uses advanced algorithms and machine learning methods to continuously process gigabytes of information from power meters, thermometers, and HVAC pressure sensors, as well as weather and energy cost. In particular, machine learning is used to segment data and determine the relative contributions of gas, electric, steam, and solar power to heating and cooling processes. The BuildingIQ platform reduces HVAC energy consumption in large-scale commercial buildings by 10–25% during normal operation.######
-With more than 8 million members, the RAC is one of the UK’s largest motoring organizations, providing roadside assistance, insurance, and other services to private and business motorists.######
-To enable rapid response to roadside incidents, reduce crashes, and mitigate insurance costs, the RAC developed an onboard crash sensing system that uses advanced machine learning algorithms to detect low-speed collisions and distinguish these events from more common driving events, such as driving over speed bumps or potholes. Independent tests showed the RAC system to be 92% accurate in detecting test crashes.######
-Choose a web site to get translated content where available and see local events and
-							offers. Based on
-							your location, we recommend that you select: .
-						######
-You can also select a web site from the following list:######
-Select the China site (in Chinese or English) for best site performance. Other MathWorks country
-						sites are not optimized for visits from your location.######
-Accelerating the pace of engineering and science######
-MathWorks is the leading developer of mathematical computing software for engineers and scientists.######
-Machine learning is a field of research aimed at teaching machines to perform cognitive activity, similar to the human mind. While they are typically much more limited in cognitive ability than the average human, they are able to process vast amounts of information quickly and derive useful business insights. ######
-“The goal of machine learning algorithms is to gain valuable business insights. Here the point is not to get more data, the point is to get the “right” data.”######
-The “learning” in machine learning refers to a process in which machines review existing data and learn new skills and knowledge from that data. Machine learning systems use algorithms to find patterns in datasets, which might include structured data, unstructured textual data, numeric data, or even rich media like audio files, images and videos. Machine learning algorithms are computationally intensive, requiring specialized infrastructure to run at large scale.######
-By submitting your email address you consent to our Privacy Policy and agree to receive information regarding our news and business offers. You can withdraw your consent at any time by sending a request to info@mobidev.biz.######
-The url to download PDF file was sent to your email######
-Below are the main disciplines in machine learning. Most machine learning algorithms fall into one of these categories:######
-Use supervised learning if you know in advance what you want to teach a machine. This typically requires exposing the algorithm to a huge set of training data, letting the model examine the output, and adjusting the parameters until getting the desired results. You can then test the machine by letting it make predictions for a “validation data set”, or in other words, new unseen data.######
-Common supervised learning tasks typically implement prediction, regression, or classification. A few examples of business  applications of supervised learning:######
-Unsupervised learning enables a machine to explore a set of data. After the initial exploration, the machine tries to identify hidden patterns that connect different variables. This type of learning can help turn data into groups, based only on statistical properties. Unsupervised learning does not require training on large data sets, and so it is much faster and easier to deploy, compared to supervised learning.######
-“Data scientists spend up to 80% of their time cleaning the gathered data before training the ML model, which is not a guarantee of the entire absence of errors and bias. That is why it is often difficult to reach the ideal data quality and meet all the data standard requirements. And that’s how we came to unsupervised machine learning approaches.”######
-A few examples of applications of unsupervised learning in business applications:######
-Semi-supervised learning combines techniques from unsupervised and supervised learning. For example, manually labeling some of the data can provide the algorithm with an example on how the rest of the data set should be grouped.######
-An example application of semi-supervised learning in business applications is detecting identity fraud. Supervised learning is used to define what is considered an “anomaly”, and anomalous cases are then categorized using unsupervised learning methods.######
-Reinforcement learning enables a machine to interact with an environment. A simple example is repeatedly playing a video game, and providing a reward when the algorithm takes the desired action. By repeating the process thousands or millions of times, the machine can eventually learn from its experience.######
-“Reinforcement learning is the best way to simulate human creativity in a machine by running many possible scenarios. The model can even be adapted to complete complex behavioral tasks. It’s an ideal solution for solving all kinds of optimization problems.”######
-Reinforcement learning is also applied in deep learning (DL). Deep reinforcement learning is often used for training autonomous decision-making, in cases that require more than what is possible to achieve with supervised learning or unsupervised learning techniques.######
-AlphaGo is a notable example of reinforcement learning. AlphaGo is an artificial intelligence (AI) engine that uses reinforcement learning to learn how to play the game of Go, possibly the world’s most complex strategy game, with 10^170 possible moves in every turn. The system trained itself repetitively until it managed to defeat the world champion in Go. ######
-Regression methods are used for training supervised ML. The goal of regression techniques is typically to explain or predict a specific numerical value while using a previous data set. For example, regression methods can take historical pricing data, and then predict the price of a similar property to retail demand forecasting.######
-Linear regression is considered the simplest and most basic method. In this case, a dataset is modeled using the following equation: ######
-( y = m * x + b ) ######
-It is possible to train a regression model with multiple pairs of data, such as x, y. To do this, you need to define a position, as well as the slope of the line, with a minimal distance from all known data points. This is the line that best approximates the observations in the data, and can help make predictions for new unseen data.######
-Classification algorithms can explain or predict a class value. Classification is an essential component for many AI applications, but it is especially useful for eCommerce applications. For example, classification algorithms can help predict if a customer will purchase a product, or not. The two classes in this case are “yes” and “no”. Classification algorithms are not limited to two classes and can be used to classify items into a large number of categories.######
-Logistic regression is considered the simplest and most basic classification algorithm. A logistic regression algorithm can take more than one input, and use the data to estimate the probability of an event occurring. An interesting use of this algorithm can be seen in predicting university admittance results. The algorithm, in this case, analyzes two test scores to estimate the university admittance probability. ######
-The output is a probable number between zero and one. The number ‘one’ represents absolute certainty in the admittance of the student, but any number greater than 0.5 predicts the student will be accepted by the university.######
-Clustering algorithms are unsupervised learning methods. A few common clustering algorithms are K-means, mean-shift, and expectation-maximization. They group data points according to similar or shared characteristics. ######
-Grouping or clustering techniques are particularly useful in business applications when there is a need to segment or categorize large volumes of data. Examples include segmenting customers by different characteristics to better target marketing campaigns, and recommending news articles that certain readers will enjoy. Clustering is also effective in discovering patterns in complex data sets that may not be obvious to the human eye.######
-The decision tree algorithm classifies objects by answering “questions” about their attributes located at the nodal points. Depending on the answer, one of the branches is selected, and at the next junction, another question is posed, until the algorithm reaches the tree’s “leaf”, which indicates the final answer. ######
-Decision tree applications include knowledge management platforms for customer service, predictive pricing, and product planning. ######
-A typical example of decision trees is identifying the insurance premium that should be charged based on an individual’s situation. The decision tree can define a complex map of criteria such as location, types of insured events, environmental conditions, etc., and determine risk categories based on claims submitted and amounts spent. The system can then evaluate new claims for insurance coverage, categorizing them by risk category and potential financial damage.######
-Neural networks mimic the structure of the brain: each artificial neuron connects to several other neurons, and together millions of neurons create a complex cognitive structure. Neural networks have a multilayer structure: neurons in one layer transmit data to several neurons on the next, and so on. Ultimately, the data reaches the output layer, where the network makes a decision about how to solve a problem, classify an object, etc. Due to the multi-layer nature of neural networks, their field of study is known as “deep learning”.######
-Neural networks are used for a wide variety of business applications. In healthcare, they are used in the analysis of medical images, to speed up diagnostic procedures and search for drugs. In the telecommunications and media industries, neural networks can be used for machine translation, fraud detection, and virtual assistant services. The financial industry uses them for fraud detection, portfolio management and risk analysis.######
-When working on projects involving machine learning techniques, we have gathered many useful insights. Here we will share some of them. ######
-1. The high quality of prepared data does not always lead to expected results. ######
-The process of data preparation often requires domain knowledge. Since data science engineers develop products in different domain areas, they are unlikely to know all of them in-depth. Considering this fact, no matter how high the gathered data’s quality is, this data is wrong. Thus, an ML model will not add value for business optimization when processing incorrect data.######
-A good way to avoid misconception is the utilization of unsupervised machine learning techniques. The idea is not to label data but to let the ML algorithm do it for you. By applying dimensionality reduction, data clustering, anomaly detection, and association mining algorithms, it’s possible not only to determine the well-known data categories but also to find the hidden structures of data and get the more valuable business insights. 
-######
-The example of Clustering algorithm in action######
-2. Predictive systems often require multiple machine learning techniques.######
-When developing demand forecasting systems for retail, we used several ML approaches involving regression, time series, random forest, decision tree, and feature engineering. Isn’t that much? – you may be asking. It depends on the expected result. For example, in the case of demand forecasting, the ML model may process different data categories from both internal and external, structured and unstructured. Thus, when it’s not enough to use just one ML technique to get the expected output accuracy, data scientists use more methods until reaching the most accurate results.######
-One more reason to use several ML techniques is the vulnerability of forecasting systems to anomalies. For example, the COVID-19 pandemic can be deemed by the demand forecasting algorithm as an anomaly. Since forecasting models process historical data mostly, they cannot recognize immediate changes in the demand. Thus, the accuracy of the forecasts will be low. ######
-There are several ways to avoid the vulnerability of that type:######
-3. Neural networks integration requires an elaborate software architecture.######
-The main requirements to those neural networks-based systems that process images and video records are related to the data storage capacity. For example, in manufacturing, AI-based visual inspection systems for defect detection commonly process video records from the production lines. ######
-The size of video records per one production lot might reach more than 10 GB, depending on the production process’s duration. Thus, it’s required to use an optimal data storage approach. In this case, it’s recommended to use a cloud streaming service, but it’s also possible to consider a local server or serverless architecture.######
-Machine learning approaches are not limited only to the techniques described in this article. The more sophisticated the use case is, the more advanced techniques are applied. It’s all about business ideas involving machine learning services, but not about inventing new approaches.######
-By submitting your email address you consent to our Privacy Policy and agree to receive information regarding our news and business offers. You can withdraw your consent at any time by sending a request to info@mobidev.biz.######
-The url to download PDF file was sent to your email######
-We will send you an email with the link to the requested file######
-By submitting your email address you consent to our Privacy Policy and agree to receive information regarding our news and business offers. You can withdraw your consent at any time by sending a request to info@mobidev.biz.######
-We are sending you an e-mail with the link to the requested file.######
-Subscribe to Tech Research & Insights Newsletter######
-By submitting your email address you consent to our Privacy Policy and agree to receive information regarding our news and business offers. You can withdraw your consent at any time by sending a request to info@mobidev.biz.######
-“Why should I care about a cool new technology until it’s solving any of my problems?”—This was the exact conversation I had with the executive of a water purification plant over a warm cup of coffee. 
-What started as id######
-Have you heard that Apache Cordova support is being retired from the App Center? Want to know how this will affect your existing Cordova app?
-Future trends of cross-platform mobile development are already starting to eme######
-What is it like chasing a tornado, and how did I find myself testing GPS app software on the border of Canada? With the car trunk packed to the brim and AC/DC playing at full power, you head central-east to Ontario. The ######
-
-US Office - MobiDev Corporation
-
-                                    3855 Holcomb Bridge Rd. Suite 300, 
-Norcross, GA 30092, USA
-######
-
-UK Office - MobiDev International Ltd
-
-                                    311 Shoreham Street, 
-Sheffield, South Yorkshire S24FA, England
-######
-
-R&D centers in Ukraine - Kharkiv, Mykolaiv, Chernivtsi
-
-######
-
-
-Call Us: +1 888 380 0276
-Mail: contact@mobidev.biz
-
-######
-
-                        Copyright © 2009-2021. All Rights Reserved.                    ######
-Google’s self-driving cars and robots get a lot of press, but the company’s real future is in machine learning, the technology that enables computers to get smarter and more personal.######
-We are probably living in the most defining period of human history. The period when computing moved from large mainframes to PCs to the cloud. But what makes it defining is not what has happened, but what is coming our way in years to come.######
-What makes this period exciting and enthralling for someone like me is the democratization of the various tools and techniques, which followed the boost in computing. Welcome to the world of data science!######
-Today, as a data scientist, I can build data-crunching machines with complex algorithms for a few dollars per hour. But reaching here wasn’t easy! I had my dark days and nights.######
-Are you a beginner looking for a place to start your data science journey? Presenting a list of comprehensive courses, full of knowledge and data science learning, curated just for you to learn data science (using Python) from scratch:######
-The idea behind creating this guide is to simplify the journey of aspiring data scientists and machine learning enthusiasts across the world. Through this guide, I will enable you to work on machine learning problems and gain from experience. I am providing a high-level understanding of various machine learning algorithms along with R & Python codes to run them. These should be sufficient to get your hands dirty. You can also check out our Machine Learning Course.######
-Essentials of machine learning algorithms with implementation in R and Python######
-I have deliberately skipped the statistics behind these techniques, as you don’t need to understand them at the start. So, if you are looking for a statistical understanding of these algorithms, you should look elsewhere. But, if you are looking to equip yourself to start building a machine learning project, you are in for a treat.######
-How it works: This algorithm consist of a target / outcome variable (or dependent variable) which is to be predicted from a given set of predictors (independent variables). Using these set of variables, we generate a function that map inputs to desired outputs. The training process continues until the model achieves a desired level of accuracy on the training data. Examples of Supervised Learning: Regression, Decision Tree, Random Forest, KNN, Logistic Regression etc.######
-How it works: In this algorithm, we do not have any target or outcome variable to predict / estimate. It is used for clustering population in different groups, which is widely used for segmenting customers in different groups for specific intervention. Examples of Unsupervised Learning: Apriori algorithm, K-means.######
-How it works: Using this algorithm, the machine is trained to make specific decisions. It works this way: the machine is exposed to an environment where it trains itself continually using trial and error. This machine learns from past experience and tries to capture the best possible knowledge to make accurate business decisions. Example of Reinforcement Learning: Markov Decision Process######
-Here is the list of commonly used machine learning algorithms. These algorithms can be applied to almost any data problem:######
-It is used to estimate real values (cost of houses, number of calls, total sales etc.) based on continuous variable(s). Here, we establish relationship between independent and dependent variables by fitting a best line. This best fit line is known as regression line and represented by a linear equation Y= a *X + b.######
-The best way to understand linear regression is to relive this experience of childhood. Let us say, you ask a child in fifth grade to arrange people in his class by increasing order of weight, without asking them their weights! What do you think the child will do? He / she would likely look (visually analyze) at the height and build of people and arrange them using a combination of these visible parameters. This is linear regression in real life! The child has actually figured out that height and build would be correlated to the weight by a relationship, which looks like the equation above.######
-These coefficients a and b are derived based on minimizing the sum of squared difference of distance between data points and regression line.######
-Look at the below example. Here we have identified the best fit line having linear equation y=0.2811x+13.9. Now using this equation, we can find the weight, knowing the height of a person.######
-Linear Regression is mainly of two types: Simple Linear Regression and Multiple Linear Regression. Simple Linear Regression is characterized by one independent variable. And, Multiple Linear Regression(as the name suggests) is characterized by multiple (more than 1) independent variables. While finding the best fit line, you can fit a polynomial or curvilinear regression. And these are known as polynomial or curvilinear regression.######
-Here’s a coding window to try out your hand and build your own linear regression model in Python:######
-Don’t get confused by its name! It is a classification not a regression algorithm. It is used to estimate discrete values ( Binary values like 0/1, yes/no, true/false ) based on given set of independent variable(s). In simple words, it predicts the probability of occurrence of an event by fitting data to a logit function. Hence, it is also known as logit regression. Since, it predicts the probability, its output values lies between 0 and 1 (as expected).######
-Again, let us try and understand this through a simple example.######
-Let’s say your friend gives you a puzzle to solve. There are only 2 outcome scenarios – either you solve it or you don’t. Now imagine, that you are being given wide range of puzzles / quizzes in an attempt to understand which subjects you are good at. The outcome to this study would be something like this – if you are given a trignometry based tenth grade problem, you are 70% likely to solve it. On the other hand, if it is grade fifth history question, the probability of getting an answer is only 30%. This is what Logistic Regression provides you.######
-Coming to the math, the log odds of the outcome is modeled as a linear combination of the predictor variables.######
-Above, p is the probability of presence of the characteristic of interest. It chooses parameters that maximize the likelihood of observing the sample values rather than that minimize the sum of squared errors (like in ordinary regression).######
-Now, you may ask, why take a log? For the sake of simplicity, let’s just say that this is one of the best mathematical way to replicate a step function. I can go in more details, but that will beat the purpose of this article.######
-Build your own logistic regression model in Python here and check the accuracy:######
-There are many different steps that could be tried in order to improve the model:######
-This is one of my favorite algorithm and I use it quite frequently. It is a type of supervised learning algorithm that is mostly used for classification problems. Surprisingly, it works for both categorical and continuous dependent variables. In this algorithm, we split the population into two or more homogeneous sets. This is done based on most significant attributes/ independent variables to make as distinct groups as possible. For more details, you can read: Decision Tree Simplified.######
-In the image above, you can see that population is classified into four different groups based on multiple attributes to identify ‘if they will play or not’. To split the population into different heterogeneous groups, it uses various techniques like Gini, Information Gain, Chi-square, entropy.######
-The best way to understand how decision tree works, is to play Jezzball – a classic game from Microsoft (image below). Essentially, you have a room with moving walls and you need to create walls such that maximum area gets cleared off with out the balls.######
-So, every time you split the room with a wall, you are trying to create 2 different populations with in the same room. Decision trees work in very similar fashion by dividing a population in as different groups as possible.######
-More: Simplified Version of Decision Tree Algorithms######
-Let’s get our hands dirty and code our own decision tree in Python!######
-It is a classification method. In this algorithm, we plot each data item as a point in n-dimensional space (where n is number of features you have) with the value of each feature being the value of a particular coordinate.######
-For example, if we only had two features like Height and Hair length of an individual, we’d first plot these two variables in two dimensional space where each point has two co-ordinates (these co-ordinates are known as Support Vectors)######
-Now, we will find some line that splits the data between the two differently classified groups of data. This will be the line such that the distances from the closest point in each of the two groups will be farthest away.######
-In the example shown above, the line which splits the data into two differently classified groups is the black line, since the two closest points are the farthest apart from the line. This line is our classifier. Then, depending on where the testing data lands on either side of the line, that’s what class we can classify the new data as.######
-More: Simplified Version of Support Vector Machine######
-Think of this algorithm as playing JezzBall in n-dimensional space. The tweaks in the game are:######
-Try your hand and design an SVM model in Python through this coding window:######
-It is a classification technique based on Bayes’ theorem with an assumption of independence between predictors. In simple terms, a Naive Bayes classifier assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature. For example, a fruit may be considered to be an apple if it is red, round, and about 3 inches in diameter. Even if these features depend on each other or upon the existence of the other features, a naive Bayes classifier would consider all of these properties to independently contribute to the probability that this fruit is an apple.######
-Naive Bayesian model is easy to build and particularly useful for very large data sets. Along with simplicity, Naive Bayes is known to outperform even highly sophisticated classification methods.######
-Bayes theorem provides a way of calculating posterior probability P(c|x) from P(c), P(x) and P(x|c). Look at the equation below:
-######
-Example: Let’s understand it using an example. Below I have a training data set of weather and corresponding target variable ‘Play’. Now, we need to classify whether players will play or not based on weather condition. Let’s follow the below steps to perform it.######
-Step 1: Convert the data set to frequency table######
-Step 2: Create Likelihood table by finding the probabilities like Overcast probability = 0.29 and probability of playing is 0.64.######
-Step 3: Now, use Naive Bayesian equation to calculate the posterior probability for each class. The class with the highest posterior probability is the outcome of prediction.######
-Problem: Players will pay if weather is sunny, is this statement is correct?######
-We can solve it using above discussed method, so P(Yes | Sunny) = P( Sunny | Yes) * P(Yes) / P (Sunny)######
-Here we have P (Sunny |Yes) = 3/9 = 0.33, P(Sunny) = 5/14 = 0.36, P( Yes)= 9/14 = 0.64######
-Now, P (Yes | Sunny) = 0.33 * 0.64 / 0.36 = 0.60, which has higher probability.######
-Naive Bayes uses a similar method to predict the probability of different class based on various attributes. This algorithm is mostly used in text classification and with problems having multiple classes.######
-Code a Naive Bayes classification model in Python:######
-It can be used for both classification and regression problems. However, it is more widely used in classification problems in the industry. K nearest neighbors is a simple algorithm that stores all available cases and classifies new cases by a majority vote of its k neighbors. The case being assigned to the class is most common amongst its K nearest neighbors measured by a distance function.######
-These distance functions can be Euclidean, Manhattan, Minkowski and Hamming distance. First three functions are used for continuous function and fourth one (Hamming) for categorical variables. If K = 1, then the case is simply assigned to the class of its nearest neighbor. At times, choosing K turns out to be a challenge while performing kNN modeling.######
-More: Introduction to k-nearest neighbors : Simplified.######
-KNN can easily be mapped to our real lives. If you want to learn about a person, of whom you have no information, you might like to find out about his close friends and the circles he moves in and gain access to his/her information!######
-Things to consider before selecting kNN:######
-It is a type of unsupervised algorithm which solves the clustering problem. Its procedure follows a simple and easy way to classify a given data set through a certain number of clusters (assume k clusters). Data points inside a cluster are homogeneous and heterogeneous to peer groups.######
-Remember figuring out shapes from ink blots? k means is somewhat similar this activity. You look at the shape and spread to decipher how many different clusters / population are present!######
-How to determine value of K:######
-In K-means, we have clusters and each cluster has its own centroid. Sum of square of difference between centroid and the data points within a cluster constitutes within sum of square value for that cluster. Also, when the sum of square values for all the clusters are added, it becomes total within sum of square value for the cluster solution.######
-We know that as the number of cluster increases, this value keeps on decreasing but if you plot the result you may see that the sum of squared distance decreases sharply up to some value of k, and then much more slowly after that. Here, we can find the optimum number of cluster.######
-Random Forest is a trademark term for an ensemble of decision trees. In Random Forest, we’ve collection of decision trees (so known as “Forest”). To classify a new object based on attributes, each tree gives a classification and we say the tree “votes” for that class. The forest chooses the classification having the most votes (over all the trees in the forest).######
-Each tree is planted & grown as follows:######
-For more details on this algorithm, comparing with decision tree and tuning model parameters, I would suggest you to read these articles:######
-Introduction to Random forest – Simplified######
-Comparing a CART model to Random Forest (Part 1)######
-Comparing a Random Forest to a CART model (Part 2)######
-Tuning the parameters of your Random Forest model######
-In the last 4-5 years, there has been an exponential increase in data capturing at every possible stages. Corporates/ Government Agencies/ Research organisations are not only coming with new sources but also they are capturing data in great detail.######
-For example: E-commerce companies are capturing more details about customer like their demographics, web crawling history, what they like or dislike, purchase history, feedback and many others to give them personalized attention more than your nearest grocery shopkeeper.######
-As a data scientist, the data we are offered also consist of many features, this sounds good for building good robust model but there is a challenge. How’d you identify highly significant variable(s) out 1000 or 2000? In such cases, dimensionality reduction algorithm helps us along with various other algorithms like Decision Tree, Random Forest, PCA, Factor Analysis, Identify based on correlation matrix, missing value ratio and others.######
-To know more about this algorithms, you can read “Beginners Guide To Learn Dimension Reduction Techniques“.######
-GBM is a boosting algorithm used when we deal with plenty of data to make a prediction with high prediction power. Boosting is actually an ensemble of learning algorithms which combines the prediction of several base estimators in order to improve robustness over a single estimator. It combines multiple weak or average predictors to a build strong predictor. These boosting algorithms always work well in data science competitions like Kaggle, AV Hackathon, CrowdAnalytix.######
-More: Know about Boosting algorithms in detail######
-GradientBoostingClassifier and Random Forest are two different boosting tree classifier and often people ask about the difference between these two algorithms.######
-Another classic gradient boosting algorithm that’s known to be the decisive choice between winning and losing in some Kaggle competitions.######
-The XGBoost has an immensely high predictive power which makes it the best choice for accuracy in events as it possesses both linear model and the tree learning algorithm, making the algorithm almost 10x faster than existing gradient booster techniques.######
-The support includes various objective functions, including regression, classification and ranking.######
-One of the most interesting things about the XGBoost is that it is also called a regularized boosting technique. This helps to reduce overfit modelling and has a massive support for a range of languages such as Scala, Java, R, Python, Julia and C++.######
-Supports distributed and widespread training on many machines that encompass GCE, AWS, Azure and Yarn clusters. XGBoost can also be integrated with Spark, Flink and other cloud dataflow systems with a built in cross validation at each iteration of the boosting process.######
-To learn more about XGBoost and parameter tuning, visit https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/.######
-LightGBM is a gradient boosting framework that uses tree based learning algorithms. It is designed to be distributed and efficient with the following advantages:######
-The framework is a fast and high-performance gradient boosting one based on decision tree algorithms, used for ranking, classification and many other machine learning tasks. It was developed under the Distributed Machine Learning Toolkit Project of Microsoft.######
-Since the LightGBM is based on decision tree algorithms, it splits the tree leaf wise with the best fit whereas other boosting algorithms split the tree depth wise or level wise rather than leaf-wise. So when growing on the same leaf in Light GBM, the leaf-wise algorithm can reduce more loss than the level-wise algorithm and hence results in much better accuracy which can rarely be achieved by any of the existing boosting algorithms.######
-Also, it is surprisingly very fast, hence the word ‘Light’.######
-Refer to the article to know more about LightGBM: https://www.analyticsvidhya.com/blog/2017/06/which-algorithm-takes-the-crown-light-gbm-vs-xgboost/######
-If you’re familiar with the Caret package in R, this is another way of implementing the LightGBM.######
-CatBoost is a recently open-sourced machine learning algorithm from Yandex. It can easily integrate with deep learning frameworks like Google’s TensorFlow and Apple’s Core ML.######
-The best part about CatBoost is that it does not require extensive data training like other ML models, and can work on a variety of data formats; not undermining how robust it can be.######
-Make sure you handle missing data well before you proceed with the implementation.######
-Catboost can automatically deal with categorical variables without showing the type conversion error, which helps you to focus on tuning your model better rather than sorting out trivial errors.######
-Learn more about Catboost from this article: https://www.analyticsvidhya.com/blog/2017/08/catboost-automated-categorical-data/######
-Now, its time to take the plunge and actually play with some other real datasets. So are you ready to take on the challenge? Accelerate your data science journey with the following Practice Problems:######
-By now, I am sure, you would have an idea of commonly used machine learning algorithms. My sole intention behind writing this article and providing the codes in R and Python is to get you started right away. If you are keen to master machine learning, start right away. Take up problems, develop a physical understanding of the process, apply these codes and see the fun!######
-Did you find this article useful ? Share your views and opinions in the comments section below.######
-I am a Business Analytics and Intelligence professional with deep experience in the Indian Insurance industry. I have worked for various multi-national Insurance companies in last 7 years.######
-Python Tutorial: Working with CSV file for Data Science######
-40 Questions to test a Data Scientist on Clustering Techniques..######
-Commonly used Machine Learning Algorithms (with Python and R Codes)######
-Understanding Support Vector Machine(SVM) algorithm from examples (along with code)######

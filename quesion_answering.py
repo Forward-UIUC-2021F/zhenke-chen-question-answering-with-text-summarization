@@ -13,7 +13,8 @@ from itertools import repeat
 
 
 # import the necessary functions from other files
-from public.data_collection.collect_data import main as collect_data
+# from public.data_collection.collect_data import main as collect_data
+from public.data_collection.collect_data import main2 as collect_data
 from public.text_summarization.summarizer import main2 as text_summarization
 
 
@@ -31,12 +32,12 @@ CANDIDTE_NUM = 5
 
 # define the list of subqeustion
 # SUB_QUESTIONS = ["What is ", "History of ", "Method of "]
-SUB_QUESTIONS = ["What is ", "Method of ", "Application of "]
+# SUB_QUESTIONS = ["What is ", "Method of ", "Application of "]
 # SUB_QUESTIONS = ["What is ", "History of ", "Applications of "]
 # SUB_QUESTIONS = ["History of ", "Applications of "]
 # SUB_QUESTIONS = ["What is "]
 # SUB_QUESTIONS = ["History of "]
-# SUB_QUESTIONS = ["Method of "]
+SUB_QUESTIONS = ["Methods of "]
 # SUB_QUESTIONS = ["Applications of "]
 
 
@@ -234,7 +235,7 @@ def optimized_answer_question(keyword):
     
 if __name__ == "__main__":
     
-    keyword = "federated learning"
+    keyword = "data mining"
     # answer_question(keyword)
-    optimized_answer_question("machine learning")
+    optimized_answer_question(keyword)
     
