@@ -10,7 +10,7 @@ pip install -r requirements.txt
 
 ## File Structure
 ```
-zhenke-chen-question-answering-with-text-summarization
+zhenke-chen-question-answering-with-text-summarization/
     - requirements.txt
     - README.md
     - data/images/
