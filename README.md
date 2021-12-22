@@ -36,7 +36,7 @@ zhenke-chen-question-answering-with-text-summarization
 * ```src/data_collection/```: Data Collection module
 * ```src/result_evaluation/```: Result Evaluation module
 * ```src/text_summarization/```: Text Summarization module
-* ```src/question_answering```: answer questions based on the keyword
+* ```src/question_answering.py```: answer questions based on the keyword
 
 # Functional Design
 
@@ -110,6 +110,9 @@ def DPR_evaluation( summarized_text, question ):
    return DPR_scores
 ```
 
+# Demo Video
+## Link: https://drive.google.com/file/d/1Q6xhHJjivIeuBHzjfAgNNmuIqSTg0_vW/view?usp=sharing
+
 # Algorithmic Design
 
 There are three parts of algorithmic designs for this project, which are corresponding the three parts from the functional design, which are **Data Collection**, **Model Training** as well as **Results Selection and Evaluation**.
@@ -133,13 +136,11 @@ There are three parts of algorithmic designs for this project, which are corresp
 * For performance evaluation after the Text Summarization, the **ROUGE-L** method with measurement of Precision, Recall and F-Measure value will be applied. With larger the value, the performance is better.
 * Then, the DPR scores evaluation will be applied to evaluate the relevance between the question and answer (which is also the summarized text). With the scores closest to 0, the answer is most relevant to the question.
 
-# Demo Video
-## Link: https://drive.google.com/file/d/1Q6xhHJjivIeuBHzjfAgNNmuIqSTg0_vW/view?usp=sharing
+# Issues and Future Work
+* The project needs to run for relatively long time for question answering
+* The OpenAI API sometimes have poor results in some cases
 
 # References
-## Datasets:
-* Google's Word2vec. Link: https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz.
-* DUC Dataset. Link: https://duc.nist.gov/data.html.
 ## Papers:
 * Summarizing Papers With Python and GPT-3. Link: https://medium.com/geekculture/a-paper-summarizer-with-python-and-gpt-3-2c718bc3bc88
 * Dense Passage Retrieval for Open-Domain Question Answering. Link: https://arxiv.org/abs/2004.04906
