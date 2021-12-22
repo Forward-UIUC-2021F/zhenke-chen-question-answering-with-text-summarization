@@ -35,9 +35,9 @@ CANDIDTE_NUM = 5
 # SUB_QUESTIONS = ["What is ", "Method of ", "Application of "]
 # SUB_QUESTIONS = ["What is ", "History of ", "Applications of "]
 # SUB_QUESTIONS = ["History of ", "Applications of "]
-# SUB_QUESTIONS = ["What is "]
+SUB_QUESTIONS = ["What is "]
 # SUB_QUESTIONS = ["History of "]
-SUB_QUESTIONS = ["Methods of "]
+# SUB_QUESTIONS = ["Methods of "]
 # SUB_QUESTIONS = ["Applications of "]
 
 
@@ -235,7 +235,7 @@ def optimized_answer_question(keyword):
     
 if __name__ == "__main__":
     
-    keyword = "data mining"
+    keyword = "natural language processing"
     # answer_question(keyword)
     optimized_answer_question(keyword)
     

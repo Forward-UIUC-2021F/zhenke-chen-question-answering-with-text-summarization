@@ -92,8 +92,8 @@ def optimized_web_clawer( websites, result_num = 2 ):
         return original_text
     
 def main():
-    websites = ["https://www.talend.com/resources/data-mining-techniques/"]
-    # websites = ["https://www.precisely.com/blog/datagovernance/top-5-data-mining-techniques?utm_medium=Redirect-Infogix&utm_source=Direct-Traffic"]
+    # websites = ["https://www.talend.com/resources/data-mining-techniques/"]
+    websites = ["https://www.precisely.com/blog/datagovernance/top-5-data-mining-techniques?utm_medium=Redirect-Infogix&utm_source=Direct-Traffic"]
     data = optimized_web_clawer( websites, 1)
     data_collected = data
     file = open("./test_bf.txt", "w")

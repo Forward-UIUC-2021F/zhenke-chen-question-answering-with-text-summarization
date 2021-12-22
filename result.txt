@@ -1,16 +1,2 @@
-1. Methods of data mining
 
-
-One of the aspects is Association rules. This data mining technique involves identifying the relationships between two or more items. It’s useful for identifying, for example, what items of clothing customers are more likely to buy after an initial purchase of say, a pair of shoes. Understanding sequential patterns can help organizations recommend additional items to customers to spur sales. 
-One of the aspects is Clustering. Clustering data mining techniques involve grouping data into clusters based on the similarities between the data. 
-One of the aspects is Classification. Classification data mining techniques involve analyzing the various attributes associated with different types of data. Once organizations identify the main characteristics of these data types, organizations can categorize or classify related data. Doing so is critical for identifying, for example, personally identifiable information organizations may want to protect or redact from documents. 
-One of the aspects is Data cleaning and preparation. Data cleaning and preparation is a vital part of the data mining process. Raw data must be cleansed and formatted to be useful in different analytic methods. Data cleaning and preparation includes different elements of data modeling, transformation, data migration, ETL, ELT, data integration, and aggregation.
-
-References:
-https://cdn.educba.com/academy/wp-content/uploads/2019/02/data-mining-1.png?sa=X&ved=2ahUKEwiilN_ZotT0AhWNr1YBHclGBS8Q_B16BAgCEAI
-https://www.educba.com/data-mining-methods/
-https://www.talend.com/resources/data-mining-techniques/
-https://en.wikipedia.org/wiki/Data_mining
-https://www.precisely.com/blog/datagovernance/top-5-data-mining-techniques?utm_medium=Redirect-Infogix&utm_source=Direct-Traffic
-https://www.datasciencecentral.com/profiles/blogs/the-7-most-important-data-mining-techniques
 
