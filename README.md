@@ -3,6 +3,18 @@ This project is to answer questions related to keywords using google with abstra
 
 # Setup
 
+## Dependencies
+```
+pip install -r requirements.txt
+```
+
+## File Structure
+```
+zhenke-chen-question-answering-with-text-summarization
+    - requirements.txt
+    - readme.md
+```
+
 # Functional Design
 
 ## Module 1: Data Collection
