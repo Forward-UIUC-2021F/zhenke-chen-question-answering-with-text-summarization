@@ -36,7 +36,7 @@ zhenke-chen-question-answering-with-text-summarization/
 * ```src/data_collection/```: Data Collection module
 * ```src/result_evaluation/```: Result Evaluation module
 * ```src/text_summarization/```: Text Summarization module (add the OpenAI API key in summarizer.py)
-* ```src/question_answering.py```: answer questions based on the keyword
+* ```src/question_answering.py```: answer questions based on the keyword (user just need to run this file to answer the question)
 
 # Functional Design
 
