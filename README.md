@@ -32,11 +32,11 @@ zhenke-chen-question-answering-with-text-summarization
 
 ## File Descriptions
 
-### ```data/images/Module_1.png```: store the image for readme file
-###```src/data_collection/```: Data Collection module
-###```src/result_evaluation/```: Result Evaluation module
-###```src/text_summarization/```: Text Summarization module
-###```src/question_answering```: answer questions based on the keyword
+* ```data/images/Module_1.png```: store the image for readme file
+* ```src/data_collection/```: Data Collection module
+* ```src/result_evaluation/```: Result Evaluation module
+* ```src/text_summarization/```: Text Summarization module
+* ```src/question_answering```: answer questions based on the keyword
 
 # Functional Design
 
