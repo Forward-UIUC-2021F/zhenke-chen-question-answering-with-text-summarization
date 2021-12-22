@@ -140,6 +140,7 @@ There are three parts of algorithmic designs for this project, which are corresp
 # Issues and Future Work
 * The project needs to run for relatively long time for question answering
 * The OpenAI API sometimes has poor results in some cases
+* Sometimes the project does not have stable results
 
 # References
 ## Papers:
