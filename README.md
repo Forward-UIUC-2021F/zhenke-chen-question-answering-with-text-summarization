@@ -115,7 +115,7 @@ def DPR_evaluation( summarized_text, question ):
 
 # Algorithmic Design
 
-There are three parts of algorithmic designs for this project, which are corresponding the three parts from the functional design, which are **Data Collection**, **Model Training** as well as **Results Selection and Evaluation**.
+There are three parts of algorithmic designs for this project, which are corresponding the three parts from the functional design, which are **Data Collection**, **Text Summarization** as well as **Results Selection and Evaluation**.
 
 ## Module 1: Data Collection
 * For data collection, since the data are collected from the Google Search, the websites of raw text result corresponding to the questions will be listed by the google search **APIs**
