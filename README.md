@@ -35,7 +35,7 @@ zhenke-chen-question-answering-with-text-summarization/
 * ```data/images/Module_1.png```: store the image for readme file
 * ```src/data_collection/```: Data Collection module
 * ```src/result_evaluation/```: Result Evaluation module
-* ```src/text_summarization/```: Text Summarization module
+* ```src/text_summarization/```: Text Summarization module (add the OpenAI API key in summarizer.py)
 * ```src/question_answering.py```: answer questions based on the keyword
 
 # Functional Design
