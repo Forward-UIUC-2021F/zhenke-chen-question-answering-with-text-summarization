@@ -3,34 +3,6 @@ This project is to answer questions related to keywords using google with abstra
 
 # Functional Design
 
-<!-- ## Funtion 1 inputQuestionTemplate
-* ***Functionality***: Implement the question template
-* ***Input***:
-    * templateId: the id of the template
-    * template: template represented by a list
-    <br>e.g. "What is xxx" is represented by ["What is ", 0]
-    <br>e.g. "xxx's history" is represented by [0, "'s history"]
-* ***Output***: 0 for success and -1 for failed
-```python
-def inputQuestionTemplate( templateId, template ):
-   xxxxxx
-   return 0
-``` -->
-
-<!-- ## Function 2 getGoogleResults
-* ***Functionality***: Get searching results from Google Search with question
-* ***Input***:
-   * question: the question to be searched on Google
-   * resNum: the number of results as original text for summarization
-   * conditionId: potential condition for Google Search result filter
-   <br>e.g. if the conditions are pre-defined with specific id for each one, such as only with “.edu“ websites, then the source of original text will only be ".edu" websites
-* ***Output***: Original text stored in a list of length resNum, with each element from one piece of Google Search result
-```python
-def getGoogleResults( question, resNum, conditionId ):
-   xxxxxx
-   return originalText
-``` -->
-
 ## Module 1: Data Collection
 ### Function 1 get_google_results
 * ***Functionality***: Get searching results from Google Search with question
@@ -45,71 +17,6 @@ def get_google_results( keywords, res_num ):
    xxxxxx
    return raw_text
 ```
-
-<!-- ### Function 2 optimizeResultsWithConcept
-* ***Functionality***: Select the best results from Google based on the key concept
-* * ***Input***:
-   * keywords: the keywords for key concepts for the question
-   * resNum: the number of optimized results
-   * originalText: the original text to be optimized, stored as a list
-* ***Output***: Optimized text stored in a list of length resNum
-```python
-def optimizeResultsWithConcept( keywords, resNum, originalText ):
-   xxxxxx
-   return optimizedText
-``` -->
-
-<!-- ## Module 2: Model Training (if necessary for the user)
-### Function 2 train_model
-* ***Functionality***: Train the model if it is necessary for the user
-* ***Input***:
-   * reference_text: standard reference text is needed for calculation of saliency scores
-   * training_data: training data with sentences from original text
-   * word2vec_word_num: number of words used in word embedding with word2vec
-   * word_num: maximum number of words to keep (with relatively large frequency)
-* ***Output***: trained model
-```python
-def train_model( reference_text, training_data, word2vec_word_num, word_num ):
-   xxxxxx
-   return trained_model
-``` -->
-
-<!-- ### Function 3 preprocess
-* ***Functionality***: Preprocess the sentences from original text by Rouge method compared with reference data to get each sentence's saliency scores
-* ***Input***:
-   * rougeMethodId: id selection of Rouge method
-   * referenceText: standard reference text is needed for calculation of saliency scores
-   * data: data with sentences from original text
-* ***Output***: data with sentences and saliency scores for each sentence
-```python
-def preprocess( rougeMethodId, referenceText, data ):
-   xxxxxx
-   return dataWithScores
-```
-
-### Function 4 embedSentences
-* ***Functionality***: Embed the sentences with word2vec
-* ***Input***:
-   * data: data with sentences and their corresponding saliency scores
-   * word2vecWordNum: number of words used in word embedding with word2vec
-   * wordNum: maximum number of words to keep (with relatively large frequency)
-* ***Output***: embedded data with saliency scores
-```python
-def embedSentences( data, word2vecWordNum, wordNum ):
-   xxxxxx
-   return embeddedData
-```
-### Function 5 trainModel
-* ***Functionality***: Train the CNN model based on embedded data from standard reference text
-* ***Input***:
-   * embeddedData: embedded data with saliency scores
-   * dataWithScores: data with sentences and saliency scores for each sentence
-* ***Output***: trained model
-```python
-def trainModel( embeddedData, dataWithScores ):
-   xxxxxx
-   return trainedModel
-``` -->
 
 ## Module 2: Text Summarization
 ### Function 2 retrieval
@@ -286,6 +193,9 @@ There are three parts of algorithmic designs for this project, which are corresp
 * The result evaluation includes the comparision between summarized text and reference text, as well as the comparision between question and answer. 
 * For performance evaluation after the Text Summarization, the **ROUGE-L** method with measurement of Precision, Recall and F-Measure value will be applied. With larger the value, the performance is better.
 * Then, the DPR scores evaluation will be applied to evaluate the relevance between the question and answer (which is also the summarized text). With the scores closest to 0, the answer is most relevant to the question.
+
+# Demo Video
+## Link: https://drive.google.com/file/d/1Q6xhHJjivIeuBHzjfAgNNmuIqSTg0_vW/view?usp=sharing
 
 # References
 ## Datasets:
