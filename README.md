@@ -2,12 +2,10 @@
 This project is to answer questions related to keywords using google with text summarization.
 
 # Setup
-
 ## Dependencies
 ```
 pip install -r requirements.txt
 ```
-
 ## File Structure
 ```
 zhenke-chen-question-answering-with-text-summarization
@@ -31,7 +29,6 @@ zhenke-chen-question-answering-with-text-summarization
 ```
 
 # Functional Design
-
 ## Module 1: Data Collection
 ### Function 1 get_google_results
 * ***Functionality***: Get searching results from Google Search with question
