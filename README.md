@@ -119,7 +119,7 @@ There are three parts of algorithmic designs for this project, which are corresp
 
 ## Module 1: Data Collection
 * For data collection, since the data are collected from the Google Search, the websites of raw text result corresponding to the questions will be listed by the google search **APIs**
-* Then, with the **BeautifulSoup** web clawer, the raw text will be extracted from the raw website data and compose the original text for the text summarization.
+* Then, with the **BeautifulSoup** web clawer, the raw text will be extracted from the raw website data based on the subtitles and compose the raw text.
 * However, because of the design of googlesearch API, some of the subpages in the Google Search result page will also be caught into the websites list, which have the less relevant content with the question. To solve this problem, I will checkout the websites, if they have the same prefix, then the second one will not be accepted.<br>
 
 
@@ -129,7 +129,8 @@ There are three parts of algorithmic designs for this project, which are corresp
 ## Module 2: Text Summarization
 * In this module, it mainly completes the task of Text Summarization. There are two steps. The first one is to choose the most relevant paragraphs from the raw text fetch from the websites compared with the question to compose the original text for Text Summarization. And the second step is to apply models to summarize the original text.
 * For the first step, it uses the **Dense Passage Retrieval (DPR)** to evaluate the relevance between the question and paragraphs from the Data Collection model. Then, the DPR will rank the paragraphs based on the relevance, and the most relevant ones will compose the original text.
-* For the second step, it mainly uses the **OpenAI tl;dr** Text Summarization model (with Davinci Model) to summarize the text. Before the summarization, the original text will be preprocessed to the format accepted by the model. Then, the summarizer will summarize the original text and the output will be the answer to the question asked by the user.
+* For the second step, it mainly uses the **OpenAI tl;dr** Text Summarization model (with Davinci Model) to summarize the text. Before the summarization, the original text will be preprocessed to the format accepted by the model. Then, the summarizer will summarize the original text.
+* To optimize the result, it will run several times for the summarizer and select the bese result as the answer to the question.
 
 ## Module 3: Results Evaluation
 * The result evaluation includes the comparision between summarized text and reference text, as well as the comparision between question and answer. 
@@ -138,7 +139,7 @@ There are three parts of algorithmic designs for this project, which are corresp
 
 # Issues and Future Work
 * The project needs to run for relatively long time for question answering
-* The OpenAI API sometimes have poor results in some cases
+* The OpenAI API sometimes has poor results in some cases
 
 # References
 ## Papers:
