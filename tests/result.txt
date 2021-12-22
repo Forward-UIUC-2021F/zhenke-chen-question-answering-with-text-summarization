@@ -1,0 +1,33 @@
+1. What is natural language processing
+
+Natural language processing is the science and engineering of computers understanding human language. It’s a broad field of study that includes linguistics, statistics, and machine learning. It’s the driving force behind machine intelligence in many modern real-world applications. Source: https://www. codementor.
+
+References:
+https://en.wikipedia.org/wiki/Natural_language_processing
+https://www.ibm.com/cloud/learn/natural-language-processing
+https://machinelearningmastery.com/natural-language-processing/
+https://aliz.ai/natural-language-processing-a-short-introduction-to-get-you-started/
+https://www.sas.com/en_nz/insights/analytics/what-is-natural-language-processing-nlp.html
+https://www.techtarget.com/searchenterpriseai/definition/natural-language-processing-NLP
+
+2. Method of natural language processing
+
+ In this article, we will cover the following techniques of NLP:
+Tokenization Stemming Lemmatization Sentence Splitting Part of Speech Tagging Word Tagging
+Tokenization: It is the process of breaking the text into tokens. A token is a single unit of text. For example, a sentence is a collection of words, a word is a collection of characters and a character is a collection of numbers. 
+Tokenization is done by using white spaces, punctuation marks and sometimes by using special characters. 
+Stemming: It is the process of reducing words to its root word. For example, the word "running" can be reduced to the root word "run". 
+Lemmatization: It is the process of reducing words to its base form. For example, the word "running" can be reduced to the base form "run". 
+Sentence Splitting: It is the process of splitting the sentence into multiple sentences. 
+Part of Speech Tagging: It is the process of assigning a part of speech to each word in a sentence. 
+Word Tagging: It is the process of assigning a word to each token. 
+Applications of Natural Language Processing.  NLP has many applications in the real world.
+
+References:
+https://blog.aureusanalytics.com/blog/5-natural-language-processing-techniques-for-extracting-information
+https://en.wikipedia.org/wiki/Natural_language_processing
+https://www.analyticssteps.com/blogs/7-natural-language-processing-techniques-extracting-information
+https://www.ibm.com/topics/natural-language-processing
+https://www.kdnuggets.com/2021/02/6-nlp-techniques.html
+https://www.xenonstack.com/blog/natural-language-processing
+

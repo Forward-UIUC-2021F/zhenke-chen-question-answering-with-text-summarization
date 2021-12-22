@@ -14,12 +14,12 @@ from itertools import repeat
 
 # import the necessary functions from other files
 # from public.data_collection.collect_data import main as collect_data
-from public.data_collection.collect_data import main2 as collect_data
-from public.text_summarization.summarizer import main2 as text_summarization
+from data_collection.collect_data import main2 as collect_data
+from text_summarization.summarizer import main2 as text_summarization
 
 
 # define the path to store the result
-RESULT_PATH = "./result.txt"
+RESULT_PATH = "./tests/result.txt"
 
 
 # define the number of websites for each subquestion
@@ -32,10 +32,10 @@ CANDIDTE_NUM = 5
 
 # define the list of subqeustion
 # SUB_QUESTIONS = ["What is ", "History of ", "Method of "]
-# SUB_QUESTIONS = ["What is ", "Method of ", "Application of "]
+SUB_QUESTIONS = ["What is ", "Method of "]
 # SUB_QUESTIONS = ["What is ", "History of ", "Applications of "]
 # SUB_QUESTIONS = ["History of ", "Applications of "]
-SUB_QUESTIONS = ["What is "]
+# SUB_QUESTIONS = ["What is "]
 # SUB_QUESTIONS = ["History of "]
 # SUB_QUESTIONS = ["Methods of "]
 # SUB_QUESTIONS = ["Applications of "]

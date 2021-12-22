@@ -16,7 +16,7 @@ import os
 
 # import the retrieval from another file
 # from retrieval import Retrieval
-from public.text_summarization.retrieval import Retrieval
+from text_summarization.retrieval import Retrieval
 
 
 # OpenAI API parameters setting
@@ -25,11 +25,11 @@ openai.api_key = ""
 
 
 # define the file path which stores the raw text file
-FILE_PATH = "./public/data_collection/original_text.txt"
+FILE_PATH = "./src/data_collection/original_text.txt"
 
 
 # define the file path which stores the original file
-FILE_PATH_2 = "./public/text_summarization/original_text.txt"
+FILE_PATH_2 = "./src/text_summarization/original_text.txt"
 
 # define the mark for the OpenAI API to recognize
 MARK = "tl;dr:"

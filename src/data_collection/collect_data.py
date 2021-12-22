@@ -21,9 +21,9 @@ import string
 
 # define the module level constants
 STRING_LENGTH = 5
-DOC = "./public/data_collection/tmp_website.html"
-DOC_2 = "./public/data_collection/original_text.txt"
-DOC_3 = "./public/data_collection/original_text_with_paragraphs.txt"
+DOC = "./src/data_collection/tmp_website.html"
+DOC_2 = "./src/data_collection/original_text.txt"
+# DOC_3 = "./src/data_collection/original_text_with_paragraphs.txt"
 TIME_OUT = 60
 FAIL = -1
 
@@ -274,7 +274,8 @@ class CollectData():
                             tmp_para_text = paras.get_text()
                             if len(tmp_para_text) > STRING_LENGTH:
                                 res_txt += tmp_para_text
-                    top_sen = "One of the aspects is " + curr_heading.get_text().strip(string.digits).strip(". ") + ". "
+                    # top_sen = "One of the aspects is " + curr_heading.get_text().strip(string.digits).strip(". ") + ". "
+                    top_sen = curr_heading.get_text().strip(string.digits).strip(". ") + ". "
                     tmp_text = top_sen + res_txt
                     
                     # print(tmp_text)
@@ -374,12 +375,12 @@ def main( question, res_num ):
             file.write("\n")
     file.close()
 
-    file_2 = open(DOC_3, "w", encoding = "UTF-8")
-    for text_id in range(len(text_list_2)):
-        file_2.write(text_list_2[text_id])
-        if text_id != len(text_list) - 1:
-            file_2.write(DELIMETER + "\n")
-    file_2.close()
+    # file_2 = open(DOC_3, "w", encoding = "UTF-8")
+    # for text_id in range(len(text_list_2)):
+    #     file_2.write(text_list_2[text_id])
+    #     if text_id != len(text_list) - 1:
+    #         file_2.write(DELIMETER + "\n")
+    # file_2.close()
 
     return text_list, website_list
 

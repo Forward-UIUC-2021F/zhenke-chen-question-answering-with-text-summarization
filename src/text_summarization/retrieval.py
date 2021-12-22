@@ -23,8 +23,8 @@ reranker = MonoT5()
 
 
 # define the file path which stores the original file
-FILE_PATH_1 = "./public/data_collection/original_text.txt"
-FILE_PATH_2 = "./public/data_collection/original_text_with_paragraphs.txt"
+FILE_PATH_1 = "./src/data_collection/original_text.txt"
+FILE_PATH_2 = "./src/data_collection/original_text_with_paragraphs.txt"
 
 
 # define the mark to separate text from different sources while storing in the file
