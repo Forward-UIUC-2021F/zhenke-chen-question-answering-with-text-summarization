@@ -1,5 +1,7 @@
-# Question-answering-with-abstracted-text-summarization
+# Question-answering-with-text-summarization
 This project is to answer questions related to keywords using google with abstracted text summarization.
+
+# Setup
 
 # Functional Design
 
@@ -72,98 +74,6 @@ def DPR_evaluation( summarized_text, question ):
    return DPR_scores
 ```
 
-<!-- ## Module 3: Results Selection and Evaluation
-### Function 3 get_result
-* ***Functionality***: Get the saliency scores from the trained model and select the sentences with highest scores
-   * data: raw data to summarize
-   * model: trained model
-   * sentence_num: number of sentences from the summarization
-   * threshold: limit the similarity if the sentences with all the sentences already in the summary
-* ***Output***: summarized text
-```python
-def get_result ( data, model, sentence_num, threshold ):
-   xxxxxx
-   return summarized_text
-``` -->
-
-<!-- ### Function 6 getModelOutput
-* ***Functionality***: Get the saliency scores output by the trained model
-* ***Input***:
-   * data: raw data to summarize
-   * model: trained model
-* ***Output***: Data with sentences with saliency scores
-```python
-def getModelOutput ( data, model ):
-   xxxxxx
-   return rawResults
-```
-
-### Function 7 selectSentences
-* ***Functionality***: Select sentence from sentences with highest saliency scores calculated by the trained model
-* ***Input***:
-   * data: data from the output of trained model, with saliency scores
-   * sentenceNum: number of sentences from the summarization
-   * threshold: limit the similarity if the sentences with all the sentences already in the summary
-* ***Output***: summarized text
-```python
-def selectSentences ( data, sentenceNum, threshold ):
-   xxxxxx
-   return summarizedText
-``` -->
-
-<!-- ## Function 7 evaluateWithRouge
-* ***Functionality***: Evaluate the text summarization result with Rouge
-* ***Input***:
-   * rougeMethodId: since there are many different Rouge evaluation methods, such Rouge-1, Rouge-2 and Rouge-L, this is for selection of Rouge method
-   * referenceText: for some Rouge methods, the evaluation needs the standard reference text
-   * summarizedText: summarized text to be evaluated
-* ***Output***: evaluation result represented by a dictionary with form {Precision: xxx, Recall: xxx, Fmeasure: xxx}
-```python
-def evaluateWithRouge( rougeMethodId, referenceText, summarizedText ):
-   xxxxxx
-   return evaluationResult
-``` -->
-
-<!-- ### Function 8 evaluateWithRouge
-* ***Functionality***: Evaluate the text summarization result with Rouge
-* ***Input***:
-   * referenceText: for some Rouge methods, the evaluation needs the standard reference text
-   * summarizedText: summarized text to be evaluated
-* ***Output***: evaluation result represented by a dictionary with form {Precision: xxx, Recall: xxx, Fmeasure: xxx}
-```python
-def evaluateWithRouge( referenceText, summarizedText ):
-   xxxxxx
-   return evaluationResult
-``` -->
-
-<!-- ## Function 8 getAnswer
-* ***Functionality***: Overall text summarization function, for convenience of implementation
-* ***Input***:
-   * templateId: the id of the template
-   * conditionId: potential condition for Google Search result filter
-   * searchResNum: the number of google search results as original text for summarization
-   * keyword: keyword of the question
-   * sentenceNum: the sentence number of summarized text
-* ***Output***: summarized text
-```python
-def getAnswer( templateId, conditionId, searchResNum, keyword, sentenceNum ):
-   xxxxxx
-   return summarizedText
-``` -->
-
-<!-- ## Function 7 getAnswer
-* ***Functionality***: Overall text summarization function, for convenience of implementation
-* ***Input***:
-   * searchResNum: the number of google search results as original text for summarization
-   * keywords: keywords of the question
-   * sentenceNum: the sentence number of summarized text
-* ***Output***: summarized text
-```python
-def getAnswer( searchResNum, keywords, sentenceNum ):
-   xxxxxx
-   return summarizedText
-``` -->
-
 # Algorithmic Design
 
 There are three parts of algorithmic designs for this project, which are corresponding the three parts from the functional design, which are **Data Collection**, **Model Training** as well as **Results Selection and Evaluation**.
@@ -172,17 +82,10 @@ There are three parts of algorithmic designs for this project, which are corresp
 * For data collection, since the data are collected from the Google Search, the websites of raw text result corresponding to the questions will be listed by the google search **APIs**
 * Then, with the **BeautifulSoup** web clawer, the raw text will be extracted from the raw website data and compose the original text for the text summarization.
 * However, because of the design of googlesearch API, some of the subpages in the Google Search result page will also be caught into the websites list, which have the less relevant content with the question. To solve this problem, I will checkout the websites, if they have the same prefix, then the second one will not be accepted.<br>
-<!-- * Then, since some of the searching results may not be relevant enough with the keywords presented by the user, there will be a filter algorithm to opimize the searching results. In details, the ones most related to the concept will be chosed to form the text to be summarized. For this part, I will temporarily apply the algorithms from Zicheng to pursue the best performance.<br> -->
 
 
   ![Routine for Module 1](https://github.com/Forward-UIUC-2021F/Question-answering-with-extracted-text-summarization/blob/milestone_1/Images_for_md/Module_1.png)
 
-<!-- ## Module 2: Model Training
-* For data training, in order to provide comparison for supervised learning, the train data will be preprocessed. The widely-accepted automatic summarization evaluation metric, ROUGE, is applied to get the salience score for each sentence. Those scores will be used in a further training process.
-* To promote the performance of training, the raw training data, also known as sentences, are not used as inputs directly. Instead, the word embedding technique, **word2vec** will be applied to make better use of the semantic and grammatical association of words. So, the human feature enginnering is not needed.
-* For the training, the Convolutional Neural Networds (**CNN**) is applied with Convolution (Sigmoid as Activation Function), Max-pooling and Regularization. And the goal is to minimized the cross-entropy (CE) compared with the salience scores from train data.<br>
-
-   ![CNN Training Model](https://github.com/Forward-UIUC-2021F/Question-answering-with-extracted-text-summarization/blob/milestone_1/Images_for_md/Module_2.png) -->
    
 ## Module 2: Text Summarization
 * In this module, it mainly completes the task of Text Summarization. There are two steps. The first one is to choose the most relevant paragraphs from the raw text fetch from the websites compared with the question to compose the original text for Text Summarization. And the second step is to apply models to summarize the original text.
@@ -208,5 +111,4 @@ There are three parts of algorithmic designs for this project, which are corresp
 ## APIs:
 * googlesearch API. Link: https://python-googlesearch.readthedocs.io/en/latest/ 
 * OpenAI API. Link: https://beta.openai.com/docs/introduction
-<!-- * Extractive Document Summarization Based on Convolutional Neural Networks. Link: https://ieeexplore.ieee.org/document/7793761.
-* Extractive Document Summarization Using Convolutional Neural Networks - Reimplementation. Link: https://leolaugier.github.io/doc/summarization.pdf. -->
+
