@@ -1,5 +1,5 @@
 # Question-answering-with-text-summarization
-This project is to answer questions related to keywords using google with abstracted text summarization.
+This project is to answer questions related to keywords using google with text summarization.
 
 # Setup
 
@@ -12,7 +12,22 @@ pip install -r requirements.txt
 ```
 zhenke-chen-question-answering-with-text-summarization
     - requirements.txt
-    - readme.md
+    - README.md
+    - data/images/
+        -- Module_1.png
+    - src/
+        -- data_collection/
+            --- collect_data.py
+            --- original_text.txt
+        -- result_evaluation/
+            --- evaluate_result.py
+        -- text_summarization/
+            --- retrieval.py
+            --- summarizer.py
+            --- original_text.py
+        -- question_answering.py
+     - tests/
+        -- results.txt
 ```
 
 # Functional Design
