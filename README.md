@@ -3,6 +3,12 @@ This project is to answer questions related to keywords using google with text s
 
 # Setup
 
+## Steps
+* Construct the dependencies
+* Fill in the OpenAI API key in ```src/text_summarization/summarizer.py```
+* Change the sub-questions and keyword in ```src/question_answering.py```
+* Run the file ```src/question_answering.py```
+
 ## Dependencies
 ```
 pip install -r requirements.txt
