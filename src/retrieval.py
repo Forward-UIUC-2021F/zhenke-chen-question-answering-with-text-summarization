@@ -62,17 +62,12 @@ class Retrieval():
                     idx += 1
                     text_list.append([str(idx), data[i]])
         
-        # print out the text list for testing
-        # for i in text_list:
-        #     print(i)
-        # print(len(text_list))
-        
         f.close()
 
         return text_list
 
 
-    def select_paragraphs( self, question, passages, paragraph_num ):
+    def select_paragraphs(self, question, passages, paragraph_num):
 
         '''
             Apply the DPR to rank the relevance between the question and text
@@ -153,8 +148,8 @@ def main():
     question = "What is data structure?"
 
     # apply the retrieval to get the top related pieces of text and combine them as the original text
-    # retrieval.select_paragraphs(question, test_passages, 3)
-    result = retrieval.select_paragraphs(question, passages, PARA_NUM)
+    retrieval.select_paragraphs(test_question, test_passages, 3)
+    # result = retrieval.select_paragraphs(question, passages, PARA_NUM)
     print("+++++++++ Original Text +++++++++")
     print(result)
 
