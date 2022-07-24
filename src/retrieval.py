@@ -19,6 +19,8 @@ from pygaggle.rerank.base import hits_to_texts
 
 import json
 
+import pdb
+
 
 # apply the proper transformer for the DPR
 reranker = MonoT5()
@@ -72,18 +74,16 @@ def select_paragraphs(question, passages, num_paragraphs):
 
         Keyword Arguments:
         question -- the question asked by the user
-        passges -- all passages fetched from Google Search with specific format
+        passges -- a python list passages fetched from Google Search with format (metadata, text)
         num_paragraphs -- number of paragraphs of original text for text summarization
     '''
     
-    # test if passages is empty
+    # Test if passages is empty
     if passages == []:
         print("There are no data collected!")
         sys.exit()
 
-    ranking_result = {}
-
-    # define the query
+    # Define the query
     query = Query(question)
 
     # define the dense decoder 
@@ -91,27 +91,27 @@ def select_paragraphs(question, passages, num_paragraphs):
     hits = searcher.search(query.text)
     texts = hits_to_texts(hits)
 
-    # extract the text with certain format
-    texts = [ Text(p[1], {'docid': p[0]}, 0) for p in passages]
-
-    # re-rank
+    # Rerank
+    texts = [Text(p[1], p[0], 0) for p in passages]
     reranked = reranker.rerank(query, texts)
 
+
     # print out and store the re-ranked results
+    ranking_result = []
+
     for i in range(0, len(passages)):
-        tmp_score = reranked[i].score
-        ranking_result[tmp_score] = reranked[i].text
+        score = reranked[i].score
+        proc_text = reranked[i].text.strip('\n')
+
+        passage_obj = (score, (proc_text, reranked[i].metadata))
+        ranking_result.append(passage_obj)
 
 
-    # sort out the ranking result with scores from high to low
-    # then output the ones with the highest socres
-    sorted_reranked = sorted(ranking_result, reverse = True)
+    ranking_result.sort(reverse=True, key=lambda t: t[0])
+    ranking_result = [t[1] for t in ranking_result]
 
-    ranked_passages = []
-    for i in range(num_paragraphs):
-        ranked_passages.append(ranking_result[sorted_reranked[i]].strip('\n'))
+    return ranking_result[:num_paragraphs]
 
-    return ranked_passages
 
 
 def main():

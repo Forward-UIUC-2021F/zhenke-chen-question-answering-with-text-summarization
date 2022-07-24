@@ -20,6 +20,9 @@ from googlesearch import search
 import string
 import unidecode
 
+import time
+from tqdm import tqdm
+
 
 STRING_LENGTH = 5
 
@@ -170,6 +173,7 @@ def fetch_candidate_texts(question, num_websites = 5, text_filter=lambda t: True
     # Contains tuples of the form (url, [p1, p2, ...])
     url_data = []
 
+    pbar = tqdm(total=len(websites))
     for url in websites:
 
         # Fetch url page
@@ -178,7 +182,12 @@ def fetch_candidate_texts(question, num_websites = 5, text_filter=lambda t: True
 
         try:
             response = urllib.request.urlopen(request)
-        except:
+            time.sleep(3)
+            pbar.update(1)
+            # print("\t", "url fetch", url)
+        except Exception as e:
+            print(e)
+            pbar.update(1)
             continue
 
         # print(response.get_content_type())
@@ -199,6 +208,7 @@ def fetch_candidate_texts(question, num_websites = 5, text_filter=lambda t: True
         }
         url_data.append(cur_url_data)
 
+    pbar.close()
     return url_data
 
 
@@ -208,5 +218,6 @@ if __name__ == "__main__":
     res_num = 10
 
     # Fetch text from websites
-    text_list = fetch_candidate_texts(website_list, res_num)
+    # website_list = get_gsearch_urls(question, 5)
+    text_list = fetch_candidate_texts(question, res_num)
     print(json.dumps(text_list, indent=4))
